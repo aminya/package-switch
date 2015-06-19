@@ -1,0 +1,26 @@
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Package Switch'
+      'submenu': [
+        {
+          'label': 'Toggle'
+          'command': 'package-switch:toggle'
+        },
+        {
+          'label': 'Create bundle'
+          'command': 'package-switch:create'
+        },
+        {
+          'label': 'Edit bundle'
+          'command': 'package-switch:edit'
+        },
+        {
+          'label': 'Remove bundle'
+          'command': 'package-switch:remove'
+        }
+      ]
+    ]
+  }
+]

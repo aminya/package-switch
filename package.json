@@ -1,0 +1,29 @@
+{
+  "name": "package-switch",
+  "main": "lib/main",
+  "version": "0.0.0",
+  "description": "Put packages into \"bundles\" and enable/disable them all at once",
+  "keywords": [
+    "package",
+    "switch",
+    "bundle"
+  ],
+  "activationCommands": {
+    "atom-workspace": [
+      "package-switch:toggle",
+      "package-switch:create",
+      "package-switch:edit",
+      "package-switch:remove"
+    ]
+  },
+  "repository": "https://github.com/deprint/package-switch",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {
+    "atom-space-pen-views": "^2.0.0",
+    "fs-plus": "^2.0.4",
+    "season": "^5.2.0"
+  }
+}
