@@ -20,9 +20,9 @@ module.exports =
 
     cancel: ->
       items = []
-      @list.children().toArray().forEach (node) =>
-        if $(node).data('select-list-item').action isnt 'ignored'
-          items.push $(node).data('select-list-item')
+      @items.forEach (item) =>
+        if item.action isnt 'ignored'
+          items.push item
       super
       @panel?.hide()
       if items.length isnt 0
@@ -48,6 +48,10 @@ module.exports =
       return super unless view
       new_view = $(@viewForItem view.data('select-list-item'))
       new_view.data('select-list-item', view.data('select-list-item'))
+      for item, index in @items
+        if item.name is view.data('select-list-item').name
+          @items[index].action = view.data('select-list-item').action
+          break
       view.replaceWith new_view
       @selectItemView new_view
 

@@ -1,12 +1,12 @@
 module.exports =
   class Bundle
-    packages: {}
+    packages: []
 
     constructor: ({@packages}) ->
 
     execute: ->
-      Object.keys(@packages).forEach (key) =>
-        if @packages[key] is 'added'
-          atom.packages.enablePackage(key)
+      for p in @packages
+        if p.action is 'added'
+          atom.packages.enablePackage(p.name)
         else
-          atom.packages.disablePackage(key)
+          atom.packages.disablePackage(p.name)

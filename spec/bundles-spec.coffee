@@ -5,8 +5,17 @@ describe 'Bundles', ->
 
   beforeEach ->
     bundles = new Bundles('')
-    bundles.addBundle('test-bundle',{'test1': 'added', 'test2': 'removed'})
-    expect(Object.keys(bundles.data['test-bundle'].packages).length).toBe 2
+    bundles.addBundle 'test-bundle', [
+      {
+        name: 'test1'
+        action: 'added'
+      }
+      {
+        name: 'test2'
+        action: 'removed'
+      }
+    ]
+    expect(bundles.data['test-bundle'].packages.length).toBe 2
 
   afterEach ->
     bundles.destroy()
@@ -17,8 +26,17 @@ describe 'Bundles', ->
 
   describe 'When adding a bundle with a name that already exists', ->
     it 'does not add the bundle', ->
-      bundles.addBundle('test-bundle',{'test2': 'added', 'test3': 'removed'})
-      expect(bundles.data['test-bundle'].packages['test1']).toBeDefined()
+      bundles.addBundle 'test-bundle', [
+        {
+          name: 'test2'
+          action: 'added'
+        }
+        {
+          name: 'test3'
+          action: 'removed'
+        }
+      ]
+      expect(bundles.data['test-bundle'].packages[0].name).toBe 'test1'
 
   describe 'When removing a bundle', ->
     it 'removes the bundle', ->

@@ -84,6 +84,9 @@ module.exports =
 
     getBundles: ->
       p = []
-      Object.keys(@data).forEach (key) ->
-        p.push(key)
+      Object.keys(@data).forEach (key) =>
+        p.push {
+          name: key
+          packages: @data[key].packages
+        }
       p
