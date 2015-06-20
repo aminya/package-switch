@@ -1,7 +1,7 @@
 {
   "name": "package-switch",
   "main": "lib/main",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Put packages into \"bundles\" and enable/disable them all at once",
   "keywords": [
     "package",
