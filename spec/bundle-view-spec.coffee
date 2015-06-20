@@ -49,7 +49,7 @@ describe 'Bundle View', ->
           expect(atom.workspace.getModalPanels()[0].visible).toBeFalsy()
 
         it 'calls the callback function', ->
-          expect(callback).toHaveBeenCalledWith [
+          expect(callback).toHaveBeenCalledWith null, [
             {
               name: packages[0]
               action: 'added'
@@ -69,17 +69,20 @@ describe 'Bundle View', ->
 
   describe 'When loading the view with actions', ->
     packages = null
-    actions = null
+    bundle = null
 
     beforeEach ->
       packages = atom.packages.getAvailablePackageNames()
-      actions = [
-        {
-          name: packages[0]
-          action: 'removed'
-        }
-      ]
-      view.show(actions, callback)
+      bundle = {
+        name: null,
+        packages: [
+          {
+            name: packages[0]
+            action: 'removed'
+          }
+        ]
+      }
+      view.show(bundle, callback)
 
     it 'displays the panel', ->
       expect(atom.workspace.getModalPanels()[0].visible).toBeTruthy()

@@ -38,6 +38,21 @@ describe 'Bundles', ->
       ]
       expect(bundles.data['test-bundle'].packages[0].name).toBe 'test1'
 
+  describe 'When replacing a bundle', ->
+    it 'removes the old bundle and adds the new one', ->
+      bundles.replaceBundle 'test-bundle', 'test-bundle-2', [
+        {
+          name: 'test2'
+          action: 'added'
+        }
+        {
+          name: 'test3'
+          action: 'removed'
+        }
+      ]
+      expect(bundles.data['test-bundle']).toBeUndefined()
+      expect(bundles.data['test-bundle-2']).toBeDefined()
+
   describe 'When removing a bundle', ->
     it 'removes the bundle', ->
       bundles.removeBundle 'test-bundle'

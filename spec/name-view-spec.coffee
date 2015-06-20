@@ -33,7 +33,7 @@ describe 'Name View', ->
   describe 'When loading the view with items of both action types', ->
 
     beforeEach ->
-      view.show bundles, [
+      view.show bundles, null, [
         {
           name: 'Test-package'
           action: 'added'
@@ -70,7 +70,7 @@ describe 'Name View', ->
         expect(atom.workspace.getModalPanels()[0].visible).toBeFalsy()
 
       it 'calls the backCallback', ->
-        expect(callbacks.backCallback).toHaveBeenCalledWith [
+        expect(callbacks.backCallback).toHaveBeenCalledWith null, [
           {
             name: 'Test-package'
             action: 'added'
@@ -119,7 +119,7 @@ describe 'Name View', ->
           expect(atom.workspace.getModalPanels()[0].visible).toBeFalsy()
 
         it 'calls the callback function', ->
-          expect(callbacks.confirmCallback).toHaveBeenCalledWith 'unique-name', [
+          expect(callbacks.confirmCallback).toHaveBeenCalledWith null, 'unique-name', [
             {
               name: 'Test-package'
               action: 'added'
@@ -132,7 +132,7 @@ describe 'Name View', ->
   describe 'When loading the view with items of one action type', ->
 
     beforeEach ->
-      view.show bundles, [
+      view.show bundles, null, [
         {
           name: 'Test-package'
           action: 'added'
