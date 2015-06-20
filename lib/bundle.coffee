@@ -4,9 +4,15 @@ module.exports =
 
     constructor: ({@packages}) ->
 
-    execute: ->
+    execute: (opposite)->
       for p in @packages
-        if p.action is 'added'
-          atom.packages.enablePackage(p.name)
+        if opposite
+          if p.action is 'removed'
+            atom.packages.enablePackage(p.name)
+          else
+            atom.packages.disablePackage(p.name)
         else
-          atom.packages.disablePackage(p.name)
+          if p.action is 'added'
+            atom.packages.enablePackage(p.name)
+          else
+            atom.packages.disablePackage(p.name)

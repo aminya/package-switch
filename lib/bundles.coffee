@@ -75,6 +75,15 @@ module.exports =
         @data[name] = new Bundle({packages})
         @setData()
 
+    replaceBundle: (oldname, name, packages) ->
+      if @data[oldname]? and not @data[name]?
+        delete @data[oldname]
+        @data[name] = new Bundle({packages})
+        @setData()
+      else
+        @notify "Bundle \"#{oldname}\" not found" if not @data[oldname]
+        @notify "Bundle \"#{name}\" already exists" if @data[name]?
+
     removeBundle: (bundle) ->
       delete @data[bundle]
       @setData()

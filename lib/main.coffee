@@ -33,9 +33,10 @@ module.exports =
   activate: ->
     @createBundlesInstance()
     @subscriptions = new CompositeDisposable
-    @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:toggle': => @toggle()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:start-bundle': => @toggle()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:stop-bundle': => @toggle(true)
     @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:create': => @create()
-    #@subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:edit': => @edit()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:edit': => @edit()
     @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:remove': => @remove()
 
   deactivate: ->
@@ -54,33 +55,38 @@ module.exports =
     @BundlesView = null
     @BundleView = null
 
-  toggleCallback: (bundle) ->
-    @bundles.getBundle(bundle.name).execute()
+  toggleCallback: (opposite, bundle) ->
+    @bundles.getBundle(bundle.name).execute(opposite)
 
   removeCallback: (bundle) ->
     @bundles.removeBundle bundle.name
 
-  toggle: ->
+  toggle: (opposite = false)->
     @createBundlesView()
-    @bundlesview.show(@bundles.getBundles(), (bundle) => @toggleCallback(bundle))
+    @bundlesview.show(@bundles.getBundles(), (bundle) => @toggleCallback(opposite, bundle))
 
   remove: ->
     @createBundlesView()
     @bundlesview.show(@bundles.getBundles(), (bundle) => @removeCallback(bundle))
 
-  createCallback: (items) ->
+  createCallback: (oldname, items) ->
     @createNameView()
     @nameview.show(@bundles, items, {confirmCallback: (name, packages) =>
-      @nameCallback(name, packages)
-    , backCallback: (items) => @create(items)})
+      @nameCallback(oldname, name, packages)
+    , backCallback: (_items) => @create(_items)})
 
-  nameCallback: (name, packages) ->
-    @bundles.addBundle name, packages
+  nameCallback: (oldname, name, packages) ->
+    if oldname?
+      @bundles.replaceBundle oldname, name, packages
+    else
+      @bundles.addBundle name, packages
 
-  create: (items = []) ->
+  create: (bundle = null) ->
     @createBundleView()
-    @bundleview.show(items, (items) => @createCallback(items))
+    @bundleview.show(bundle, (oldname, items) => @createCallback(oldname, items))
 
-  #edit: ->
+  edit: ->
+    @createBundlesView()
+    @bundlesview.show(@bundles.getBundles(), (bundle) => @create(bundle))
 
   #remove: ->

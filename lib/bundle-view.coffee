@@ -26,11 +26,18 @@ module.exports =
       super
       @panel?.hide()
       if items.length isnt 0
-        @cb items
+        @cb @oldname, items
 
-    show: (actions = [], @cb) ->
+    show: (bundle = null, @cb) ->
       @panel ?= atom.workspace.addModalPanel(item: this)
       @panel.show()
+
+      if bundle?
+        @oldname = bundle.name
+        actions = bundle.packages
+      else
+        @oldname = null
+        actions = []
 
       packages = []
       atom.packages.getAvailablePackageNames().forEach (name) =>

@@ -10,7 +10,8 @@
   ],
   "activationCommands": {
     "atom-workspace": [
-      "package-switch:toggle",
+      "package-switch:start-bundle",
+      "package-switch:stop-bundle",
       "package-switch:create",
       "package-switch:edit",
       "package-switch:remove"
