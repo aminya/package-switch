@@ -1,22 +1,30 @@
 {CompositeDisposable} = require 'atom'
 
-BundleView = null
-bundleview = null
-
-createBundleView = ->
-  BundleView ?= require './bundle-view'
-  bundleview ?= new BundleView()
-
 module.exports =
 
   Bundles: null
   bundles: null
+
+  BundleView: null
+  bundleview: null
+
+  NameView: null
+  nameview: null
+
+  createBundleView: ->
+    @BundleView ?= require './bundle-view'
+    @bundleview ?= new @BundleView()
+
+  createNameView: ->
+    @NameView ?= require './name-view'
+    @nameview ?= new @NameView()
 
   createBundlesInstance: ->
     @Bundles ?= require './bundles'
     @bundles ?= new @Bundles()
 
   activate: ->
+    @createBundlesInstance()
     @subscriptions = new CompositeDisposable
     #@subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:toggle': => @toggle()
     @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:create': => @create()
@@ -27,12 +35,29 @@ module.exports =
     @subscriptions.dispose()
     @bundleview?.destroy()
     @bundles?.destroy()
+    @nameview?.destroy()
+    @bundleview?.destroy()
+    @bundles = null
+    @nameview = null
+    @bundleview = null
+    @Bundles = null
+    @NameView = null
+    @BundleView = null
 
   #toggle: ->
 
-  create: ->
-    createBundleView()
-    bundleview.show({'build-tools-cpp': 'added'},-> )
+  createCallback: (items) ->
+    @createNameView()
+    @nameview.show(@bundles, items, {confirmCallback: (name, packages) =>
+      @nameCallback(name, packages)
+    , backCallback: (items) => @create(items)})
+
+  nameCallback: (name, packages) ->
+    @bundles.addBundle name, packages
+
+  create: (items = [{name: 'build-tools-cpp', action:'added'}]) ->
+    @createBundleView()
+    @bundleview.show(items, (items) => @createCallback(items))
 
   #edit: ->
 

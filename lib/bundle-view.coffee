@@ -19,23 +19,29 @@ module.exports =
         @setDisabled()
 
     cancel: ->
-      items = @list.children().children().toArray().filter (node) =>
-        $(node).prop('class').split('-').reverse()[0] isnt 'ignored'
+      items = []
+      @list.children().toArray().forEach (node) =>
+        if $(node).data('select-list-item').action isnt 'ignored'
+          items.push $(node).data('select-list-item')
       super
       @panel?.hide()
-      @cb items
+      if items.length isnt 0
+        @cb items
 
-    show: (actions = {}, @cb) ->
+    show: (actions = [], @cb) ->
       @panel ?= atom.workspace.addModalPanel(item: this)
       @panel.show()
 
-      packages = atom.packages.getAvailablePackageNames()
-      items = []
-      for p in packages
-        items.push
-          name: p
-          action: if actions[p]? then actions[p] else 'ignored'
-      @setItems items
+      packages = []
+      atom.packages.getAvailablePackageNames().forEach (name) =>
+        action = actions.filter (item) =>
+          item.name is name
+        action = action[0]?.action
+        if not action?
+          action = 'ignored'
+        packages.push {name,action}
+
+      @setItems packages
       @focusFilterEditor()
 
     populateList: (view = null)->
