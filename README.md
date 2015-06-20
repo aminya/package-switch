@@ -8,12 +8,14 @@ package-switch
 ## Usage
 ### Create a Bundle
 1. Run `package-switch:create`
-2. Each package has one of three "actions" (Select a package and press `Enter` to cycle through the actions):
+2. Each package has one of three "actions" (Select a package and press `Enter` to cycle through them):
   * Ignored (`/`) packages do not change when a bundle is executed
   * Added (`+`) packages will be enabled
   * Removed (`-`) packages will be disabled
+![package-switch-create](https://cloud.githubusercontent.com/assets/7817714/8269547/deb667ca-17ad-11e5-9124-b5c3a4f42e74.png)
 3. Press `Escape` once you've finished your list ( to abort: Press `Escape` twice )
 4. A new dialog box will open where you enter the name of your bundle
+![package-switch-name](https://cloud.githubusercontent.com/assets/7817714/8269546/d4a422ae-17ad-11e5-8384-8a9b72a9fd92.png)
 5. Press `Enter` to create the bundle
 
 ### Execute a Bundle
