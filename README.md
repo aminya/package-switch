@@ -25,6 +25,10 @@ package-switch
   * Removed (`-`) packages will be disabled
   * `package-switch:stop-bundle` does the opposite of `package-switch:start-bundle`
 
+## Debugging
+All the data is stored in `~/.atom/package-switch.bundles` or your OS-equivalent.
+Include this file in bug reports if you think the bug is in this file.
+
 ## Roadmap
 * Run bundle at start-up
 * Bug fixes, etc.
