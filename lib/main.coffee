@@ -55,7 +55,7 @@ module.exports =
   nameCallback: (name, packages) ->
     @bundles.addBundle name, packages
 
-  create: (items = [{name: 'build-tools-cpp', action:'added'}]) ->
+  create: (items = []) ->
     @createBundleView()
     @bundleview.show(items, (items) => @createCallback(items))
 

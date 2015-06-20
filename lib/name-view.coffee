@@ -14,8 +14,8 @@ module.exports =
           @div id:'name-error-none' ,class:'error hidden', 'This field cannot be empty'
           @div id:'name-error-used' ,class:'error hidden', 'Name already used'
         @div class:'block text-subtle', =>
-          @div class:'icon icon-diff-added', outlet:'added'
-          @div class:'icon icon-diff-removed', outlet: 'removed'
+          @div class:'added icon icon-diff-added hidden', outlet:'added'
+          @div class:'removed icon icon-diff-removed hidden', outlet: 'removed'
         @div class:'buttons', =>
           @div =>
             @div class: 'btn btn-error icon icon-x inline-block-tight', 'Cancel'
@@ -38,6 +38,7 @@ module.exports =
     destroy: ->
       @disposables.dispose()
       @detach()
+      @panel?.hide()
 
     cancel: (event) =>
       @panel?.hide()
@@ -65,9 +66,18 @@ module.exports =
       @find('#name-error-none').addClass('hidden')
       @find('#name-error-used').addClass('hidden')
 
+    clearPackages: ->
+      @added.addClass 'hidden'
+      @removed.addClass 'hidden'
+
+    showPackages: (div, packages) ->
+      div.removeClass('hidden')
+      div.html(packages.toString())
+
     show: (@bundles, @items, {@confirmCallback, @backCallback}) ->
       @nameEditor.setText ''
       @clearErrors()
+      @clearPackages()
       items_added = []
       items_removed = []
       @items.forEach (item) =>
@@ -75,8 +85,8 @@ module.exports =
           items_added.push item.name
         else
           items_removed.push item.name
-      @added.html(items_added.toString())
-      @removed.html(items_removed.toString())
+      @showPackages @added, items_added if items_added.length isnt 0
+      @showPackages @removed, items_removed if items_removed.length isnt 0
 
       @panel ?= atom.workspace.addModalPanel(item: this)
       @panel.show()
