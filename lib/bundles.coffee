@@ -76,7 +76,7 @@ module.exports =
         @setData()
 
     replaceBundle: (oldname, name, packages) ->
-      if @data[oldname]? and not @data[name]?
+      if (oldname is name and @data[oldname]?) or (@data[oldname]? and not @data[name]?)
         delete @data[oldname]
         @data[name] = new Bundle({packages})
         @setData()

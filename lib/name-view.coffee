@@ -45,7 +45,7 @@ module.exports =
       event.stopPropagation()
 
     back: (event) =>
-      @backCallback @items
+      @backCallback @oldname, @items
       @cancel event
 
     accept: (event) =>
@@ -56,11 +56,11 @@ module.exports =
           @find('#name-error-used').removeClass('hidden')
       else
         @cancel event
-        @confirmCallback @nameEditor.getText(), @items
+        @confirmCallback @oldname, @nameEditor.getText(), @items
 
     validInput: ->
       @clearErrors()
-      @nameEditor.getText() isnt '' and not @bundles.getBundle(@nameEditor.getText())?
+      @nameEditor.getText() isnt '' and (@oldname? or not @bundles.getBundle(@nameEditor.getText())?)
 
     clearErrors: ->
       @find('#name-error-none').addClass('hidden')
@@ -74,8 +74,11 @@ module.exports =
       div.removeClass('hidden')
       div.html(packages.toString())
 
-    show: (@bundles, @items, {@confirmCallback, @backCallback}) ->
-      @nameEditor.setText ''
+    show: (@bundles, @oldname, @items, {@confirmCallback, @backCallback}) ->
+      if @oldname?
+        @nameEditor.setText @oldname
+      else
+        @nameEditor.setText ''
       @clearErrors()
       @clearPackages()
       items_added = []

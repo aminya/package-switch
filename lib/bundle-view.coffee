@@ -8,7 +8,7 @@ module.exports =
     viewForItem: ({name, action}) ->
       $$ ->
         @li =>
-          @div class:"icon icon-diff-#{action}", name
+          @div class:"status-#{action} icon icon-diff-#{action}", name
 
     confirmed: ->
       if @isDisabled()

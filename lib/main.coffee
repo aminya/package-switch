@@ -63,7 +63,9 @@ module.exports =
 
   toggle: (opposite = false)->
     @createBundlesView()
-    @bundlesview.show(@bundles.getBundles(), (bundle) => @toggleCallback(opposite, bundle))
+    @bundlesview.show(@bundles.getBundles(), (bundle) =>
+      @toggleCallback(opposite, bundle)
+    , opposite)
 
   remove: ->
     @createBundlesView()
@@ -71,9 +73,12 @@ module.exports =
 
   createCallback: (oldname, items) ->
     @createNameView()
-    @nameview.show(@bundles, items, {confirmCallback: (name, packages) =>
+    @nameview.show(@bundles, oldname, items, {confirmCallback: (oldname, name, packages) =>
       @nameCallback(oldname, name, packages)
-    , backCallback: (_items) => @create(_items)})
+    , backCallback: (oldname, _items) => @create({
+        name: oldname
+        packages: _items
+      })})
 
   nameCallback: (oldname, name, packages) ->
     if oldname?
@@ -88,5 +93,3 @@ module.exports =
   edit: ->
     @createBundlesView()
     @bundlesview.show(@bundles.getBundles(), (bundle) => @create(bundle))
-
-  #remove: ->

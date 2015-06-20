@@ -22,7 +22,7 @@ module.exports =
     cancelled: ->
       @panel?.hide()
 
-    show: (bundles, @cb) ->
+    show: (bundles, @cb, opposite = false) ->
       @panel ?= atom.workspace.addModalPanel(item: this)
       @panel.show()
 
@@ -32,10 +32,16 @@ module.exports =
           removed: []
         }
         for p in bundle.packages
-          if p.action is 'added'
-            bundle.actions.added.push p.name
+          if opposite
+            if p.action is 'removed'
+              bundle.actions.added.push p.name
+            else
+              bundle.actions.removed.push p.name
           else
-            bundle.actions.removed.push p.name
+            if p.action is 'added'
+              bundle.actions.added.push p.name
+            else
+              bundle.actions.removed.push p.name
         bundles[index] = bundle
       @setItems bundles
       @focusFilterEditor()
