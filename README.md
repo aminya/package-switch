@@ -26,7 +26,8 @@ package-switch
   * `package-switch:stop-bundle` does the opposite of `package-switch:start-bundle`
 
 ### Save and restore package states
-You may want to enable as few packages at startup as possible in order to reduce Atom's startup time
+You may want to enable as few packages at startup as possible in order to reduce Atom's startup time.
+
 1. Disable all packages that you do <b>not</b> want to activate when Atom starts
 2. Go to package-switch settings
 3. Enable "Save and restore packages"
