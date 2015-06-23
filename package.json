@@ -8,15 +8,6 @@
     "switch",
     "bundle"
   ],
-  "activationCommands": {
-    "atom-workspace": [
-      "package-switch:start-bundle",
-      "package-switch:stop-bundle",
-      "package-switch:create",
-      "package-switch:edit",
-      "package-switch:remove"
-    ]
-  },
   "repository": "https://github.com/deprint/package-switch",
   "license": "MIT",
   "engines": {
