@@ -31,7 +31,6 @@ module.exports =
     @bundles ?= new @Bundles()
 
   activate: ->
-    @createBundlesInstance()
     @subscriptions = new CompositeDisposable
     @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:start-bundle': => @toggle()
     @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:stop-bundle': => @toggle(true)
@@ -43,6 +42,8 @@ module.exports =
 
   deactivate: ->
     @subscriptions.dispose()
+    if atom.config.get('package-switch.SaveRestore')
+      atom.config.set('core.disabledPackages', atom.config.get 'package-switch.SaveData')
     @bundleview?.destroy()
     @bundles?.destroy()
     @nameview?.destroy()
@@ -64,15 +65,19 @@ module.exports =
     @bundles.removeBundle bundle.name
 
   saveStates: ->
-    atom.config.set('package-switch.SaveData', atom.config.get('core.disabledPackages'))
+    atom.config.set('package-switch.SaveData', atom.config.get('core.disabledPackages').filter (item, index, array) ->
+      array.indexOf(item) == index
+    )
 
   toggle: (opposite = false)->
+    @createBundlesInstance()
     @createBundlesView()
     @bundlesview.show(@bundles.getBundles(), (bundle) =>
       @toggleCallback(opposite, bundle)
     , opposite)
 
   remove: ->
+    @createBundlesInstance()
     @createBundlesView()
     @bundlesview.show(@bundles.getBundles(), (bundle) => @removeCallback(bundle))
 
@@ -92,10 +97,12 @@ module.exports =
       @bundles.addBundle name, packages
 
   create: (bundle = null) ->
+    @createBundlesInstance()
     @createBundleView()
     @bundleview.show(bundle, (oldname, items) => @createCallback(oldname, items))
 
   edit: ->
+    @createBundlesInstance()
     @createBundlesView()
     @bundlesview.show(@bundles.getBundles(), (bundle) => @create(bundle))
 
