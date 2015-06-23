@@ -39,6 +39,8 @@ module.exports =
     @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:edit': => @edit()
     @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:remove': => @remove()
 
+    @subscriptions.add atom.config.observe('package-switch.SaveRestore', (value) => @saveStates() if value)
+
   deactivate: ->
     @subscriptions.dispose()
     @bundleview?.destroy()
@@ -60,6 +62,9 @@ module.exports =
 
   removeCallback: (bundle) ->
     @bundles.removeBundle bundle.name
+
+  saveStates: ->
+    atom.config.set('package-switch.SaveData', atom.config.get('core.disabledPackages'))
 
   toggle: (opposite = false)->
     @createBundlesView()
@@ -93,3 +98,15 @@ module.exports =
   edit: ->
     @createBundlesView()
     @bundlesview.show(@bundles.getBundles(), (bundle) => @create(bundle))
+
+  config:
+    SaveRestore:
+      title: 'Save and restore packages'
+      description: 'Restore package states when deactivating this package (e.g. when closing Atom)'
+      type: 'boolean'
+      default: false
+    SaveData:
+      title: 'Package States'
+      description: 'Array of packages to disable when deactivating this package'
+      type: 'array'
+      default: []

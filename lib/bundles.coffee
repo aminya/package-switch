@@ -26,6 +26,8 @@ module.exports =
     destroy: ->
       @watcher?.close()
       @emitter.dispose()
+      if atom.config.get('package-switch.SaveRestore')
+        atom.config.set('core.disabledPackages', atom.config.get 'package-switch.SaveData')
       @data = {}
 
     reload: (event,filename) =>
