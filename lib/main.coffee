@@ -38,7 +38,7 @@ module.exports =
     @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:edit': => @edit()
     @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:remove': => @remove()
 
-    @subscriptions.add atom.config.observe('package-switch.SaveRestore', (value) => @saveStates() if value)
+    @subscriptions.add atom.config.onDidChange('package-switch.SaveRestore', ({newValue}) => @saveStates() if newValue)
 
   deactivate: ->
     @subscriptions.dispose()
