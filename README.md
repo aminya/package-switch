@@ -2,8 +2,13 @@ package-switch
 ==============
 [![Build Status](https://travis-ci.org/deprint/package-switch.svg)](https://travis-ci.org/deprint/package-switch) [![Dependency Status](https://david-dm.org/deprint/package-switch.svg)](https://david-dm.org/deprint/package-switch) [![apm](https://img.shields.io/apm/dm/package-switch.svg)](https://github.com/deprint/package-switch) [![apm](https://img.shields.io/apm/v/package-switch.svg)](https://github.com/deprint/package-switch)
 
-## Put packages into "Bundles" and enable/disable them all at once
+## Easy package activation/deactivation
 ![package-switch-2](https://cloud.githubusercontent.com/assets/7817714/8269467/947642ce-17a9-11e5-8602-3a1de749edd1.png)
+
+## Features
+* Enable/disable packages without having to navigate settings-view
+* Put multiple packages into `Bundles` to enable/disable them all at once
+* Save and restore package states to save start-up time
 
 ## Usage
 ### Create a Bundle
@@ -18,12 +23,12 @@ package-switch
 ![package-switch-name](https://cloud.githubusercontent.com/assets/7817714/8269546/d4a422ae-17ad-11e5-8384-8a9b72a9fd92.png)
 5. Press `Enter` to create the bundle
 
-### Execute a Bundle
-1. Run `package-switch:start-bundle` or `package-switch:stop-bundle`
-2. Select the Bundle
+### Execute a Bundle/Package
+1. Run `package-switch:start-packages` or `package-switch:stop-packages`
+2. Select the Bundle/Package
   * Added (`+`) packages will be enabled
   * Removed (`-`) packages will be disabled
-  * `package-switch:stop-bundle` does the opposite of `package-switch:start-bundle`
+  * `package-switch:stop-packages` does the opposite of `package-switch:start-packages`
 
 ### Save and restore package states
 You may want to enable as few packages at startup as possible in order to reduce Atom's startup time.

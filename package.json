@@ -2,10 +2,9 @@
   "name": "package-switch",
   "main": "lib/main",
   "version": "0.2.1",
-  "description": "Put packages into \"bundles\" and enable/disable them all at once",
+  "description": "Easy package activation/deactivation",
   "keywords": [
     "package",
-    "switch",
     "bundle"
   ],
   "repository": "https://github.com/deprint/package-switch",
