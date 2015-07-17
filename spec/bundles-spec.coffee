@@ -24,6 +24,9 @@ describe 'Bundles', ->
     it 'creates/loads the project file', ->
       expect(bundles.emitter).toBeDefined()
 
+    it 'loads a package list', ->
+      expect(bundles.single_bundles).toBeDefined()
+
   describe 'When adding a bundle with a name that already exists', ->
     it 'does not add the bundle', ->
       bundles.addBundle 'test-bundle', [
@@ -65,3 +68,11 @@ describe 'Bundles', ->
       bundles.getBundle('test-bundle').execute()
       expect(atom.packages.enablePackage).toHaveBeenCalledWith 'test1'
       expect(atom.packages.disablePackage).toHaveBeenCalledWith 'test2'
+
+  describe 'On ::getBundles without singles flag', ->
+    it 'only shows bundles', ->
+      expect(bundles.getBundles(false).length).toBe 1
+
+  describe 'On ::getBundles with singles flag', ->
+    it 'shows bundles and packages', ->
+      expect(bundles.getBundles(true).length).not.toBe 1

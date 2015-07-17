@@ -5,12 +5,12 @@
       'label': 'Package Switch'
       'submenu': [
         {
-          'label': 'Start Bundle'
-          'command': 'package-switch:start-bundle'
+          'label': 'Start Packages'
+          'command': 'package-switch:start-packages'
         },
         {
           'label': 'Stop Bundle'
-          'command': 'package-switch:stop-bundle'
+          'command': 'package-switch:stop-packages'
         },
         {
           'label': 'Create bundle'

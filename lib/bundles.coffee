@@ -97,7 +97,7 @@ module.exports =
 
     getBundle: (bundle) ->
       if @data[bundle]?
-        @data[bundle]?
+        @data[bundle]
       else
         @single_bundles[bundle]
 

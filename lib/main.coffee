@@ -32,8 +32,8 @@ module.exports =
 
   activate: ->
     @subscriptions = new CompositeDisposable
-    @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:start-bundle': => @toggle()
-    @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:stop-bundle': => @toggle(true)
+    @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:start-packages': => @toggle()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:stop-packages': => @toggle(true)
     @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:create': => @create()
     @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:edit': => @edit()
     @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:remove': => @remove()
