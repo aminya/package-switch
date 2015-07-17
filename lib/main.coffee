@@ -79,7 +79,7 @@ module.exports =
   remove: ->
     @createBundlesInstance()
     @createBundlesView()
-    @bundlesview.show(@bundles.getBundles(), (bundle) => @removeCallback(bundle))
+    @bundlesview.show(@bundles.getBundles(false), (bundle) => @removeCallback(bundle))
 
   createCallback: (oldname, items) ->
     @createNameView()
@@ -104,7 +104,7 @@ module.exports =
   edit: ->
     @createBundlesInstance()
     @createBundlesView()
-    @bundlesview.show(@bundles.getBundles(), (bundle) => @create(bundle))
+    @bundlesview.show(@bundles.getBundles(false), (bundle) => @create(bundle))
 
   config:
     SaveRestore:

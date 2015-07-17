@@ -8,6 +8,7 @@ module.exports =
   class Bundles
     filename: null
     data: {}
+    single_bundles: {}
     writing: false
 
     constructor: (arg) ->
@@ -21,12 +22,14 @@ module.exports =
         @watcher = fs.watch @filename, @reload
       else
         @data = {}
+      @getPackages()
       @emitter = new Emitter
 
     destroy: ->
       @watcher?.close()
       @emitter.dispose()
       @data = {}
+      @single_bundles = {}
 
     reload: (event,filename) =>
       if not @writing
@@ -48,6 +51,10 @@ module.exports =
           @data[key] = new Bundle(data[key])
       catch error
         @notify 'Error while reading settings from file'
+
+    getPackages: ->
+      atom.packages.getAvailablePackageNames().forEach (name) =>
+        @single_bundles[name] = new Bundle(packages: [name: name, action: 'added'])
 
     setData: (emit = true)=>
       if @filename?
@@ -89,13 +96,22 @@ module.exports =
       @setData()
 
     getBundle: (bundle) ->
-      @data[bundle]
+      if @data[bundle]?
+        @data[bundle]?
+      else
+        @single_bundles[bundle]
 
-    getBundles: ->
+    getBundles: (singles = true)->
       p = []
       Object.keys(@data).forEach (key) =>
         p.push {
           name: key
           packages: @data[key].packages
         }
+      return p unless singles
+      Object.keys(@single_bundles).forEach (key) =>
+        p.push {
+          name: key
+          packages: @single_bundles[key].packages
+        } if not @data[key]?
       p
