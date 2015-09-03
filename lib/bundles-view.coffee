@@ -1,4 +1,4 @@
-{$,$$,SelectListView} = require 'atom-space-pen-views'
+{$, $$, SelectListView} = require 'atom-space-pen-views'
 
 module.exports =
   class BundlesView extends SelectListView
@@ -7,13 +7,13 @@ module.exports =
 
     viewForItem: ({name, actions}) ->
       $$ ->
-        @li class:'two-lines', =>
-          @div class:'primary-line', name
-          @div class:'secondary-line', =>
-            @div class:'added', =>
-              @span class:'icon icon-diff-added', actions.added.toString() if actions.added.length isnt 0
-            @div class:'removed', =>
-              @span class:'icon icon-diff-removed', actions.removed.toString() if actions.removed.length isnt 0
+        @li class: 'two-lines', =>
+          @div class: 'primary-line', name
+          @div class: 'secondary-line', =>
+            @div class: 'added', =>
+              @span class: 'icon icon-diff-added', actions.added.toString() if actions.added.length isnt 0
+            @div class: 'removed', =>
+              @span class: 'icon icon-diff-removed', actions.removed.toString() if actions.removed.length isnt 0
 
     confirmed: (bundle) ->
       @cancel()
@@ -26,7 +26,7 @@ module.exports =
       @panel ?= atom.workspace.addModalPanel(item: this)
       @panel.show()
 
-      bundles.forEach (bundle, index) =>
+      bundles.forEach (bundle, index) ->
         bundle['actions'] = {
           added: []
           removed: []

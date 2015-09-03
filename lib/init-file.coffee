@@ -1,8 +1,13 @@
-module.exports =
-  class Bundle
-    packages: []
+CSON = require 'season'
 
-    constructor: ({@packages}) ->
+module.exports =
+  class InitFile
+
+    constructor: (@name, @filepath) ->
+      try
+        @packages = CSON.readFileSync @filepath
+      catch error
+        @packages = []
 
     execute: (opposite) ->
       for p in @packages

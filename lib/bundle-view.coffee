@@ -1,4 +1,4 @@
-{$,$$,SelectListView} = require 'atom-space-pen-views'
+{$, $$, SelectListView} = require 'atom-space-pen-views'
 
 module.exports =
   class BundleView extends SelectListView
@@ -8,7 +8,7 @@ module.exports =
     viewForItem: ({name, action}) ->
       $$ ->
         @li =>
-          @div class:"status-#{action} icon icon-diff-#{action}", name
+          @div class: "status-#{action} icon icon-diff-#{action}", name
 
     confirmed: ->
       if @isDisabled()
@@ -20,7 +20,7 @@ module.exports =
 
     cancel: ->
       items = []
-      @items.forEach (item) =>
+      @items.forEach (item) ->
         if item.action isnt 'ignored'
           items.push item
       super
@@ -40,18 +40,18 @@ module.exports =
         actions = []
 
       packages = []
-      atom.packages.getAvailablePackageNames().forEach (name) =>
-        action = actions.filter (item) =>
+      atom.packages.getAvailablePackageNames().forEach (name) ->
+        action = actions.filter (item) ->
           item.name is name
         action = action[0]?.action
         if not action?
           action = 'ignored'
-        packages.push {name,action}
+        packages.push {name, action}
 
       @setItems packages
       @focusFilterEditor()
 
-    populateList: (view = null)->
+    populateList: (view = null) ->
       return super unless view
       new_view = $(@viewForItem view.data('select-list-item'))
       new_view.data('select-list-item', view.data('select-list-item'))

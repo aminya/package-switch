@@ -31,7 +31,7 @@ module.exports =
       @data = {}
       @single_bundles = {}
 
-    reload: (event,filename) =>
+    reload: (event, filename) =>
       if not @writing
         @getData() if @filename?
         @emitter.emit 'file-change'
@@ -39,7 +39,7 @@ module.exports =
         @writing = false
 
     getFileName: ->
-      @filename = path.join(path.dirname(atom.config.getUserConfigPath()),"package-switch.bundles")
+      @filename = path.join(path.dirname(atom.config.getUserConfigPath()), 'package-switch.bundles')
 
     onFileChange: (callback) ->
       @emitter.on 'file-change', callback
@@ -56,7 +56,7 @@ module.exports =
       atom.packages.getAvailablePackageNames().forEach (name) =>
         @single_bundles[name] = new Bundle(packages: [name: name, action: 'added'])
 
-    setData: (emit = true)=>
+    setData: (emit = true) =>
       if @filename?
         try
           @writing = true
@@ -101,7 +101,7 @@ module.exports =
       else
         @single_bundles[bundle]
 
-    getBundles: (singles = true)->
+    getBundles: (singles = true) ->
       p = []
       Object.keys(@data).forEach (key) =>
         p.push {

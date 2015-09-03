@@ -31,6 +31,7 @@ module.exports =
     @bundles ?= new @Bundles()
 
   activate: ->
+    @loadProjectConfigs()
     @subscriptions = new CompositeDisposable
     @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:start-packages': => @toggle()
     @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:stop-packages': => @toggle(true)
@@ -58,6 +59,15 @@ module.exports =
     @BundlesView = null
     @BundleView = null
 
+  loadProjectConfigs: ->
+    if (p = atom.project.getPaths()).length is 1
+      fs = require 'fs'
+      path = require 'path'
+      fs.exists (f = path.join(p[0], '.package-switch.cson')), (exists) ->
+        return unless exists
+        InitFile = require './init-file'
+        new InitFile(path.dirname(p[0]), f).execute(false)
+
   toggleCallback: (opposite, bundle) ->
     @bundles.getBundle(bundle.name).execute(opposite)
 
@@ -66,10 +76,10 @@ module.exports =
 
   saveStates: ->
     atom.config.set('package-switch.SaveData', atom.config.get('core.disabledPackages').filter (item, index, array) ->
-      array.indexOf(item) == index
+      array.indexOf(item) is index
     )
 
-  toggle: (opposite = false)->
+  toggle: (opposite = false) ->
     @createBundlesInstance()
     @createBundlesView()
     @bundlesview.show(@bundles.getBundles(), (bundle) =>
@@ -86,9 +96,9 @@ module.exports =
     @nameview.show(@bundles, oldname, items, {confirmCallback: (oldname, name, packages) =>
       @nameCallback(oldname, name, packages)
     , backCallback: (oldname, _items) => @create({
-        name: oldname
-        packages: _items
-      })})
+      name: oldname
+      packages: _items
+    })})
 
   nameCallback: (oldname, name, packages) ->
     if oldname?

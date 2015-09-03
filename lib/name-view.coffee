@@ -1,4 +1,4 @@
-{$,$$,View, TextEditorView} = require 'atom-space-pen-views'
+{$, $$, View, TextEditorView} = require 'atom-space-pen-views'
 {CompositeDisposable} = require 'atom'
 
 module.exports =
@@ -6,20 +6,20 @@ module.exports =
     nameEditor: null
 
     @content: ->
-      @div class:'nameview', =>
-        @div class:'block', =>
+      @div class: 'nameview', =>
+        @div class: 'block', =>
           @label =>
-            @div class:'bundle-name', 'Bundle Name'
-          @subview 'bundle_name', new TextEditorView(mini:true)
-          @div id:'name-error-none' ,class:'error hidden', 'This field cannot be empty'
-          @div id:'name-error-used' ,class:'error hidden', 'Name already used'
-        @div class:'block text-subtle', =>
-          @div class:'added icon icon-diff-added hidden', outlet:'added'
-          @div class:'removed icon icon-diff-removed hidden', outlet: 'removed'
-        @div class:'buttons', =>
+            @div class: 'bundle-name', 'Bundle Name'
+          @subview 'bundle_name', new TextEditorView(mini: true)
+          @div id: 'name-error-none', class: 'error hidden', 'This field cannot be empty'
+          @div id: 'name-error-used', class: 'error hidden', 'Name already used'
+        @div class: 'block text-subtle', =>
+          @div class: 'added icon icon-diff-added hidden', outlet: 'added'
+          @div class: 'removed icon icon-diff-removed hidden', outlet: 'removed'
+        @div class: 'buttons', =>
           @div =>
             @div class: 'btn btn-error icon icon-x inline-block-tight', 'Cancel'
-            @div class:' btn btn-error icon icon-arrow-left inline-block-tight', 'Back'
+            @div class: ' btn btn-error icon icon-arrow-left inline-block-tight', 'Back'
           @div class: 'btn btn-primary icon icon-check inline-block-tight', 'Accept'
 
     initialize: ->
@@ -83,7 +83,7 @@ module.exports =
       @clearPackages()
       items_added = []
       items_removed = []
-      @items.forEach (item) =>
+      @items.forEach (item) ->
         if item.action is 'added'
           items_added.push item.name
         else
