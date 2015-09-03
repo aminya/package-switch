@@ -4,11 +4,14 @@ fs = require 'fs'
 {Emitter} = require 'atom'
 CSON = require 'season'
 
+InitFile = null
+
 module.exports =
   class Bundles
     filename: null
     data: {}
     single_bundles: {}
+    project_bundles: {}
     writing: false
 
     constructor: (arg) ->
@@ -23,6 +26,7 @@ module.exports =
       else
         @data = {}
       @getPackages()
+      @project_bundles = {}
       @emitter = new Emitter
 
     destroy: ->
@@ -30,6 +34,7 @@ module.exports =
       @emitter.dispose()
       @data = {}
       @single_bundles = {}
+      @project_bundles = {}
 
     reload: (event, filename) =>
       if not @writing
@@ -96,19 +101,31 @@ module.exports =
       @setData()
 
     getBundle: (bundle) ->
-      if @data[bundle]?
+      if (_bundle = @project_bundles[bundle])?
+        _bundle
+      else if @data[bundle]?
         @data[bundle]
       else
         @single_bundles[bundle]
 
     getBundles: (singles = true) ->
       p = []
+      @project_bundles = {}
       Object.keys(@data).forEach (key) =>
         p.push {
           name: key
           packages: @data[key].packages
         }
       return p unless singles
+      for project in atom.project.getPaths()
+        if fs.existsSync (f = path.join(project, '.package-switch.cson'))
+          InitFile ?= require './init-file'
+          if (i = (new InitFile((d = path.basename(project)), f))).packages.length isnt 0
+            p.push {
+              name: "Project: #{d}"
+              packages: i.packages
+            }
+            @project_bundles["Project: #{d}"] = i
       Object.keys(@single_bundles).forEach (key) =>
         p.push {
           name: key

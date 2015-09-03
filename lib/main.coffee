@@ -66,10 +66,10 @@ module.exports =
       fs.exists (f = path.join(p[0], '.package-switch.cson')), (exists) ->
         return unless exists
         InitFile = require './init-file'
-        new InitFile(path.dirname(p[0]), f).execute(false)
+        new InitFile(path.basename(p[0]), f).execute(false)
 
   toggleCallback: (opposite, bundle) ->
-    @bundles.getBundle(bundle.name).execute(opposite)
+    @bundles.getBundle(bundle.name)?.execute(opposite)
 
   removeCallback: (bundle) ->
     @bundles.removeBundle bundle.name
