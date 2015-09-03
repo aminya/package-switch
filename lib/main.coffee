@@ -1,4 +1,6 @@
 {CompositeDisposable} = require 'atom'
+fs = null
+path = null
 
 module.exports =
 
@@ -13,6 +15,9 @@ module.exports =
 
   NameView: null
   nameview: null
+
+  InitFileView: null
+  InitFile: null
 
   createBundleView: ->
     @BundleView ?= require './bundle-view'
@@ -41,6 +46,14 @@ module.exports =
 
     @subscriptions.add atom.config.onDidChange('package-switch.SaveRestore', ({newValue}) => @saveStates() if newValue)
 
+    @subscriptions.add atom.workspace.addOpener (uritoopen) ->
+      if uritoopen.endsWith('.package-switch.cson')
+        fs ?= require 'fs'
+        path ?= require 'path'
+        @InitFile ?= require './init-file'
+        @InitFileView ?= require './init-file-view'
+        @initfileview = new @InitFileView(uri: uritoopen, file: new @InitFile(path.dirname(uritoopen), uritoopen))
+
   deactivate: ->
     @subscriptions.dispose()
     if atom.config.get('package-switch.SaveRestore')
@@ -58,15 +71,19 @@ module.exports =
     @NameView = null
     @BundlesView = null
     @BundleView = null
+    @initfileview?.destroy()
+    @initfileview = null
+    @InitFileView = null
+    @InitFile = null
 
   loadProjectConfigs: ->
     if (p = atom.project.getPaths()).length is 1
-      fs = require 'fs'
-      path = require 'path'
+      fs ?= require 'fs'
+      path ?= require 'path'
       fs.exists (f = path.join(p[0], '.package-switch.cson')), (exists) ->
         return unless exists
-        InitFile = require './init-file'
-        new InitFile(path.basename(p[0]), f).execute(false)
+        @InitFile ?= require './init-file'
+        new @InitFile(path.basename(p[0]), f).execute(false)
 
   toggleCallback: (opposite, bundle) ->
     @bundles.getBundle(bundle.name)?.execute(opposite)

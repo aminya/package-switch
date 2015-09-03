@@ -21,3 +21,7 @@ module.exports =
             atom.packages.enablePackage(p.name)
           else
             atom.packages.disablePackage(p.name)
+
+    save: ->
+      try
+        CSON.writeFileSync @filepath, @packages
