@@ -6,6 +6,7 @@ module.exports =
     constructor: (@name, @filepath) ->
       try
         @packages = CSON.readFileSync @filepath
+        @packages = [] if not @packages?
       catch error
         @packages = []
 

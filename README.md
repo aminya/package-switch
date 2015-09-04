@@ -8,6 +8,8 @@ package-switch
 ## Features
 * Enable/disable packages without having to navigate settings-view
 * Put multiple packages into `Bundles` to enable/disable them all at once
+* Store local bundles in `.package-switch.cson` files
+* Auto-execute local bundle if only one project is active
 * Save and restore package states to save start-up time
 
 ## Usage
