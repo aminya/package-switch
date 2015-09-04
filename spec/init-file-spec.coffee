@@ -26,7 +26,7 @@ describe 'Init File', ->
       initFileView?.destroy()
 
     it 'has loaded all packages', ->
-      expect(initFileView.package_list.children().length).toBe 2
+      expect(initFileView.package_list.children().length).toBe atom.packages.getAvailablePackageNames().length
 
     describe 'on destroy', ->
 

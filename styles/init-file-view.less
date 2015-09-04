@@ -1,0 +1,42 @@
+@import "ui-variables";
+
+.package-switch {
+  -webkit-user-select: none;
+
+  .inset-panel {
+    max-height: 100%;
+    overflow-y: auto;
+  }
+
+  .btn-group {
+    margin-left: @component-padding;
+  }
+
+  .package {
+    cursor: pointer;
+    height: @tab-height;
+    border-width: 1px;
+    border-color: @base-border-color;
+    border-style: solid;
+    display: table;
+    width: 100%;
+    padding: 0 0 0 @component-padding;
+
+    .item {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .icon-diff-added {
+      color: @text-color-success;
+      white-space: normal;
+    }
+
+    .icon-diff-removed {
+      color: @text-color-error;
+      white-space: normal;
+    }
+
+  }
+
+}
