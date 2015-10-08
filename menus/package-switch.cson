@@ -23,6 +23,10 @@
         {
           'label': 'Remove bundle'
           'command': 'package-switch:remove'
+        },
+        {
+          'label': 'Open global config file'
+          'command': 'package-switch:open-global'
         }
       ]
     ]

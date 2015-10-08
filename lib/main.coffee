@@ -43,7 +43,9 @@ module.exports =
     @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:create': => @create()
     @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:edit': => @edit()
     @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:remove': => @remove()
-
+    @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:open-global': ->
+      path ?= require 'path'
+      atom.workspace.open(path.join(path.dirname(atom.config.getUserConfigPath()), 'package-switch.bundles'))
     @subscriptions.add atom.config.onDidChange('package-switch.SaveRestore', ({newValue}) => @saveStates() if newValue)
 
     @subscriptions.add atom.workspace.addOpener (uritoopen) ->
