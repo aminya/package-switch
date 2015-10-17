@@ -57,14 +57,12 @@ module.exports =
         @initfileview = new @InitFileView(uri: uritoopen, file: new @InitFile(path.dirname(uritoopen), uritoopen))
 
   deactivate: ->
+    if atom.config.get 'package-switch.SaveRestore'
+      atom.config.set 'core.disabledPackages', atom.config.get('package-switch.SaveData')
+      atom.config.save()
     @subscriptions.dispose()
-    if atom.config.get('package-switch.SaveRestore')
-      atom.config.set('core.disabledPackages', atom.config.get 'package-switch.SaveData')
-    @bundleview?.destroy()
     @bundles?.destroy()
     @nameview?.destroy()
-    @bundlesview?.destroy()
-    @bundleview?.destroy()
     @bundles = null
     @nameview = null
     @bundlesview = null
