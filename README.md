@@ -32,7 +32,11 @@ package-switch
   * Removed (`-`) packages will be disabled
   * `package-switch:stop-packages` does the opposite of `package-switch:start-packages`
 
-### Save and restore package states
+### "Auto-enable" packages
+To auto-enable packages you have to create a local configuration file called `.package-switch.cson` in your project's root folder.
+This config file can store one bundle that will be executed when Atom starts in the project folder.
+
+### "Auto-disable" packages
 You may want to enable as few packages at startup as possible in order to reduce Atom's startup time.
 
 1. Disable all packages that you do <b>not</b> want to activate when Atom starts
@@ -43,8 +47,9 @@ You may want to enable as few packages at startup as possible in order to reduce
 When you now deactivate this package (e.g. by closing Atom) the configuration in "Save Data" will be loaded and when you start Atom these packages will be disabled.
 
 ## Debugging
-Bundles are stored in `~/.atom/package-switch.bundles` or your OS-equivalent.
+Global bundles are stored in `~/.atom/package-switch.bundles` or your OS-equivalent.
 Include this file in bug reports if you think the bug is in this file.
+Local configuration files can be opened as a text editor by right-clicking the file in tree-view and clicking on `Open as Text`.
 
 ## Roadmap
 * Bug fixes, etc.

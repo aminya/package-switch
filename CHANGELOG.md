@@ -1,6 +1,7 @@
 ## 0.4.1 - Edit config files manually
 * `package-switch:open-global` opens the global config file
-* Added button in local config file ui to open file as an editor
+* Added context menu command for config files in tree-view to open them as text editors
+* Fix save and restore
 
 ## 0.4.0 - Local bundles
 * A `.package-switch.cson` in a project's root folder can now store a local bundle.
