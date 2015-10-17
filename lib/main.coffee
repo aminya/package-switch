@@ -85,7 +85,7 @@ module.exports =
       fs.exists (f = path.join(p[0], '.package-switch.cson')), (exists) ->
         return unless exists
         @InitFile ?= require './init-file'
-        new @InitFile(path.basename(p[0]), f).execute(false)
+        setTimeout (=> new @InitFile(path.basename(p[0]), f).execute(false)), atom.config.get('package-switch.DeferInitialization')
 
   toggleCallback: (opposite, bundle) ->
     @bundles.getBundle(bundle.name)?.execute(opposite)
@@ -146,3 +146,8 @@ module.exports =
       description: 'Array of packages to disable when deactivating this package'
       type: 'array'
       default: []
+    DeferInitialization:
+      title: 'Activation Timeout'
+      description: 'Number of milliseconds to defer execution of local bundles'
+      type: 'integer'
+      default: 100
