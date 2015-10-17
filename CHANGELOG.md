@@ -1,6 +1,7 @@
 ## 0.4.1 - Edit config files manually
 * `package-switch:open-global` opens the global config file
 * Added context menu command for config files in tree-view to open them as text editors
+* Add options to invert save data and thus disable EVERYTHING except for a few packages
 * Fix save and restore
 
 ## 0.4.0 - Local bundles

@@ -60,7 +60,18 @@ module.exports =
 
   deactivate: ->
     if atom.config.get 'package-switch.SaveRestore'
-      atom.config.set 'core.disabledPackages', atom.config.get('package-switch.SaveData')
+      if atom.config.get 'package-switch.InvertSaveData'
+        lp = atom.config.get 'package-switch.DisableLanguagePackages'
+        saveData = atom.config.get 'package-switch.SaveData'
+        disabledPackages = []
+        for p in atom.packages.getAvailablePackageNames()
+          continue if p is 'package-switch'
+          continue if p in saveData
+          continue if lp and p.startsWith('language-')
+          disabledPackages.push p
+        atom.config.set 'core.disabledPackages', disabledPackages
+      else
+        atom.config.set 'core.disabledPackages', atom.config.get('package-switch.SaveData')
       atom.config.save()
     @subscriptions.dispose()
     @bundles?.destroy()
@@ -83,9 +94,18 @@ module.exports =
       fs ?= require 'fs'
       path ?= require 'path'
       fs.exists (f = path.join(p[0], '.package-switch.cson')), (exists) ->
-        return unless exists
+        unless exists
+          atom.packages.activatePackage('tree-view')
+          atom.packages.activatePackage('tabs')
+          atom.packages.activatePackage('settings-view')
+          return atom.packages.activatePackage('command-palette')
         @InitFile ?= require './init-file'
         setTimeout (=> new @InitFile(path.basename(p[0]), f).execute(false)), atom.config.get('package-switch.DeferInitialization')
+    else
+      atom.packages.activatePackage('tree-view')
+      atom.packages.activatePackage('tabs')
+      atom.packages.activatePackage('settings-view')
+      atom.packages.activatePackage('command-palette')
 
   toggleCallback: (opposite, bundle) ->
     @bundles.getBundle(bundle.name)?.execute(opposite)
@@ -151,3 +171,13 @@ module.exports =
       description: 'Number of milliseconds to defer execution of local bundles'
       type: 'integer'
       default: 100
+    InvertSaveData:
+      title: 'Invert Package States'
+      description: 'Disable ALL packages EXCEPT those in "Package States". This includes core packages like tabs, tree-view and settings-view!!!'
+      type: 'boolean'
+      default: false
+    DisableLanguagePackages:
+      title: 'Do not disable Language Packages'
+      description: 'Do not disable language packages. Only if "Invert Package States" is checked'
+      type: 'boolean'
+      default: false

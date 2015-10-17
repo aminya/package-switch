@@ -37,14 +37,12 @@ To auto-enable packages you have to create a local configuration file called `.p
 This config file can store one bundle that will be executed when Atom starts in the project folder.
 
 ### "Auto-disable" packages
-You may want to enable as few packages at startup as possible in order to reduce Atom's startup time.
+You may want to enable as few packages at startup as possible in order to reduce Atom's startup time. When "Save and restore packages" is enabled, you can define a blacklist or whitelist for packages. By default, all entries in "Package States" will be disabled when you close Atom, which means that, when you restart, these packages will be disabled and not waste start-up time.
 
-1. Disable all packages that you do <b>not</b> want to activate when Atom starts
-2. Go to package-switch settings
-3. Enable "Save and restore packages"
-4. The "Save Data" field should now contain a list with all currently disabled packages
+You can invert "Package States" (and thus create a whitelist) by enabling "Invert Package States".
+__package-switch with a whitelist will disable ALL packages except those in "Package States", as well as `tree-view`, `settings-view`, `tabs` and `command-palette` if a local config file could not be found and `package-switch` itself (because just core Atom is pretty much unusable). If you provide a local config file then make sure that the important core modules stay enabled. It is also recommended to enable "Do not disable language packages", so you don't have to micro-manage every grammar.__
 
-When you now deactivate this package (e.g. by closing Atom) the configuration in "Save Data" will be loaded and when you start Atom these packages will be disabled.
+__A wrong whitelist configuration can render Atom unusable because even `atom --safe` adheres to this package's rules!!!!__
 
 ## Debugging
 Global bundles are stored in `~/.atom/package-switch.bundles` or your OS-equivalent.
