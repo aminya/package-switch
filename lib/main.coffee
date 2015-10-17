@@ -46,10 +46,12 @@ module.exports =
     @subscriptions.add atom.commands.add 'atom-workspace', 'package-switch:open-global': ->
       path ?= require 'path'
       atom.workspace.open(path.join(path.dirname(atom.config.getUserConfigPath()), 'package-switch.bundles'))
+    @subscriptions.add atom.commands.add '.tree-view .file .name[data-name$="\\.package-switch\\.cson"]', 'package-switch:open-local', ({target}) ->
+      atom.workspace.open(target.dataset.path, noopener: true)
     @subscriptions.add atom.config.onDidChange('package-switch.SaveRestore', ({newValue}) => @saveStates() if newValue)
 
-    @subscriptions.add atom.workspace.addOpener (uritoopen) ->
-      if uritoopen.endsWith('.package-switch.cson')
+    @subscriptions.add atom.workspace.addOpener (uritoopen, {noopener}) ->
+      if uritoopen.endsWith('.package-switch.cson') and not noopener?
         fs ?= require 'fs'
         path ?= require 'path'
         @InitFile ?= require './init-file'

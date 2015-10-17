@@ -32,3 +32,6 @@
     ]
   }
 ]
+'context-menu':
+  '.tree-view .file .name[data-name$="\\.package-switch\\.cson"]':
+    [{label: 'Open as Text', command: 'package-switch:open-local'}]
