@@ -4,10 +4,9 @@
  * DS207: Consider shorter variations of null checks
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
-let InitFile
 import CSON from "season"
 
-export default InitFile = class InitFile {
+export class InitFile {
   constructor(name, filepath) {
     this.name = name
     this.filepath = filepath
