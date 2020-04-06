@@ -9,6 +9,13 @@
   ],
   "repository": "https://github.com/deprint/package-switch",
   "license": "MIT",
+  "scripts": {
+    "typescript": "tsc -p ./src/tsconfig.json || echo done",
+    "prettier_src": "prettier --write ./src/**/*.ts",
+    "prettier_out": "prettier --write ./lib/**/*.js",
+    "build": "npm run typescript -s",
+    "lint": "eslint . --ext js,ts,coffee,json"
+  },
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
   },
