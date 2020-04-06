@@ -24,145 +24,141 @@ let nameview: null
 let InitFileView: null
 let InitFile: null
 
-export default {
-  createBundleView() {
-    if (BundleView == null) {
-      BundleView = require("./bundle-view")
-    }
-    return bundleview != null ? bundleview : (bundleview = new this.BundleView())
-  },
+function createBundleView() {
+  if (BundleView == null) {
+    BundleView = require("./bundle-view")
+  }
+  return bundleview != null ? bundleview : (bundleview = new BundleView())
+}
 
-  createBundlesView() {
-    if (BundlesView == null) {
-      BundlesView = require("./bundles-view")
-    }
-    return bundlesview != null ? bundlesview : (bundlesview = new BundlesView())
-  },
+function createBundlesView() {
+  if (BundlesView == null) {
+    BundlesView = require("./bundles-view")
+  }
+  return bundlesview != null ? bundlesview : (bundlesview = new BundlesView())
+}
 
-  createNameView() {
-    if (NameView == null) {
-      NameView = require("./name-view")
-    }
-    return nameview != null ? nameview : (nameview = new NameView())
-  },
+function createNameView() {
+  if (NameView == null) {
+    NameView = require("./name-view")
+  }
+  return nameview != null ? nameview : (nameview = new NameView())
+}
 
-  createBundlesInstance() {
-    if (Bundles == null) {
-      Bundles = require("./bundles")
+function createBundlesInstance() {
+  if (Bundles == null) {
+    Bundles = require("./bundles")
+  }
+  return bundles != null ? bundles : (bundles = new Bundles())
+}
+function loadProjectConfigs() {
+  let p
+  if ((p = atom.project.getPaths()).length === 1) {
+    let f
+    if (fs == null) {
+      fs = require("fs")
     }
-    return bundles != null ? bundles : (bundles = new Bundles())
-  },
-  loadProjectConfigs() {
-    let p
-    if ((p = atom.project.getPaths()).length === 1) {
-      let f
-      if (fs == null) {
-        fs = require("fs")
+    if (path == null) {
+      path = require("path")
+    }
+    return fs.exists((f = path.join(p[0], ".package-switch.cson")), function (exists) {
+      if (!exists) {
+        atom.packages.activatePackage("tree-view")
+        atom.packages.activatePackage("tabs")
+        atom.packages.activatePackage("settings-view")
+        return atom.packages.activatePackage("command-palette")
       }
-      if (path == null) {
-        path = require("path")
+      if (InitFile == null) {
+        InitFile = require("./init-file")
       }
-      return fs.exists((f = path.join(p[0], ".package-switch.cson")), function (exists) {
-        if (!exists) {
-          atom.packages.activatePackage("tree-view")
-          atom.packages.activatePackage("tabs")
-          atom.packages.activatePackage("settings-view")
-          return atom.packages.activatePackage("command-palette")
-        }
-        if (InitFile == null) {
-          InitFile = require("./init-file")
-        }
-        return setTimeout(
-          () => new InitFile(path.basename(p[0]), f).execute(false),
-          atom.config.get("package-switch.DeferInitialization")
-        )
-      })
-    } else {
-      atom.packages.activatePackage("tree-view")
-      atom.packages.activatePackage("tabs")
-      atom.packages.activatePackage("settings-view")
-      return atom.packages.activatePackage("command-palette")
-    }
-  },
-
-  toggleCallback(opposite, bundle) {
-    return __guard__(bundles.getBundle(bundle.name), (x) => x.execute(opposite))
-  },
-
-  removeCallback(bundle) {
-    return bundles.removeBundle(bundle.name)
-  },
-
-  saveStates() {
-    return atom.config.set(
-      "package-switch.SaveData",
-      atom.config.get("core.disabledPackages").filter((item, index, array) => array.indexOf(item) === index)
-    )
-  },
-
-  toggle(opposite = false) {
-    this.createBundlesInstance()
-    this.createBundlesView()
-    return bundlesview.show(
-      bundles.getBundles(),
-      (bundle) => {
-        return this.toggleCallback(opposite, bundle)
-      },
-      opposite
-    )
-  },
-
-  remove() {
-    this.createBundlesInstance()
-    this.createBundlesView()
-    return bundlesview.show(bundles.getBundles(false), (bundle) => this.removeCallback(bundle))
-  },
-
-  createCallback(oldname, items) {
-    this.createNameView()
-    return nameview.show(bundles, oldname, items, {
-      confirmCallback: (oldname, name, packages) => {
-        return this.nameCallback(oldname, name, packages)
-      },
-      backCallback: (oldname, _items) =>
-        this.create({
-          name: oldname,
-          packages: _items,
-        }),
+      return setTimeout(
+        () => new InitFile(path.basename(p[0]), f).execute(false),
+        atom.config.get("package-switch.DeferInitialization")
+      )
     })
-  },
+  } else {
+    atom.packages.activatePackage("tree-view")
+    atom.packages.activatePackage("tabs")
+    atom.packages.activatePackage("settings-view")
+    return atom.packages.activatePackage("command-palette")
+  }
+}
 
-  nameCallback(oldname, name, packages) {
-    if (oldname != null) {
-      return bundles.replaceBundle(oldname, name, packages)
-    } else {
-      return bundles.addBundle(name, packages)
-    }
-  },
+function toggleCallback(opposite, bundle) {
+  return __guard__(bundles.getBundle(bundle.name), (x) => x.execute(opposite))
+}
 
-  create(bundle = null) {
-    this.createBundlesInstance()
-    this.createBundleView()
-    return bundleview.show(bundle, (oldname, items) => this.createCallback(oldname, items))
-  },
+function removeCallback(bundle) {
+  return bundles.removeBundle(bundle.name)
+}
 
-  edit() {
-    this.createBundlesInstance()
-    this.createBundlesView()
-    return bundlesview.show(bundles.getBundles(false), (bundle) => this.create(bundle))
-  },
+function saveStates() {
+  return atom.config.set(
+    "package-switch.SaveData",
+    atom.config.get("core.disabledPackages").filter((item, index, array) => array.indexOf(item) === index)
+  )
+}
+
+function toggle(opposite = false) {
+  createBundlesInstance()
+  createBundlesView()
+  return bundlesview.show(
+    bundles.getBundles(),
+    (bundle) => {
+      return toggleCallback(opposite, bundle)
+    },
+    opposite
+  )
+}
+
+function remove() {
+  createBundlesInstance()
+  createBundlesView()
+  return bundlesview.show(bundles.getBundles(false), (bundle) => removeCallback(bundle))
+}
+
+function createCallback(oldname, items) {
+  createNameView()
+  return nameview.show(bundles, oldname, items, {
+    confirmCallback: (oldname, name, packages) => {
+      return nameCallback(oldname, name, packages)
+    },
+    backCallback: (oldname, _items) =>
+      create({
+        name: oldname,
+        packages: _items,
+      }),
+  })
+}
+
+function nameCallback(oldname, name, packages) {
+  if (oldname != null) {
+    return bundles.replaceBundle(oldname, name, packages)
+  } else {
+    return bundles.addBundle(name, packages)
+  }
+}
+
+function create(bundle = null) {
+  createBundlesInstance()
+  createBundleView()
+  return bundleview.show(bundle, (oldname, items) => createCallback(oldname, items))
+}
+
+function edit() {
+  createBundlesInstance()
+  createBundlesView()
+  return bundlesview.show(bundles.getBundles(false), (bundle) => create(bundle))
 }
 
 export function activate() {
-  this.loadProjectConfigs()
+  loadProjectConfigs()
   this.subscriptions = new CompositeDisposable()
-  this.subscriptions.add(atom.commands.add("atom-workspace", { "package-switch:start-packages": () => this.toggle() }))
-  this.subscriptions.add(
-    atom.commands.add("atom-workspace", { "package-switch:stop-packages": () => this.toggle(true) })
-  )
-  this.subscriptions.add(atom.commands.add("atom-workspace", { "package-switch:create": () => this.create() }))
-  this.subscriptions.add(atom.commands.add("atom-workspace", { "package-switch:edit": () => this.edit() }))
-  this.subscriptions.add(atom.commands.add("atom-workspace", { "package-switch:remove": () => this.remove() }))
+  this.subscriptions.add(atom.commands.add("atom-workspace", { "package-switch:start-packages": () => toggle() }))
+  this.subscriptions.add(atom.commands.add("atom-workspace", { "package-switch:stop-packages": () => toggle(true) }))
+  this.subscriptions.add(atom.commands.add("atom-workspace", { "package-switch:create": () => create() }))
+  this.subscriptions.add(atom.commands.add("atom-workspace", { "package-switch:edit": () => edit() }))
+  this.subscriptions.add(atom.commands.add("atom-workspace", { "package-switch:remove": () => remove() }))
   this.subscriptions.add(
     atom.commands.add("atom-workspace", {
       "package-switch:open-global"() {
@@ -183,7 +179,7 @@ export function activate() {
   this.subscriptions.add(
     atom.config.onDidChange("package-switch.SaveRestore", ({ newValue }) => {
       if (newValue) {
-        return this.saveStates()
+        return saveStates()
       }
     })
   )
@@ -203,7 +199,7 @@ export function activate() {
         if (InitFileView == null) {
           InitFileView = require("./init-file-view")
         }
-        return (this.initfileview = new InitFileView({
+        return (initfileview = new InitFileView({
           uri: uritoopen,
           file: new InitFile(path.dirname(uritoopen), uritoopen),
         }))
@@ -251,10 +247,10 @@ export function deactivate() {
   NameView = null
   BundlesView = null
   BundleView = null
-  if (this.initfileview != null) {
-    this.initfileview.destroy()
+  if (initfileview != null) {
+    initfileview.destroy()
   }
-  this.initfileview = null
+  initfileview = null
   InitFileView = null
   return (InitFile = null)
 }
