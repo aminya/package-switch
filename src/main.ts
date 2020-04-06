@@ -24,7 +24,6 @@ let nameview: null
 let InitFileView: null
 let InitFile: null
 
-
 export default {
   createBundleView() {
     if (BundleView == null) {
@@ -157,9 +156,7 @@ export default {
 export function activate() {
   this.loadProjectConfigs()
   this.subscriptions = new CompositeDisposable()
-  this.subscriptions.add(
-    atom.commands.add("atom-workspace", { "package-switch:start-packages": () => this.toggle() })
-  )
+  this.subscriptions.add(atom.commands.add("atom-workspace", { "package-switch:start-packages": () => this.toggle() }))
   this.subscriptions.add(
     atom.commands.add("atom-workspace", { "package-switch:stop-packages": () => this.toggle(true) })
   )
@@ -261,7 +258,6 @@ export function deactivate() {
   InitFileView = null
   return (InitFile = null)
 }
-
 
 export const config = {
   SaveRestore: {
