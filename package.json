@@ -13,8 +13,25 @@
     "atom": ">=0.174.0 <2.0.0"
   },
   "dependencies": {
-    "atom-space-pen-views": "^2.0.0",
-    "fs-plus": "^2.0.4",
-    "season": "^5.2.0"
+    "atom-space-pen-views": "^2.2.0",
+    "fs-plus": "^3.1.1",
+    "season": "^6.0.2"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.3",
+    "coffeescript": "^2.5.1",
+    "@types/atom": "^1.40.1",
+    "@types/fs-plus": "^3.0.1",
+    "@types/season": "^6.0.0",
+    "eslint": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "babel-eslint": "latest",
+    "eslint-plugin-coffee": "latest",
+    "eslint-plugin-json": "latest",
+    "eslint-plugin-only-warn": "latest",
+    "tslint": "latest",
+    "tslint-config-prettier": "latest",
+    "prettier": "latest"
   }
 }
