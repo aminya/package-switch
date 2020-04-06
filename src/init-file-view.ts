@@ -4,10 +4,9 @@
  * DS207: Consider shorter variations of null checks
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
-let InitFileView
 import { $$, View } from "atom-space-pen-views"
 
-export default InitFileView = class InitFileView extends View {
+export class InitFileView extends View {
   static content() {
     return this.div({ class: "package-switch", tabindex: -1 }, () => {
       return this.div({ class: "inset-panel" }, () => {
