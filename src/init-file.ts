@@ -4,39 +4,38 @@
  * DS207: Consider shorter variations of null checks
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
-let InitFile;
-import CSON from 'season';
+let InitFile
+import CSON from "season"
 
 export default InitFile = class InitFile {
-
-    constructor(name, filepath) {
-      this.name = name;
-      this.filepath = filepath;
-      try {
-        this.packages = CSON.readFileSync(this.filepath);
-        if ((this.packages == null)) { this.packages = []; }
-      } catch (error) {
-        this.packages = [];
+  constructor(name, filepath) {
+    this.name = name
+    this.filepath = filepath
+    try {
+      this.packages = CSON.readFileSync(this.filepath)
+      if (this.packages == null) {
+        this.packages = []
       }
+    } catch (error) {
+      this.packages = []
     }
+  }
 
-    execute(opposite) {
-      return this.packages.map((p) =>
-        opposite ?
-          p.action === 'removed' ?
-            atom.packages.enablePackage(p.name)
-          :
-            atom.packages.disablePackage(p.name)
-        :
-          p.action === 'added' ?
-            atom.packages.enablePackage(p.name)
-          :
-            atom.packages.disablePackage(p.name));
-    }
+  execute(opposite) {
+    return this.packages.map((p) =>
+      opposite
+        ? p.action === "removed"
+          ? atom.packages.enablePackage(p.name)
+          : atom.packages.disablePackage(p.name)
+        : p.action === "added"
+        ? atom.packages.enablePackage(p.name)
+        : atom.packages.disablePackage(p.name)
+    )
+  }
 
-    save() {
-      try {
-        return CSON.writeFileSync(this.filepath, this.packages);
-      } catch (error) {}
-    }
-  };
+  save() {
+    try {
+      return CSON.writeFileSync(this.filepath, this.packages)
+    } catch (error) {}
+  }
+}
