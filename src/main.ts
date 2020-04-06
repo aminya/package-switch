@@ -52,115 +52,6 @@ export default {
     }
     return this.bundles != null ? this.bundles : (this.bundles = new this.Bundles())
   },
-
-  activate() {
-    this.loadProjectConfigs()
-    this.subscriptions = new CompositeDisposable()
-    this.subscriptions.add(
-      atom.commands.add("atom-workspace", { "package-switch:start-packages": () => this.toggle() })
-    )
-    this.subscriptions.add(
-      atom.commands.add("atom-workspace", { "package-switch:stop-packages": () => this.toggle(true) })
-    )
-    this.subscriptions.add(atom.commands.add("atom-workspace", { "package-switch:create": () => this.create() }))
-    this.subscriptions.add(atom.commands.add("atom-workspace", { "package-switch:edit": () => this.edit() }))
-    this.subscriptions.add(atom.commands.add("atom-workspace", { "package-switch:remove": () => this.remove() }))
-    this.subscriptions.add(
-      atom.commands.add("atom-workspace", {
-        "package-switch:open-global"() {
-          if (path == null) {
-            path = require("path")
-          }
-          return atom.workspace.open(path.join(path.dirname(atom.config.getUserConfigPath()), "package-switch.bundles"))
-        },
-      })
-    )
-    this.subscriptions.add(
-      atom.commands.add(
-        '.tree-view .file .name[data-name$="\\.package-switch\\.cson"]',
-        "package-switch:open-local",
-        ({ target }) => atom.workspace.open(target.dataset.path, { noopener: true })
-      )
-    )
-    this.subscriptions.add(
-      atom.config.onDidChange("package-switch.SaveRestore", ({ newValue }) => {
-        if (newValue) {
-          return this.saveStates()
-        }
-      })
-    )
-
-    return this.subscriptions.add(
-      atom.workspace.addOpener(function (uritoopen, { noopener }) {
-        if (uritoopen.endsWith(".package-switch.cson") && noopener == null) {
-          if (fs == null) {
-            fs = require("fs")
-          }
-          if (path == null) {
-            path = require("path")
-          }
-          if (this.InitFile == null) {
-            this.InitFile = require("./init-file")
-          }
-          if (this.InitFileView == null) {
-            this.InitFileView = require("./init-file-view")
-          }
-          return (this.initfileview = new this.InitFileView({
-            uri: uritoopen,
-            file: new this.InitFile(path.dirname(uritoopen), uritoopen),
-          }))
-        }
-      })
-    )
-  },
-
-  deactivate() {
-    if (atom.config.get("package-switch.SaveRestore")) {
-      if (atom.config.get("package-switch.InvertSaveData")) {
-        const lp = atom.config.get("package-switch.DisableLanguagePackages")
-        const saveData = atom.config.get("package-switch.SaveData")
-        const disabledPackages = []
-        for (let p of atom.packages.getAvailablePackageNames()) {
-          if (p === "package-switch") {
-            continue
-          }
-          if (saveData.includes(p)) {
-            continue
-          }
-          if (lp && p.startsWith("language-")) {
-            continue
-          }
-          disabledPackages.push(p)
-        }
-        atom.config.set("core.disabledPackages", disabledPackages)
-      } else {
-        atom.config.set("core.disabledPackages", atom.config.get("package-switch.SaveData"))
-      }
-      atom.config.save()
-    }
-    this.subscriptions.dispose()
-    if (this.bundles != null) {
-      this.bundles.destroy()
-    }
-    if (this.nameview != null) {
-      this.nameview.destroy()
-    }
-    this.bundles = null
-    this.nameview = null
-    this.bundlesview = null
-    this.bundleview = null
-    this.Bundles = null
-    this.NameView = null
-    this.BundlesView = null
-    this.BundleView = null
-    if (this.initfileview != null) {
-      this.initfileview.destroy()
-    }
-    this.initfileview = null
-    this.InitFileView = null
-    return (this.InitFile = null)
-  },
-
   loadProjectConfigs() {
     let p
     if ((p = atom.project.getPaths()).length === 1) {
@@ -261,6 +152,115 @@ export default {
     return this.bundlesview.show(this.bundles.getBundles(false), (bundle) => this.create(bundle))
   },
 }
+
+export function activate() {
+  this.loadProjectConfigs()
+  this.subscriptions = new CompositeDisposable()
+  this.subscriptions.add(
+    atom.commands.add("atom-workspace", { "package-switch:start-packages": () => this.toggle() })
+  )
+  this.subscriptions.add(
+    atom.commands.add("atom-workspace", { "package-switch:stop-packages": () => this.toggle(true) })
+  )
+  this.subscriptions.add(atom.commands.add("atom-workspace", { "package-switch:create": () => this.create() }))
+  this.subscriptions.add(atom.commands.add("atom-workspace", { "package-switch:edit": () => this.edit() }))
+  this.subscriptions.add(atom.commands.add("atom-workspace", { "package-switch:remove": () => this.remove() }))
+  this.subscriptions.add(
+    atom.commands.add("atom-workspace", {
+      "package-switch:open-global"() {
+        if (path == null) {
+          path = require("path")
+        }
+        return atom.workspace.open(path.join(path.dirname(atom.config.getUserConfigPath()), "package-switch.bundles"))
+      },
+    })
+  )
+  this.subscriptions.add(
+    atom.commands.add(
+      '.tree-view .file .name[data-name$="\\.package-switch\\.cson"]',
+      "package-switch:open-local",
+      ({ target }) => atom.workspace.open(target.dataset.path, { noopener: true })
+    )
+  )
+  this.subscriptions.add(
+    atom.config.onDidChange("package-switch.SaveRestore", ({ newValue }) => {
+      if (newValue) {
+        return this.saveStates()
+      }
+    })
+  )
+
+  return this.subscriptions.add(
+    atom.workspace.addOpener(function (uritoopen, { noopener }) {
+      if (uritoopen.endsWith(".package-switch.cson") && noopener == null) {
+        if (fs == null) {
+          fs = require("fs")
+        }
+        if (path == null) {
+          path = require("path")
+        }
+        if (this.InitFile == null) {
+          this.InitFile = require("./init-file")
+        }
+        if (this.InitFileView == null) {
+          this.InitFileView = require("./init-file-view")
+        }
+        return (this.initfileview = new this.InitFileView({
+          uri: uritoopen,
+          file: new this.InitFile(path.dirname(uritoopen), uritoopen),
+        }))
+      }
+    })
+  )
+}
+
+export function deactivate() {
+  if (atom.config.get("package-switch.SaveRestore")) {
+    if (atom.config.get("package-switch.InvertSaveData")) {
+      const lp = atom.config.get("package-switch.DisableLanguagePackages")
+      const saveData = atom.config.get("package-switch.SaveData")
+      const disabledPackages = []
+      for (let p of atom.packages.getAvailablePackageNames()) {
+        if (p === "package-switch") {
+          continue
+        }
+        if (saveData.includes(p)) {
+          continue
+        }
+        if (lp && p.startsWith("language-")) {
+          continue
+        }
+        disabledPackages.push(p)
+      }
+      atom.config.set("core.disabledPackages", disabledPackages)
+    } else {
+      atom.config.set("core.disabledPackages", atom.config.get("package-switch.SaveData"))
+    }
+    atom.config.save()
+  }
+  this.subscriptions.dispose()
+  if (this.bundles != null) {
+    this.bundles.destroy()
+  }
+  if (this.nameview != null) {
+    this.nameview.destroy()
+  }
+  this.bundles = null
+  this.nameview = null
+  this.bundlesview = null
+  this.bundleview = null
+  this.Bundles = null
+  this.NameView = null
+  this.BundlesView = null
+  this.BundleView = null
+  if (this.initfileview != null) {
+    this.initfileview.destroy()
+  }
+  this.initfileview = null
+  this.InitFileView = null
+  return (this.InitFile = null)
+}
+
 
 export const config = {
   SaveRestore: {
