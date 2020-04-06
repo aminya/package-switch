@@ -260,39 +260,39 @@ export default {
     this.createBundlesView()
     return this.bundlesview.show(this.bundles.getBundles(false), (bundle) => this.create(bundle))
   },
+}
 
-  config: {
-    SaveRestore: {
-      title: "Save and restore packages",
-      description: "Restore package states when deactivating this package (e.g. when closing Atom)",
-      type: "boolean",
-      default: false,
-    },
-    SaveData: {
-      title: "Package States",
-      description: "Array of packages to disable when deactivating this package",
-      type: "array",
-      default: [],
-    },
-    DeferInitialization: {
-      title: "Activation Timeout",
-      description: "Number of milliseconds to defer execution of local bundles",
-      type: "integer",
-      default: 100,
-    },
-    InvertSaveData: {
-      title: "Invert Package States",
-      description:
-        'Disable ALL packages EXCEPT those in "Package States". This includes core packages like tabs, tree-view and settings-view!!!',
-      type: "boolean",
-      default: false,
-    },
-    DisableLanguagePackages: {
-      title: "Do not disable Language Packages",
-      description: 'Do not disable language packages. Only if "Invert Package States" is checked',
-      type: "boolean",
-      default: false,
-    },
+export const config = {
+  SaveRestore: {
+    title: "Save and restore packages",
+    description: "Restore package states when deactivating this package (e.g. when closing Atom)",
+    type: "boolean",
+    default: false,
+  },
+  SaveData: {
+    title: "Package States",
+    description: "Array of packages to disable when deactivating this package",
+    type: "array",
+    default: [],
+  },
+  DeferInitialization: {
+    title: "Activation Timeout",
+    description: "Number of milliseconds to defer execution of local bundles",
+    type: "integer",
+    default: 100,
+  },
+  InvertSaveData: {
+    title: "Invert Package States",
+    description:
+      'Disable ALL packages EXCEPT those in "Package States". This includes core packages like tabs, tree-view and settings-view!!!',
+    type: "boolean",
+    default: false,
+  },
+  DisableLanguagePackages: {
+    title: "Do not disable Language Packages",
+    description: 'Do not disable language packages. Only if "Invert Package States" is checked',
+    type: "boolean",
+    default: false,
   },
 }
 
