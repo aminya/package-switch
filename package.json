@@ -33,5 +33,10 @@
     "tslint": "latest",
     "tslint-config-prettier": "latest",
     "prettier": "latest"
+  },
+  "prettier": {
+    "semi": false,
+    "tabWidth": 2,
+    "printWidth": 120
   }
 }
