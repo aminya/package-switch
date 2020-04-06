@@ -77,19 +77,19 @@ export default NameView = (function() {
         return (this.panel != null ? this.panel.hide() : undefined);
       }
 
-      cancel(event) {
+      cancel(event?) {
         if (this.panel != null) {
           this.panel.hide();
         }
         return event.stopPropagation();
       }
 
-      back(event) {
+      back(event?) {
         this.backCallback(this.oldname, this.items);
         return this.cancel(event);
       }
 
-      accept(event) {
+      accept(event?) {
         if (!this.validInput()) {
           if (this.nameEditor.getText() === '') {
             return this.find('#name-error-none').removeClass('hidden');

@@ -54,7 +54,7 @@ export default Bundles = (function() {
         return this.project_bundles = {};
       }
 
-      reload(event, filename) {
+      reload(event?, filename?) {
         if (!this.writing) {
           if (this.filename != null) { this.getData(); }
           return this.emitter.emit('file-change');
@@ -102,7 +102,7 @@ export default Bundles = (function() {
         }
       }
 
-      notify(message) {
+      notify(message?) {
         if (atom.notifications != null) {
           atom.notifications.addError(message);
         }
