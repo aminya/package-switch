@@ -9,48 +9,49 @@ import { CompositeDisposable } from "atom"
 let fs = null
 let path = null
 
+let Bundles: null
+let bundles: null
+
+let BundleView: null
+let bundleview: null
+
+let BundlesView: null
+let bundlesview: null
+
+let NameView: null
+let nameview: null
+
+let InitFileView: null
+let InitFile: null
+
+
 export default {
-  Bundles: null,
-  bundles: null,
-
-  BundleView: null,
-  bundleview: null,
-
-  BundlesView: null,
-  bundlesview: null,
-
-  NameView: null,
-  nameview: null,
-
-  InitFileView: null,
-  InitFile: null,
-
   createBundleView() {
-    if (this.BundleView == null) {
-      this.BundleView = require("./bundle-view")
+    if (BundleView == null) {
+      BundleView = require("./bundle-view")
     }
-    return this.bundleview != null ? this.bundleview : (this.bundleview = new this.BundleView())
+    return bundleview != null ? bundleview : (bundleview = new this.BundleView())
   },
 
   createBundlesView() {
-    if (this.BundlesView == null) {
-      this.BundlesView = require("./bundles-view")
+    if (BundlesView == null) {
+      BundlesView = require("./bundles-view")
     }
-    return this.bundlesview != null ? this.bundlesview : (this.bundlesview = new this.BundlesView())
+    return bundlesview != null ? bundlesview : (bundlesview = new BundlesView())
   },
 
   createNameView() {
-    if (this.NameView == null) {
-      this.NameView = require("./name-view")
+    if (NameView == null) {
+      NameView = require("./name-view")
     }
-    return this.nameview != null ? this.nameview : (this.nameview = new this.NameView())
+    return nameview != null ? nameview : (nameview = new NameView())
   },
 
   createBundlesInstance() {
-    if (this.Bundles == null) {
-      this.Bundles = require("./bundles")
+    if (Bundles == null) {
+      Bundles = require("./bundles")
     }
-    return this.bundles != null ? this.bundles : (this.bundles = new this.Bundles())
+    return bundles != null ? bundles : (bundles = new Bundles())
   },
   loadProjectConfigs() {
     let p
@@ -69,11 +70,11 @@ export default {
           atom.packages.activatePackage("settings-view")
           return atom.packages.activatePackage("command-palette")
         }
-        if (this.InitFile == null) {
-          this.InitFile = require("./init-file")
+        if (InitFile == null) {
+          InitFile = require("./init-file")
         }
         return setTimeout(
-          () => new this.InitFile(path.basename(p[0]), f).execute(false),
+          () => new InitFile(path.basename(p[0]), f).execute(false),
           atom.config.get("package-switch.DeferInitialization")
         )
       })
@@ -86,11 +87,11 @@ export default {
   },
 
   toggleCallback(opposite, bundle) {
-    return __guard__(this.bundles.getBundle(bundle.name), (x) => x.execute(opposite))
+    return __guard__(bundles.getBundle(bundle.name), (x) => x.execute(opposite))
   },
 
   removeCallback(bundle) {
-    return this.bundles.removeBundle(bundle.name)
+    return bundles.removeBundle(bundle.name)
   },
 
   saveStates() {
@@ -103,8 +104,8 @@ export default {
   toggle(opposite = false) {
     this.createBundlesInstance()
     this.createBundlesView()
-    return this.bundlesview.show(
-      this.bundles.getBundles(),
+    return bundlesview.show(
+      bundles.getBundles(),
       (bundle) => {
         return this.toggleCallback(opposite, bundle)
       },
@@ -115,12 +116,12 @@ export default {
   remove() {
     this.createBundlesInstance()
     this.createBundlesView()
-    return this.bundlesview.show(this.bundles.getBundles(false), (bundle) => this.removeCallback(bundle))
+    return bundlesview.show(bundles.getBundles(false), (bundle) => this.removeCallback(bundle))
   },
 
   createCallback(oldname, items) {
     this.createNameView()
-    return this.nameview.show(this.bundles, oldname, items, {
+    return nameview.show(bundles, oldname, items, {
       confirmCallback: (oldname, name, packages) => {
         return this.nameCallback(oldname, name, packages)
       },
@@ -134,22 +135,22 @@ export default {
 
   nameCallback(oldname, name, packages) {
     if (oldname != null) {
-      return this.bundles.replaceBundle(oldname, name, packages)
+      return bundles.replaceBundle(oldname, name, packages)
     } else {
-      return this.bundles.addBundle(name, packages)
+      return bundles.addBundle(name, packages)
     }
   },
 
   create(bundle = null) {
     this.createBundlesInstance()
     this.createBundleView()
-    return this.bundleview.show(bundle, (oldname, items) => this.createCallback(oldname, items))
+    return bundleview.show(bundle, (oldname, items) => this.createCallback(oldname, items))
   },
 
   edit() {
     this.createBundlesInstance()
     this.createBundlesView()
-    return this.bundlesview.show(this.bundles.getBundles(false), (bundle) => this.create(bundle))
+    return bundlesview.show(bundles.getBundles(false), (bundle) => this.create(bundle))
   },
 }
 
@@ -199,15 +200,15 @@ export function activate() {
         if (path == null) {
           path = require("path")
         }
-        if (this.InitFile == null) {
-          this.InitFile = require("./init-file")
+        if (InitFile == null) {
+          InitFile = require("./init-file")
         }
-        if (this.InitFileView == null) {
-          this.InitFileView = require("./init-file-view")
+        if (InitFileView == null) {
+          InitFileView = require("./init-file-view")
         }
-        return (this.initfileview = new this.InitFileView({
+        return (this.initfileview = new InitFileView({
           uri: uritoopen,
-          file: new this.InitFile(path.dirname(uritoopen), uritoopen),
+          file: new InitFile(path.dirname(uritoopen), uritoopen),
         }))
       }
     })
@@ -239,26 +240,26 @@ export function deactivate() {
     atom.config.save()
   }
   this.subscriptions.dispose()
-  if (this.bundles != null) {
-    this.bundles.destroy()
+  if (bundles != null) {
+    bundles.destroy()
   }
-  if (this.nameview != null) {
-    this.nameview.destroy()
+  if (nameview != null) {
+    nameview.destroy()
   }
-  this.bundles = null
-  this.nameview = null
-  this.bundlesview = null
-  this.bundleview = null
-  this.Bundles = null
-  this.NameView = null
-  this.BundlesView = null
-  this.BundleView = null
+  bundles = null
+  nameview = null
+  bundlesview = null
+  bundleview = null
+  Bundles = null
+  NameView = null
+  BundlesView = null
+  BundleView = null
   if (this.initfileview != null) {
     this.initfileview.destroy()
   }
   this.initfileview = null
-  this.InitFileView = null
-  return (this.InitFile = null)
+  InitFileView = null
+  return (InitFile = null)
 }
 
 
