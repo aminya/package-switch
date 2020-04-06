@@ -151,15 +151,18 @@ function edit() {
   return bundlesview.show(bundles.getBundles(false), (bundle) => create(bundle))
 }
 
+let subscriptions: CompositeDisposable
+
 export function activate() {
   loadProjectConfigs()
-  this.subscriptions = new CompositeDisposable()
-  this.subscriptions.add(atom.commands.add("atom-workspace", { "package-switch:start-packages": () => toggle() }))
-  this.subscriptions.add(atom.commands.add("atom-workspace", { "package-switch:stop-packages": () => toggle(true) }))
-  this.subscriptions.add(atom.commands.add("atom-workspace", { "package-switch:create": () => create() }))
-  this.subscriptions.add(atom.commands.add("atom-workspace", { "package-switch:edit": () => edit() }))
-  this.subscriptions.add(atom.commands.add("atom-workspace", { "package-switch:remove": () => remove() }))
-  this.subscriptions.add(
+  subscriptions = new CompositeDisposable()
+
+  subscriptions.add(
+    atom.commands.add("atom-workspace", { "package-switch:start-packages": () => toggle() }),
+    atom.commands.add("atom-workspace", { "package-switch:stop-packages": () => toggle(true) }),
+    atom.commands.add("atom-workspace", { "package-switch:create": () => create() }),
+    atom.commands.add("atom-workspace", { "package-switch:edit": () => edit() }),
+    atom.commands.add("atom-workspace", { "package-switch:remove": () => remove() }),
     atom.commands.add("atom-workspace", {
       "package-switch:open-global"() {
         if (path == null) {
@@ -167,24 +170,17 @@ export function activate() {
         }
         return atom.workspace.open(path.join(path.dirname(atom.config.getUserConfigPath()), "package-switch.bundles"))
       },
-    })
-  )
-  this.subscriptions.add(
+    }),
     atom.commands.add(
       '.tree-view .file .name[data-name$="\\.package-switch\\.cson"]',
       "package-switch:open-local",
       ({ target }) => atom.workspace.open(target.dataset.path, { noopener: true })
-    )
-  )
-  this.subscriptions.add(
+    ),
     atom.config.onDidChange("package-switch.SaveRestore", ({ newValue }) => {
       if (newValue) {
         return saveStates()
       }
-    })
-  )
-
-  return this.subscriptions.add(
+    }),
     atom.workspace.addOpener(function (uritoopen, { noopener }) {
       if (uritoopen.endsWith(".package-switch.cson") && noopener == null) {
         if (fs == null) {
@@ -232,7 +228,7 @@ export function deactivate() {
     }
     atom.config.save()
   }
-  this.subscriptions.dispose()
+  subscriptions.dispose()
   if (bundles != null) {
     bundles.destroy()
   }
