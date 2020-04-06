@@ -4,10 +4,9 @@
  * DS207: Consider shorter variations of null checks
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
-let BundlesView
 import { $, $$, SelectListView } from "atom-space-pen-views"
 
-export default BundlesView = class BundlesView extends SelectListView {
+export class BundlesView extends SelectListView {
   initialize() {
     return super.initialize(...arguments)
   }
