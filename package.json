@@ -1,10 +1,21 @@
 {
   "name": "package-switch",
   "main": "lib/main",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "author": "Amin Yahyaabadi, Fabian Stiewitz",
   "description": "Easy package activation/deactivation",
-  "keywords": ["package", "activate", "deactivate", "activation","disable", "enable", "load", "bundle", "switch", "shutdown"],
+  "keywords": [
+    "package",
+    "activate",
+    "deactivate",
+    "activation",
+    "disable",
+    "enable",
+    "load",
+    "bundle",
+    "switch",
+    "shutdown"
+  ],
   "repository": "https://github.com/aminya/package-switch",
   "license": "MIT",
   "scripts": {
