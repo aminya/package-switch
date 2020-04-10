@@ -65,7 +65,7 @@ export class InitFileView extends View {
     }
 
     const arr = []
-    for (let k of Object.keys(obj)) {
+    for (const k of Object.keys(obj)) {
       arr.push({ name: k, action: obj[k] })
     }
 
@@ -99,8 +99,8 @@ export class InitFileView extends View {
 
   save() {
     this.file.packages = []
-    let package_list_children = Array.from(this.package_list.children())
-    for (let child of package_list_children) {
+    const package_list_children = Array.from(this.package_list.children())
+    for (const child of package_list_children) {
       if (child.children[0].classList.contains("icon-diff-added")) {
         this.file.packages.push({ name: child.children[0].innerText, action: "added" })
       }

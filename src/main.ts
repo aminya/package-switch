@@ -65,7 +65,7 @@ export function deactivate() {
       const lp = atom.config.get("package-switch.DisableLanguagePackages")
       const saveData = atom.config.get("package-switch.SaveData")
       const disabledPackages = []
-      for (let p of atom.packages.getAvailablePackageNames()) {
+      for (const p of atom.packages.getAvailablePackageNames()) {
         if (p === "package-switch") {
           continue
         }

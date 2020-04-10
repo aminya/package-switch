@@ -169,10 +169,10 @@ export class Bundles {
     if (!singles) {
       return p
     }
-    for (let project of atom.project.getPaths()) {
-      var f
+    for (const project of atom.project.getPaths()) {
+      let f
       if (fs.existsSync((f = path.join(project, ".package-switch.cson")))) {
-        var d, i
+        let d, i
         if ((i = new InitFile((d = path.basename(project)), f)).packages.length !== 0) {
           p.push({
             name: `Project: ${d}`,

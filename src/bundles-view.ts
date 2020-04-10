@@ -52,7 +52,7 @@ export class BundlesView extends SelectListView {
         added: [],
         removed: [],
       }
-      for (let p of bundle.packages) {
+      for (const p of bundle.packages) {
         if (opposite) {
           if (p.action === "removed") {
             bundle.actions.added.push(p.name)
