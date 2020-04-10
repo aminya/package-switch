@@ -14,11 +14,11 @@ import { BundlesView } from "./bundles-view"
 import { NameView } from "./name-view"
 import { Bundles } from "./bundles"
 
-let bundles
-let bundleview
-let bundlesview
-let nameview
-let initfileview
+let bundles: Bundles | null
+let bundleview: BundleView | null
+let bundlesview: BundlesView | null
+let nameview: NameView | null
+let initfileview: InitFileView | null
 
 let subscriptions: CompositeDisposable
 
@@ -139,20 +139,29 @@ function __guard__(value, transform) {
 }
 
 function createBundleView() {
-  bundleview != null ? bundleview : (bundleview = new BundleView())
+  if (!bundleview){
+    bundleview = new BundleView()
+  }
 }
 
 function createBundlesView() {
-  bundlesview != null ? bundlesview : (bundlesview = new BundlesView())
+  if (!bundlesview){
+    bundlesview = new BundlesView()
+  }
 }
 
 function createNameView() {
-  nameview != null ? nameview : (nameview = new NameView())
+  if (!nameview){
+    nameview = new NameView()
+  }
 }
 
 function createBundlesInstance() {
-  bundles != null ? bundles : (bundles = new Bundles())
+  if (!bundles){
+    bundles = new Bundles()
+  }
 }
+
 function loadProjectConfigs() {
   let p
   if ((p = atom.project.getPaths()).length === 1) {
