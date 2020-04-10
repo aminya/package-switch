@@ -21,14 +21,12 @@
   },
   "dependencies": {
     "atom-space-pen-views": "^2.2.0",
-    "fs-plus": "^3.1.1",
     "season": "^6.0.2"
   },
   "devDependencies": {
     "typescript": "^3.8.3",
     "coffeescript": "^2.5.1",
     "@types/atom": "^1.40.1",
-    "@types/fs-plus": "^3.0.1",
     "@types/season": "^6.0.0",
     "eslint": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
