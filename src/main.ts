@@ -7,21 +7,18 @@
 import { CompositeDisposable } from "atom"
 import fs from "fs"
 import path from "path"
+import { InitFileView } from "./init-file-view"
+import { InitFile } from "./init-file"
+import { BundleView } from "./bundle-view"
+import { BundlesView } from "./bundles-view"
+import { NameView } from "./name-view"
+import { Bundles } from "./bundles"
 
-let Bundles: null
-let bundles: null
-
-let BundleView: null
-let bundleview: null
-
-let BundlesView: null
-let bundlesview: null
-
-let NameView: null
-let nameview: null
-
-let InitFileView: null
-let InitFile: null
+let bundles
+let bundleview
+let bundlesview
+let nameview
+let initfileview
 
 let subscriptions: CompositeDisposable
 
@@ -52,16 +49,10 @@ export function activate() {
     }),
     atom.workspace.addOpener(function (uritoopen, { noopener }) {
       if (uritoopen.endsWith(".package-switch.cson") && noopener == null) {
-        if (InitFile == null) {
-          InitFile = require("./init-file")
-        }
-        if (InitFileView == null) {
-          InitFileView = require("./init-file-view")
-        }
-        (initfileview = new InitFileView({
+        initfileview = new InitFileView({
           uri: uritoopen,
           file: new InitFile(path.dirname(uritoopen), uritoopen),
-        }))
+        })
       }
     })
   )
@@ -102,16 +93,10 @@ export function deactivate() {
   nameview = null
   bundlesview = null
   bundleview = null
-  Bundles = null
-  NameView = null
-  BundlesView = null
-  BundleView = null
   if (initfileview != null) {
     initfileview.destroy()
   }
   initfileview = null
-  InitFileView = null
-  return (InitFile = null)
 }
 
 export const config = {
@@ -153,30 +138,18 @@ function __guard__(value, transform) {
 }
 
 function createBundleView() {
-  if (BundleView == null) {
-    BundleView = require("./bundle-view")
-  }
   bundleview != null ? bundleview : (bundleview = new BundleView())
 }
 
 function createBundlesView() {
-  if (BundlesView == null) {
-    BundlesView = require("./bundles-view")
-  }
   bundlesview != null ? bundlesview : (bundlesview = new BundlesView())
 }
 
 function createNameView() {
-  if (NameView == null) {
-    NameView = require("./name-view")
-  }
   nameview != null ? nameview : (nameview = new NameView())
 }
 
 function createBundlesInstance() {
-  if (Bundles == null) {
-    Bundles = require("./bundles")
-  }
   bundles != null ? bundles : (bundles = new Bundles())
 }
 function loadProjectConfigs() {
@@ -189,9 +162,6 @@ function loadProjectConfigs() {
         atom.packages.activatePackage("tabs")
         atom.packages.activatePackage("settings-view")
         atom.packages.activatePackage("command-palette")
-      }
-      if (InitFile == null) {
-        InitFile = require("./init-file")
       }
       setTimeout(
         () => new InitFile(path.basename(p[0]), f).execute(false),
