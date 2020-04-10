@@ -41,20 +41,26 @@
     "season": "^6.0.2"
   },
   "devDependencies": {
-    "typescript": "^3.8.3",
-    "coffeescript": "^2.5.1",
     "@types/atom": "^1.40.1",
     "@types/season": "^6.0.0",
-    "eslint": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
     "babel-eslint": "latest",
+    "coffeescript": "^2.5.1",
+    "eslint": "latest",
     "eslint-plugin-coffee": "latest",
     "eslint-plugin-json": "latest",
     "eslint-plugin-only-warn": "latest",
+    "less-loader": "^5.0.0",
+    "prettier": "latest",
+    "ts-loader": "^6.2.2",
     "tslint": "latest",
     "tslint-config-prettier": "latest",
-    "prettier": "latest"
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "less": "^3.11.1",
+    "coffee-loader": "^0.9.0"
   },
   "prettier": {
     "semi": false,
