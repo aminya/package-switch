@@ -1,4 +1,4 @@
-BundlesView = require '../lib/bundles-view'
+{ BundlesView } = require '../lib/bundles-view'
 {$} = require 'atom-space-pen-views'
 
 describe 'Bundles View', ->
@@ -6,7 +6,7 @@ describe 'Bundles View', ->
   callback = null
 
   beforeEach ->
-    view = new BundlesView
+    view = new BundlesView()
     jasmine.attachToDOM(view.element)
     callback = jasmine.createSpy('callback')
 

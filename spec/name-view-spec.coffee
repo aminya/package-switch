@@ -1,5 +1,5 @@
-NameView = require '../lib/name-view'
-Bundles = require '../lib/bundles'
+{ NameView } = require '../lib/name-view'
+{ Bundles } = require '../lib/bundles'
 
 describe 'Name View', ->
   view = null
@@ -18,7 +18,7 @@ describe 'Name View', ->
         action: 'removed'
       }
     ]
-    view = new NameView
+    view = new NameView()
     jasmine.attachToDOM(view.element)
     callbacks = {
       confirmCallback: jasmine.createSpy('confirm')
