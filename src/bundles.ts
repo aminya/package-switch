@@ -61,7 +61,8 @@ export class Bundles {
 
   getFileName() {
     let configdir = atom.config.getUserConfigPath()
-    if (!configdir) { // TODO
+    if (!configdir) {
+      // TODO
       configdir = atom.project.getPaths()[0]
     }
     this.filename = path.join(path.dirname(configdir), "package-switch.bundles")

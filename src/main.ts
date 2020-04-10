@@ -29,13 +29,13 @@ export function activate() {
   subscriptions.add(
     atom.commands.add("atom-workspace", {
       "package-switch:start-packages": () => toggle(),
-       "package-switch:stop-packages": () => toggle(true),
-      "package-switch:create": () => create() ,
-      "package-switch:edit": () => edit() ,
+      "package-switch:stop-packages": () => toggle(true),
+      "package-switch:create": () => create(),
+      "package-switch:edit": () => edit(),
       "package-switch:remove": () => remove(),
       "package-switch:open-global": () => {
         atom.workspace.open(path.join(path.dirname(atom.config.getUserConfigPath()), "package-switch.bundles"))
-      }
+      },
     }),
 
     atom.commands.add(
@@ -134,25 +134,25 @@ function __guard__(value, transform) {
 }
 
 function createBundleView() {
-  if (!bundleview){
+  if (!bundleview) {
     bundleview = new BundleView()
   }
 }
 
 function createBundlesView() {
-  if (!bundlesview){
+  if (!bundlesview) {
     bundlesview = new BundlesView()
   }
 }
 
 function createNameView() {
-  if (!nameview){
+  if (!nameview) {
     nameview = new NameView()
   }
 }
 
 function createBundlesInstance() {
-  if (!bundles){
+  if (!bundles) {
     bundles = new Bundles()
   }
 }

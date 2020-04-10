@@ -114,15 +114,15 @@
         "signature": "1377923021927244ea19433873b997ad8585533b0a56d5de29cda497f7842756"
       },
       "../src/bundle-view.ts": {
-        "version": "b5b952127efbb959db0731cd08ae45493e202f0d5225577cd42294a43624b56e",
+        "version": "f8a4add90fe4b217eb4438a6aa0e17686a86a7a5559f9f428ab234a136fcc45f",
         "signature": "7bc16d495bd2f4117d80645a63040cc4ae1543f8c00f367b35ad94482a4c2377"
       },
       "../src/bundle.ts": {
-        "version": "df9bc0fc1de7d8751e5163b62561763b893e853b1cdd760c7cf9b66123af03fe",
+        "version": "3edf387bfff6f2a6ec9dd0970c8c06163428b80cd3ba8d9e1a70469254143f51",
         "signature": "e4d1779e630616f3ada9af91bf98c4bca2e120250a0e2decef77023a59324d9b"
       },
       "../src/bundles-view.ts": {
-        "version": "ecdad2857f2c061813a6b1425b0665f87aa3a59a1df2b071b166964a13bad89f",
+        "version": "8cff8d2f96eba967fb21f349151ef032a5eab403780dd73fa402d1996b87e9c0",
         "signature": "3dbd9d300c221f60fc9b69715f869edc4dc0337852751bbbf944cdde3e571d31"
       },
       "../node_modules/@types/season/index.d.ts": {
@@ -130,7 +130,7 @@
         "signature": "bc7f44fdf2c20e0c540c5e986135c31421724d5922638c67257a4bf52a7984b7"
       },
       "../src/init-file.ts": {
-        "version": "5db79821031827928166d239501f28360a282efef79227d3f851d4d023508177",
+        "version": "7d32b60f575387db4c86b29bb7a6229060706af50ae9701876ee700e0fa9a6b6",
         "signature": "ecfb3feabdcec04aac4c817f97a9018cbc0d86915b8749d52c06b25c3a58559f"
       },
       "../node_modules/@types/node/globals.d.ts": {
@@ -318,19 +318,19 @@
         "signature": "1c0edbd8cd877d3fd9faa7ad81d39f83ac1d5d6a2d1826eef1097d20ab4140d7"
       },
       "../src/bundles.ts": {
-        "version": "18e638b22f93fa4d45f362feacdf752f9ee9f1a2929bd7765b9984f185c2a407",
+        "version": "ce9ecf2b1ed18a838444f7598576a7292ebe72ff0a78e6441e90eed133e47b9d",
         "signature": "197b478056c3ac1b36cffee4432361863158cac12c8f69c01d7999ca68ed4dce"
       },
       "../src/init-file-view.ts": {
-        "version": "6fa947804cc98805421c143df1cdda31dc4b8ea29abf0794940bc1209ffb076c",
+        "version": "7fa4e2ce90bdf3feebea3f2930c09474440e8e0da3ce5a96062a5f9b554f5987",
         "signature": "6fbfd9b24d79dfed77c26303b5315d950320cf4bbc6063a5d2aff39cd841e2a4"
       },
       "../src/name-view.ts": {
-        "version": "a83f73b1cadf774ded0a92f0a9aeb7588af4b5e9966c093c8235b590db8d5951",
+        "version": "5ef8ba1de1573233ac4543d894c499fd1b1496b4b0d055e0c94893294d75a6a7",
         "signature": "4c8269d771cdbe8a993355bba8a9786b096ebe56313596f48607816af4d65727"
       },
       "../src/main.ts": {
-        "version": "0d57f39a9a6a1229737de82e728a9a85ad8083d068246be9516b2047e8e46839",
+        "version": "1b74f5e67485e236dfbccd232bfa80a9bc9a2047b5df3eaba5645eb33008973d",
         "signature": "2ee17d4a4b8f67ff5877d96459ae2a861286408d0c89d9c2f9d9a1245ba1b505"
       },
       "../node_modules/@types/color-name/index.d.ts": {
@@ -1241,83 +1241,7 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../node_modules/@types/node/base.d.ts": [
-        "../node_modules/@types/node/globals.d.ts",
-        "../node_modules/@types/node/assert.d.ts",
-        "../node_modules/@types/node/async_hooks.d.ts",
-        "../node_modules/@types/node/buffer.d.ts",
-        "../node_modules/@types/node/child_process.d.ts",
-        "../node_modules/@types/node/cluster.d.ts",
-        "../node_modules/@types/node/console.d.ts",
-        "../node_modules/@types/node/constants.d.ts",
-        "../node_modules/@types/node/crypto.d.ts",
-        "../node_modules/@types/node/dgram.d.ts",
-        "../node_modules/@types/node/dns.d.ts",
-        "../node_modules/@types/node/domain.d.ts",
-        "../node_modules/@types/node/events.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/http.d.ts",
-        "../node_modules/@types/node/http2.d.ts",
-        "../node_modules/@types/node/https.d.ts",
-        "../node_modules/@types/node/inspector.d.ts",
-        "../node_modules/@types/node/module.d.ts",
-        "../node_modules/@types/node/net.d.ts",
-        "../node_modules/@types/node/os.d.ts",
-        "../node_modules/@types/node/path.d.ts",
-        "../node_modules/@types/node/perf_hooks.d.ts",
-        "../node_modules/@types/node/process.d.ts",
-        "../node_modules/@types/node/punycode.d.ts",
-        "../node_modules/@types/node/querystring.d.ts",
-        "../node_modules/@types/node/readline.d.ts",
-        "../node_modules/@types/node/repl.d.ts",
-        "../node_modules/@types/node/stream.d.ts",
-        "../node_modules/@types/node/string_decoder.d.ts",
-        "../node_modules/@types/node/timers.d.ts",
-        "../node_modules/@types/node/tls.d.ts",
-        "../node_modules/@types/node/trace_events.d.ts",
-        "../node_modules/@types/node/tty.d.ts",
-        "../node_modules/@types/node/url.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/v8.d.ts",
-        "../node_modules/@types/node/vm.d.ts",
-        "../node_modules/@types/node/worker_threads.d.ts",
-        "../node_modules/@types/node/zlib.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../node_modules/@types/node/ts3.2/index.d.ts": [
-        "../node_modules/@types/node/base.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts",
-        "../node_modules/@types/node/ts3.2/globals.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts"
-      ],
-      "../../../../node_modules/@types/glob/index.d.ts": [
-        "../node_modules/@types/node/events.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../../../../node_modules/@types/minimatch/index.d.ts",
-        "../node_modules/@types/node/ts3.2/index.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../node_modules/@types/atom/index.d.ts": [
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/child_process.d.ts",
-        "../node_modules/@types/node/ts3.2/index.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "../node_modules/@types/node/async_hooks.d.ts": [
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../node_modules/@types/node/perf_hooks.d.ts": [
-        "../node_modules/@types/node/async_hooks.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -1368,38 +1292,6 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../node_modules/@types/node/tls.d.ts": [
-        "../node_modules/@types/node/crypto.d.ts",
-        "../node_modules/@types/node/dns.d.ts",
-        "../node_modules/@types/node/net.d.ts",
-        "../node_modules/@types/node/stream.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../node_modules/@types/node/https.d.ts": [
-        "../node_modules/@types/node/tls.d.ts",
-        "../node_modules/@types/node/events.d.ts",
-        "../node_modules/@types/node/http.d.ts",
-        "../node_modules/@types/node/url.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../node_modules/@types/node/http2.d.ts": [
-        "../node_modules/@types/node/events.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/net.d.ts",
-        "../node_modules/@types/node/stream.d.ts",
-        "../node_modules/@types/node/tls.d.ts",
-        "../node_modules/@types/node/url.d.ts",
-        "../node_modules/@types/node/http.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "../node_modules/@types/node/dgram.d.ts": [
         "../node_modules/@types/node/net.d.ts",
         "../node_modules/@types/node/dns.d.ts",
@@ -1410,39 +1302,6 @@
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../node_modules/@types/node/dns.d.ts": [
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../node_modules/@types/node/net.d.ts": [
-        "../node_modules/@types/node/stream.d.ts",
-        "../node_modules/@types/node/events.d.ts",
-        "../node_modules/@types/node/dns.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../node_modules/@types/node/tty.d.ts": [
-        "../node_modules/@types/node/net.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../node_modules/@types/node/process.d.ts": [
-        "../node_modules/@types/node/tty.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../node_modules/@types/node/http.d.ts": [
-        "../node_modules/@types/node/events.d.ts",
-        "../node_modules/@types/node/stream.d.ts",
-        "../node_modules/@types/node/url.d.ts",
-        "../node_modules/@types/node/net.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -1461,31 +1320,102 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../node_modules/@types/node/worker_threads.d.ts": [
-        "../node_modules/@types/node/vm.d.ts",
+      "../node_modules/@types/node/fs.d.ts": [
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/http.d.ts": [
         "../node_modules/@types/node/events.d.ts",
         "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../node_modules/@types/node/net.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../node_modules/@types/node/stream.d.ts": [
+      "../node_modules/@types/node/http2.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/tls.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/https.d.ts": [
+        "../node_modules/@types/node/tls.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/inspector.d.ts": [
         "../node_modules/@types/node/events.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../node_modules/@types/node/zlib.d.ts": [
-        "../node_modules/@types/node/stream.d.ts",
+      "../node_modules/@types/node/module.d.ts": [
+        "../node_modules/@types/node/url.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../node_modules/@types/node/v8.d.ts": [
+      "../node_modules/@types/node/net.d.ts": [
         "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/dns.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/os.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/path.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/perf_hooks.d.ts": [
+        "../node_modules/@types/node/async_hooks.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/process.d.ts": [
+        "../node_modules/@types/node/tty.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/punycode.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/querystring.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -1507,105 +1437,8 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../node_modules/@types/node/fs.d.ts": [
-        "../node_modules/@types/node/stream.d.ts",
+      "../node_modules/@types/node/stream.d.ts": [
         "../node_modules/@types/node/events.d.ts",
-        "../node_modules/@types/node/url.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../../node_modules/@types/mkdirp/index.d.ts": [
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../../node_modules/@types/minimatch/index.d.ts": [
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../../node_modules/@types/detect-indent/index.d.ts": [
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../../node_modules/@types/benchmark/index.d.ts": [
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../node_modules/@types/json-schema/index.d.ts": [
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../node_modules/@types/eslint-visitor-keys/index.d.ts": [
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../node_modules/@types/color-name/index.d.ts": [
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../node_modules/@types/node/ts3.2/globals.d.ts": [
-        "../node_modules/@types/node/globals.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../node_modules/@types/node/ts3.2/util.d.ts": [
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts"
-      ],
-      "../node_modules/@types/node/ts3.2/fs.d.ts": [
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../node_modules/@types/node/vm.d.ts": [
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../node_modules/@types/node/util.d.ts": [
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../node_modules/@types/node/url.d.ts": [
-        "../node_modules/@types/node/querystring.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../node_modules/@types/node/module.d.ts": [
-        "../node_modules/@types/node/url.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../node_modules/@types/node/trace_events.d.ts": [
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../node_modules/@types/node/timers.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -1617,32 +1450,199 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../node_modules/@types/node/querystring.d.ts": [
+      "../node_modules/@types/node/timers.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../node_modules/@types/node/punycode.d.ts": [
+      "../node_modules/@types/node/tls.d.ts": [
+        "../node_modules/@types/node/crypto.d.ts",
+        "../node_modules/@types/node/dns.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../node_modules/@types/node/path.d.ts": [
+      "../node_modules/@types/node/trace_events.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../node_modules/@types/node/os.d.ts": [
+      "../node_modules/@types/node/tty.d.ts": [
+        "../node_modules/@types/node/net.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../node_modules/@types/node/inspector.d.ts": [
+      "../node_modules/@types/node/url.d.ts": [
+        "../node_modules/@types/node/querystring.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/util.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/v8.d.ts": [
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/vm.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/worker_threads.d.ts": [
+        "../node_modules/@types/node/vm.d.ts",
         "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/zlib.d.ts": [
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/base.d.ts": [
+        "../node_modules/@types/node/globals.d.ts",
+        "../node_modules/@types/node/assert.d.ts",
+        "../node_modules/@types/node/async_hooks.d.ts",
+        "../node_modules/@types/node/buffer.d.ts",
+        "../node_modules/@types/node/child_process.d.ts",
+        "../node_modules/@types/node/cluster.d.ts",
+        "../node_modules/@types/node/console.d.ts",
+        "../node_modules/@types/node/constants.d.ts",
+        "../node_modules/@types/node/crypto.d.ts",
+        "../node_modules/@types/node/dgram.d.ts",
+        "../node_modules/@types/node/dns.d.ts",
+        "../node_modules/@types/node/domain.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/http2.d.ts",
+        "../node_modules/@types/node/https.d.ts",
+        "../node_modules/@types/node/inspector.d.ts",
+        "../node_modules/@types/node/module.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/os.d.ts",
+        "../node_modules/@types/node/path.d.ts",
+        "../node_modules/@types/node/perf_hooks.d.ts",
+        "../node_modules/@types/node/process.d.ts",
+        "../node_modules/@types/node/punycode.d.ts",
+        "../node_modules/@types/node/querystring.d.ts",
+        "../node_modules/@types/node/readline.d.ts",
+        "../node_modules/@types/node/repl.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/string_decoder.d.ts",
+        "../node_modules/@types/node/timers.d.ts",
+        "../node_modules/@types/node/tls.d.ts",
+        "../node_modules/@types/node/trace_events.d.ts",
+        "../node_modules/@types/node/tty.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/v8.d.ts",
+        "../node_modules/@types/node/vm.d.ts",
+        "../node_modules/@types/node/worker_threads.d.ts",
+        "../node_modules/@types/node/zlib.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/ts3.2/fs.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/ts3.2/util.d.ts": [
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts"
+      ],
+      "../node_modules/@types/node/ts3.2/globals.d.ts": [
+        "../node_modules/@types/node/globals.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/ts3.2/index.d.ts": [
+        "../node_modules/@types/node/base.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/ts3.2/globals.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@types/atom/index.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/child_process.d.ts",
+        "../node_modules/@types/node/ts3.2/index.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/color-name/index.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/eslint-visitor-keys/index.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/json-schema/index.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../../node_modules/@types/benchmark/index.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../../node_modules/@types/detect-indent/index.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../../node_modules/@types/minimatch/index.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../../node_modules/@types/glob/index.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../../../../node_modules/@types/minimatch/index.d.ts",
+        "../node_modules/@types/node/ts3.2/index.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../../node_modules/@types/mkdirp/index.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -1650,844 +1650,35 @@
       ]
     },
     "semanticDiagnosticsPerFile": [
-      [
-        "../src/bundle-view.ts",
-        [
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 294,
-            "length": 22,
-            "code": 7016,
-            "category": 1,
-            "messageText": {
-              "messageText": "Could not find a declaration file for module 'atom-space-pen-views'. 'C:/Users/yahyaaba/Documents/GitHub/package-switch/node_modules/atom-space-pen-views/lib/main.js' implicitly has an 'any' type.",
-              "category": 1,
-              "code": 7016,
-              "next": [
-                {
-                  "messageText": "Try `npm install @types/atom-space-pen-views` if it exists or add a new declaration (.d.ts) file containing `declare module 'atom-space-pen-views';`",
-                  "category": 1,
-                  "code": 7035
-                }
-              ]
-            }
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 454,
-            "length": 4,
-            "messageText": "Binding element 'name' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7031
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 460,
-            "length": 6,
-            "messageText": "Binding element 'action' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7031
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 515,
-            "length": 4,
-            "messageText": "'this' implicitly has type 'any' because it does not have a type annotation.",
-            "category": 1,
-            "code": 2683,
-            "relatedInformation": [
-              {
-                "file": "../src/bundle-view.ts",
-                "start": 487,
-                "length": 8,
-                "messageText": "An outer value of 'this' is shadowed by this container.",
-                "category": 3,
-                "code": 2738
-              }
-            ]
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 547,
-            "length": 4,
-            "messageText": "'this' implicitly has type 'any' because it does not have a type annotation.",
-            "category": 1,
-            "code": 2683,
-            "relatedInformation": [
-              {
-                "file": "../src/bundle-view.ts",
-                "start": 487,
-                "length": 8,
-                "messageText": "An outer value of 'this' is shadowed by this container.",
-                "category": 3,
-                "code": 2738
-              }
-            ]
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 876,
-            "length": 5,
-            "messageText": "Variable 'items' implicitly has type 'any[]' in some locations where its type cannot be determined.",
-            "category": 1,
-            "code": 7034
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 897,
-            "length": 5,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'items' does not exist on type 'BundleView'."
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 911,
-            "length": 8,
-            "messageText": "Not all code paths return a value.",
-            "category": 1,
-            "code": 7030
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 921,
-            "length": 4,
-            "messageText": "Parameter 'item' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 1065,
-            "length": 5,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'panel' does not exist on type 'BundleView'."
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 1094,
-            "length": 5,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'panel' does not exist on type 'BundleView'."
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 1164,
-            "length": 2,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'cb' does not exist on type 'BundleView'."
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 1172,
-            "length": 7,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'oldname' does not exist on type 'BundleView'."
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 1181,
-            "length": 5,
-            "messageText": "Variable 'items' implicitly has an 'any[]' type.",
-            "category": 1,
-            "code": 7005
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 1225,
-            "length": 2,
-            "messageText": "Parameter 'cb' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 1240,
-            "length": 7,
-            "messageText": "Variable 'actions' implicitly has type 'any' in some locations where its type cannot be determined.",
-            "category": 1,
-            "code": 7034
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 1258,
-            "length": 2,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'cb' does not exist on type 'BundleView'."
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 1280,
-            "length": 5,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'panel' does not exist on type 'BundleView'."
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 1309,
-            "length": 5,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'panel' does not exist on type 'BundleView'."
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 1379,
-            "length": 5,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'panel' does not exist on type 'BundleView'."
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 1433,
-            "length": 7,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'oldname' does not exist on type 'BundleView'."
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 1443,
-            "length": 6,
-            "messageText": "Object is possibly 'null'.",
-            "category": 1,
-            "code": 2531
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 1472,
-            "length": 6,
-            "messageText": "Object is possibly 'null'.",
-            "category": 1,
-            "code": 2531
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 1514,
-            "length": 7,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'oldname' does not exist on type 'BundleView'."
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 1569,
-            "length": 8,
-            "messageText": "Variable 'packages' implicitly has type 'any[]' in some locations where its type cannot be determined.",
-            "category": 1,
-            "code": 7034
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 1675,
-            "length": 7,
-            "messageText": "Variable 'actions' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7005
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 1691,
-            "length": 4,
-            "messageText": "Parameter 'item' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 1917,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'setItems' does not exist on type 'BundleView'."
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 1926,
-            "length": 8,
-            "messageText": "Variable 'packages' implicitly has an 'any[]' type.",
-            "category": 1,
-            "code": 7005
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 1953,
-            "length": 17,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'focusFilterEditor' does not exist on type 'BundleView'."
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 2124,
-            "length": 4,
-            "messageText": "Object is possibly 'null'.",
-            "category": 1,
-            "code": 2531
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 2195,
-            "length": 4,
-            "messageText": "Object is possibly 'null'.",
-            "category": 1,
-            "code": 2531
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 2264,
-            "length": 5,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'items' does not exist on type 'BundleView'."
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 2314,
-            "length": 5,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'items' does not exist on type 'BundleView'."
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 2352,
-            "length": 4,
-            "messageText": "Object is possibly 'null'.",
-            "category": 1,
-            "code": 2531
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 2404,
-            "length": 5,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'items' does not exist on type 'BundleView'."
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 2426,
-            "length": 4,
-            "messageText": "Object is possibly 'null'.",
-            "category": 1,
-            "code": 2531
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 2499,
-            "length": 4,
-            "messageText": "Object is possibly 'null'.",
-            "category": 1,
-            "code": 2531
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 2543,
-            "length": 14,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'selectItemView' does not exist on type 'BundleView'."
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 2656,
-            "length": 19,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'getSelectedItemView' does not exist on type 'BundleView'."
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 2765,
-            "length": 19,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'getSelectedItemView' does not exist on type 'BundleView'."
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 2874,
-            "length": 19,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'getSelectedItemView' does not exist on type 'BundleView'."
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 2988,
-            "length": 19,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'getSelectedItemView' does not exist on type 'BundleView'."
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 3171,
-            "length": 19,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'getSelectedItemView' does not exist on type 'BundleView'."
-          },
-          {
-            "file": "../src/bundle-view.ts",
-            "start": 3353,
-            "length": 19,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'getSelectedItemView' does not exist on type 'BundleView'."
-          }
-        ]
-      ],
-      [
-        "../src/bundle.ts",
-        [
-          {
-            "file": "../src/bundle.ts",
-            "start": 58,
-            "length": 8,
-            "messageText": "Binding element 'packages' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7031
-          },
-          {
-            "file": "../src/bundle.ts",
-            "start": 120,
-            "length": 8,
-            "messageText": "Parameter 'opposite' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/bundle.ts",
-            "start": 156,
-            "length": 1,
-            "messageText": "Parameter 'p' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          }
-        ]
-      ],
-      [
-        "../src/bundles-view.ts",
-        [
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 265,
-            "length": 1,
-            "messageText": "'$' is declared but its value is never read.",
-            "category": 1,
-            "code": 6133,
-            "reportsUnnecessary": true
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 294,
-            "length": 22,
-            "code": 7016,
-            "category": 1,
-            "messageText": {
-              "messageText": "Could not find a declaration file for module 'atom-space-pen-views'. 'C:/Users/yahyaaba/Documents/GitHub/package-switch/node_modules/atom-space-pen-views/lib/main.js' implicitly has an 'any' type.",
-              "category": 1,
-              "code": 7016,
-              "next": [
-                {
-                  "messageText": "Try `npm install @types/atom-space-pen-views` if it exists or add a new declaration (.d.ts) file containing `declare module 'atom-space-pen-views';`",
-                  "category": 1,
-                  "code": 7035
-                }
-              ]
-            }
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 455,
-            "length": 4,
-            "messageText": "Binding element 'name' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7031
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 461,
-            "length": 7,
-            "messageText": "Binding element 'actions' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7031
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 517,
-            "length": 4,
-            "messageText": "'this' implicitly has type 'any' because it does not have a type annotation.",
-            "category": 1,
-            "code": 2683,
-            "relatedInformation": [
-              {
-                "file": "../src/bundles-view.ts",
-                "start": 489,
-                "length": 8,
-                "messageText": "An outer value of 'this' is shadowed by this container.",
-                "category": 3,
-                "code": 2738
-              }
-            ]
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 566,
-            "length": 4,
-            "messageText": "'this' implicitly has type 'any' because it does not have a type annotation.",
-            "category": 1,
-            "code": 2683,
-            "relatedInformation": [
-              {
-                "file": "../src/bundles-view.ts",
-                "start": 489,
-                "length": 8,
-                "messageText": "An outer value of 'this' is shadowed by this container.",
-                "category": 3,
-                "code": 2738
-              }
-            ]
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 624,
-            "length": 4,
-            "messageText": "'this' implicitly has type 'any' because it does not have a type annotation.",
-            "category": 1,
-            "code": 2683,
-            "relatedInformation": [
-              {
-                "file": "../src/bundles-view.ts",
-                "start": 489,
-                "length": 8,
-                "messageText": "An outer value of 'this' is shadowed by this container.",
-                "category": 3,
-                "code": 2738
-              }
-            ]
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 681,
-            "length": 4,
-            "messageText": "'this' implicitly has type 'any' because it does not have a type annotation.",
-            "category": 1,
-            "code": 2683,
-            "relatedInformation": [
-              {
-                "file": "../src/bundles-view.ts",
-                "start": 489,
-                "length": 8,
-                "messageText": "An outer value of 'this' is shadowed by this container.",
-                "category": 3,
-                "code": 2738
-              }
-            ]
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 787,
-            "length": 4,
-            "messageText": "'this' implicitly has type 'any' because it does not have a type annotation.",
-            "category": 1,
-            "code": 2683,
-            "relatedInformation": [
-              {
-                "file": "../src/bundles-view.ts",
-                "start": 489,
-                "length": 8,
-                "messageText": "An outer value of 'this' is shadowed by this container.",
-                "category": 3,
-                "code": 2738
-              }
-            ]
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 905,
-            "length": 4,
-            "messageText": "'this' implicitly has type 'any' because it does not have a type annotation.",
-            "category": 1,
-            "code": 2683,
-            "relatedInformation": [
-              {
-                "file": "../src/bundles-view.ts",
-                "start": 489,
-                "length": 8,
-                "messageText": "An outer value of 'this' is shadowed by this container.",
-                "category": 3,
-                "code": 2738
-              }
-            ]
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 1015,
-            "length": 4,
-            "messageText": "'this' implicitly has type 'any' because it does not have a type annotation.",
-            "category": 1,
-            "code": 2683,
-            "relatedInformation": [
-              {
-                "file": "../src/bundles-view.ts",
-                "start": 489,
-                "length": 8,
-                "messageText": "An outer value of 'this' is shadowed by this container.",
-                "category": 3,
-                "code": 2738
-              }
-            ]
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 1169,
-            "length": 6,
-            "messageText": "Parameter 'bundle' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 1189,
-            "length": 6,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'cancel' does not exist on type 'BundlesView'."
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 1215,
-            "length": 2,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'cb' does not exist on type 'BundlesView'."
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 1267,
-            "length": 5,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'panel' does not exist on type 'BundlesView'."
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 1288,
-            "length": 5,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'panel' does not exist on type 'BundlesView'."
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 1328,
-            "length": 7,
-            "messageText": "Parameter 'bundles' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 1337,
-            "length": 2,
-            "messageText": "Parameter 'cb' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 1371,
-            "length": 2,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'cb' does not exist on type 'BundlesView'."
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 1393,
-            "length": 5,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'panel' does not exist on type 'BundlesView'."
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 1422,
-            "length": 5,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'panel' does not exist on type 'BundlesView'."
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 1492,
-            "length": 5,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'panel' does not exist on type 'BundlesView'."
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 1538,
-            "length": 6,
-            "messageText": "Parameter 'bundle' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 1546,
-            "length": 5,
-            "messageText": "Parameter 'index' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 2133,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'setItems' does not exist on type 'BundlesView'."
-          },
-          {
-            "file": "../src/bundles-view.ts",
-            "start": 2168,
-            "length": 17,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'focusFilterEditor' does not exist on type 'BundlesView'."
-          }
-        ]
-      ],
+      "../node_modules/typescript/lib/lib.es5.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.d.ts",
+      "../node_modules/typescript/lib/lib.es2016.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.d.ts",
+      "../node_modules/typescript/lib/lib.dom.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.core.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.collection.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.generator.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.iterable.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.promise.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.proxy.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.reflect.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.symbol.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
+      "../node_modules/typescript/lib/lib.es2016.array.include.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.object.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.string.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.intl.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.intl.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.promise.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.regexp.d.ts",
+      "../node_modules/typescript/lib/lib.es2020.bigint.d.ts",
+      "../node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "../node_modules/@types/season/index.d.ts",
-      [
-        "../src/init-file.ts",
-        [
-          {
-            "file": "../src/init-file.ts",
-            "start": 324,
-            "length": 4,
-            "messageText": "Parameter 'name' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 330,
-            "length": 8,
-            "messageText": "Parameter 'filepath' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 352,
-            "length": 4,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'name' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 374,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'filepath' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 417,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 451,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'filepath' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 477,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 511,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 569,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 608,
-            "length": 8,
-            "messageText": "Parameter 'opposite' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 637,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 651,
-            "length": 1,
-            "messageText": "Parameter 'p' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 1008,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'filepath' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 1023,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFile'."
-          }
-        ]
-      ],
       "../node_modules/@types/node/globals.d.ts",
       "../node_modules/@types/node/assert.d.ts",
       "../node_modules/@types/node/async_hooks.d.ts",
@@ -2534,12 +1725,857 @@
       "../node_modules/@types/node/ts3.2/globals.d.ts",
       "../node_modules/@types/node/ts3.2/index.d.ts",
       "../node_modules/@types/atom/index.d.ts",
+      "../node_modules/@types/color-name/index.d.ts",
+      "../node_modules/@types/eslint-visitor-keys/index.d.ts",
+      "../node_modules/@types/json-schema/index.d.ts",
+      "../../../../node_modules/@types/benchmark/index.d.ts",
+      "../../../../node_modules/@types/detect-indent/index.d.ts",
+      "../../../../node_modules/@types/minimatch/index.d.ts",
+      "../../../../node_modules/@types/glob/index.d.ts",
+      "../../../../node_modules/@types/mkdirp/index.d.ts",
+      [
+        "../src/bundle-view.ts",
+        [
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 288,
+            "length": 22,
+            "code": 7016,
+            "category": 1,
+            "messageText": {
+              "messageText": "Could not find a declaration file for module 'atom-space-pen-views'. 'C:/Users/yahyaaba/Documents/GitHub/package-switch/node_modules/atom-space-pen-views/lib/main.js' implicitly has an 'any' type.",
+              "category": 1,
+              "code": 7016,
+              "next": [
+                {
+                  "messageText": "Try `npm install @types/atom-space-pen-views` if it exists or add a new declaration (.d.ts) file containing `declare module 'atom-space-pen-views';`",
+                  "category": 1,
+                  "code": 7035
+                }
+              ]
+            }
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 441,
+            "length": 4,
+            "messageText": "Binding element 'name' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7031
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 447,
+            "length": 6,
+            "messageText": "Binding element 'action' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7031
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 500,
+            "length": 4,
+            "messageText": "'this' implicitly has type 'any' because it does not have a type annotation.",
+            "category": 1,
+            "code": 2683,
+            "relatedInformation": [
+              {
+                "file": "../src/bundle-view.ts",
+                "start": 473,
+                "length": 8,
+                "messageText": "An outer value of 'this' is shadowed by this container.",
+                "category": 3,
+                "code": 2738
+              }
+            ]
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 531,
+            "length": 4,
+            "messageText": "'this' implicitly has type 'any' because it does not have a type annotation.",
+            "category": 1,
+            "code": 2683,
+            "relatedInformation": [
+              {
+                "file": "../src/bundle-view.ts",
+                "start": 473,
+                "length": 8,
+                "messageText": "An outer value of 'this' is shadowed by this container.",
+                "category": 3,
+                "code": 2738
+              }
+            ]
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 844,
+            "length": 5,
+            "messageText": "Variable 'items' implicitly has type 'any[]' in some locations where its type cannot be determined.",
+            "category": 1,
+            "code": 7034
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 864,
+            "length": 5,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'items' does not exist on type 'BundleView'."
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 878,
+            "length": 8,
+            "messageText": "Not all code paths return a value.",
+            "category": 1,
+            "code": 7030
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 888,
+            "length": 4,
+            "messageText": "Parameter 'item' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 1026,
+            "length": 5,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'panel' does not exist on type 'BundleView'."
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 1054,
+            "length": 5,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'panel' does not exist on type 'BundleView'."
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 1121,
+            "length": 2,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'cb' does not exist on type 'BundleView'."
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 1129,
+            "length": 7,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'oldname' does not exist on type 'BundleView'."
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 1138,
+            "length": 5,
+            "messageText": "Variable 'items' implicitly has an 'any[]' type.",
+            "category": 1,
+            "code": 7005
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 1178,
+            "length": 2,
+            "messageText": "Parameter 'cb' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 1192,
+            "length": 7,
+            "messageText": "Variable 'actions' implicitly has type 'any' in some locations where its type cannot be determined.",
+            "category": 1,
+            "code": 7034
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 1209,
+            "length": 2,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'cb' does not exist on type 'BundleView'."
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 1230,
+            "length": 5,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'panel' does not exist on type 'BundleView'."
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 1258,
+            "length": 5,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'panel' does not exist on type 'BundleView'."
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 1326,
+            "length": 5,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'panel' does not exist on type 'BundleView'."
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 1377,
+            "length": 7,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'oldname' does not exist on type 'BundleView'."
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 1387,
+            "length": 6,
+            "messageText": "Object is possibly 'null'.",
+            "category": 1,
+            "code": 2531
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 1415,
+            "length": 6,
+            "messageText": "Object is possibly 'null'.",
+            "category": 1,
+            "code": 2531
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 1455,
+            "length": 7,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'oldname' does not exist on type 'BundleView'."
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 1506,
+            "length": 8,
+            "messageText": "Variable 'packages' implicitly has type 'any[]' in some locations where its type cannot be determined.",
+            "category": 1,
+            "code": 7034
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 1610,
+            "length": 7,
+            "messageText": "Variable 'actions' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7005
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 1626,
+            "length": 4,
+            "messageText": "Parameter 'item' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 1844,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'setItems' does not exist on type 'BundleView'."
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 1853,
+            "length": 8,
+            "messageText": "Variable 'packages' implicitly has an 'any[]' type.",
+            "category": 1,
+            "code": 7005
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 1879,
+            "length": 17,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'focusFilterEditor' does not exist on type 'BundleView'."
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 2043,
+            "length": 4,
+            "messageText": "Object is possibly 'null'.",
+            "category": 1,
+            "code": 2531
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 2113,
+            "length": 4,
+            "messageText": "Object is possibly 'null'.",
+            "category": 1,
+            "code": 2531
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 2181,
+            "length": 5,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'items' does not exist on type 'BundleView'."
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 2230,
+            "length": 5,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'items' does not exist on type 'BundleView'."
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 2267,
+            "length": 4,
+            "messageText": "Object is possibly 'null'.",
+            "category": 1,
+            "code": 2531
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 2318,
+            "length": 5,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'items' does not exist on type 'BundleView'."
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 2340,
+            "length": 4,
+            "messageText": "Object is possibly 'null'.",
+            "category": 1,
+            "code": 2531
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 2409,
+            "length": 4,
+            "messageText": "Object is possibly 'null'.",
+            "category": 1,
+            "code": 2531
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 2452,
+            "length": 14,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'selectItemView' does not exist on type 'BundleView'."
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 2557,
+            "length": 19,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'getSelectedItemView' does not exist on type 'BundleView'."
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 2662,
+            "length": 19,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'getSelectedItemView' does not exist on type 'BundleView'."
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 2767,
+            "length": 19,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'getSelectedItemView' does not exist on type 'BundleView'."
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 2877,
+            "length": 19,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'getSelectedItemView' does not exist on type 'BundleView'."
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 3053,
+            "length": 19,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'getSelectedItemView' does not exist on type 'BundleView'."
+          },
+          {
+            "file": "../src/bundle-view.ts",
+            "start": 3228,
+            "length": 19,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'getSelectedItemView' does not exist on type 'BundleView'."
+          }
+        ]
+      ],
+      [
+        "../src/bundle.ts",
+        [
+          {
+            "file": "../src/bundle.ts",
+            "start": 55,
+            "length": 8,
+            "messageText": "Binding element 'packages' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7031
+          },
+          {
+            "file": "../src/bundle.ts",
+            "start": 113,
+            "length": 8,
+            "messageText": "Parameter 'opposite' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/bundle.ts",
+            "start": 148,
+            "length": 1,
+            "messageText": "Parameter 'p' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          }
+        ]
+      ],
+      [
+        "../src/bundles-view.ts",
+        [
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 259,
+            "length": 1,
+            "messageText": "'$' is declared but its value is never read.",
+            "category": 1,
+            "code": 6133,
+            "reportsUnnecessary": true
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 288,
+            "length": 22,
+            "code": 7016,
+            "category": 1,
+            "messageText": {
+              "messageText": "Could not find a declaration file for module 'atom-space-pen-views'. 'C:/Users/yahyaaba/Documents/GitHub/package-switch/node_modules/atom-space-pen-views/lib/main.js' implicitly has an 'any' type.",
+              "category": 1,
+              "code": 7016,
+              "next": [
+                {
+                  "messageText": "Try `npm install @types/atom-space-pen-views` if it exists or add a new declaration (.d.ts) file containing `declare module 'atom-space-pen-views';`",
+                  "category": 1,
+                  "code": 7035
+                }
+              ]
+            }
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 442,
+            "length": 4,
+            "messageText": "Binding element 'name' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7031
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 448,
+            "length": 7,
+            "messageText": "Binding element 'actions' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7031
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 502,
+            "length": 4,
+            "messageText": "'this' implicitly has type 'any' because it does not have a type annotation.",
+            "category": 1,
+            "code": 2683,
+            "relatedInformation": [
+              {
+                "file": "../src/bundles-view.ts",
+                "start": 475,
+                "length": 8,
+                "messageText": "An outer value of 'this' is shadowed by this container.",
+                "category": 3,
+                "code": 2738
+              }
+            ]
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 550,
+            "length": 4,
+            "messageText": "'this' implicitly has type 'any' because it does not have a type annotation.",
+            "category": 1,
+            "code": 2683,
+            "relatedInformation": [
+              {
+                "file": "../src/bundles-view.ts",
+                "start": 475,
+                "length": 8,
+                "messageText": "An outer value of 'this' is shadowed by this container.",
+                "category": 3,
+                "code": 2738
+              }
+            ]
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 607,
+            "length": 4,
+            "messageText": "'this' implicitly has type 'any' because it does not have a type annotation.",
+            "category": 1,
+            "code": 2683,
+            "relatedInformation": [
+              {
+                "file": "../src/bundles-view.ts",
+                "start": 475,
+                "length": 8,
+                "messageText": "An outer value of 'this' is shadowed by this container.",
+                "category": 3,
+                "code": 2738
+              }
+            ]
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 663,
+            "length": 4,
+            "messageText": "'this' implicitly has type 'any' because it does not have a type annotation.",
+            "category": 1,
+            "code": 2683,
+            "relatedInformation": [
+              {
+                "file": "../src/bundles-view.ts",
+                "start": 475,
+                "length": 8,
+                "messageText": "An outer value of 'this' is shadowed by this container.",
+                "category": 3,
+                "code": 2738
+              }
+            ]
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 767,
+            "length": 4,
+            "messageText": "'this' implicitly has type 'any' because it does not have a type annotation.",
+            "category": 1,
+            "code": 2683,
+            "relatedInformation": [
+              {
+                "file": "../src/bundles-view.ts",
+                "start": 475,
+                "length": 8,
+                "messageText": "An outer value of 'this' is shadowed by this container.",
+                "category": 3,
+                "code": 2738
+              }
+            ]
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 882,
+            "length": 4,
+            "messageText": "'this' implicitly has type 'any' because it does not have a type annotation.",
+            "category": 1,
+            "code": 2683,
+            "relatedInformation": [
+              {
+                "file": "../src/bundles-view.ts",
+                "start": 475,
+                "length": 8,
+                "messageText": "An outer value of 'this' is shadowed by this container.",
+                "category": 3,
+                "code": 2738
+              }
+            ]
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 990,
+            "length": 4,
+            "messageText": "'this' implicitly has type 'any' because it does not have a type annotation.",
+            "category": 1,
+            "code": 2683,
+            "relatedInformation": [
+              {
+                "file": "../src/bundles-view.ts",
+                "start": 475,
+                "length": 8,
+                "messageText": "An outer value of 'this' is shadowed by this container.",
+                "category": 3,
+                "code": 2738
+              }
+            ]
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 1136,
+            "length": 6,
+            "messageText": "Parameter 'bundle' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 1155,
+            "length": 6,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'cancel' does not exist on type 'BundlesView'."
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 1180,
+            "length": 2,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'cb' does not exist on type 'BundlesView'."
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 1228,
+            "length": 5,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'panel' does not exist on type 'BundlesView'."
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 1249,
+            "length": 5,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'panel' does not exist on type 'BundlesView'."
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 1286,
+            "length": 7,
+            "messageText": "Parameter 'bundles' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 1295,
+            "length": 2,
+            "messageText": "Parameter 'cb' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 1328,
+            "length": 2,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'cb' does not exist on type 'BundlesView'."
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 1349,
+            "length": 5,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'panel' does not exist on type 'BundlesView'."
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 1377,
+            "length": 5,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'panel' does not exist on type 'BundlesView'."
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 1445,
+            "length": 5,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'panel' does not exist on type 'BundlesView'."
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 1489,
+            "length": 6,
+            "messageText": "Parameter 'bundle' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 1497,
+            "length": 5,
+            "messageText": "Parameter 'index' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 2062,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'setItems' does not exist on type 'BundlesView'."
+          },
+          {
+            "file": "../src/bundles-view.ts",
+            "start": 2096,
+            "length": 17,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'focusFilterEditor' does not exist on type 'BundlesView'."
+          }
+        ]
+      ],
+      [
+        "../src/init-file.ts",
+        [
+          {
+            "file": "../src/init-file.ts",
+            "start": 315,
+            "length": 4,
+            "messageText": "Parameter 'name' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 321,
+            "length": 8,
+            "messageText": "Parameter 'filepath' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 342,
+            "length": 4,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'name' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 363,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'filepath' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 404,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 438,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'filepath' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 463,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 496,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 551,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 586,
+            "length": 8,
+            "messageText": "Parameter 'opposite' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 614,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 628,
+            "length": 1,
+            "messageText": "Parameter 'p' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 972,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'filepath' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 987,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFile'."
+          }
+        ]
+      ],
       [
         "../src/bundles.ts",
         [
           {
             "file": "../src/bundles.ts",
-            "start": 507,
+            "start": 487,
             "length": 4,
             "messageText": "Parameter 'arg' implicitly has an 'any' type.",
             "category": 1,
@@ -2547,7 +2583,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 803,
+            "start": 772,
             "length": 7,
             "code": 2339,
             "category": 1,
@@ -2555,7 +2591,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 822,
+            "start": 791,
             "length": 13,
             "code": 2769,
             "category": 1,
@@ -2591,7 +2627,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 958,
+            "start": 921,
             "length": 7,
             "code": 2339,
             "category": 1,
@@ -2599,7 +2635,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 1018,
+            "start": 977,
             "length": 7,
             "code": 2339,
             "category": 1,
@@ -2607,7 +2643,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 1049,
+            "start": 1007,
             "length": 7,
             "code": 2339,
             "category": 1,
@@ -2615,7 +2651,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 1082,
+            "start": 1038,
             "length": 7,
             "code": 2339,
             "category": 1,
@@ -2623,7 +2659,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 1198,
+            "start": 1148,
             "length": 5,
             "messageText": "'event' is declared but its value is never read.",
             "category": 1,
@@ -2632,7 +2668,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 1198,
+            "start": 1148,
             "length": 6,
             "messageText": "Parameter 'event' implicitly has an 'any' type.",
             "category": 1,
@@ -2640,7 +2676,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 1206,
+            "start": 1156,
             "length": 8,
             "messageText": "'filename' is declared but its value is never read.",
             "category": 1,
@@ -2649,7 +2685,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 1206,
+            "start": 1156,
             "length": 9,
             "messageText": "Parameter 'filename' implicitly has an 'any' type.",
             "category": 1,
@@ -2657,7 +2693,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 1326,
+            "start": 1271,
             "length": 7,
             "code": 2339,
             "category": 1,
@@ -2665,7 +2701,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 1571,
+            "start": 1511,
             "length": 13,
             "code": 2322,
             "category": 1,
@@ -2673,7 +2709,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 1671,
+            "start": 1608,
             "length": 8,
             "messageText": "Parameter 'callback' implicitly has an 'any' type.",
             "category": 1,
@@ -2681,7 +2717,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 1693,
+            "start": 1629,
             "length": 7,
             "code": 2339,
             "category": 1,
@@ -2689,7 +2725,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 1800,
+            "start": 1731,
             "length": 13,
             "code": 2345,
             "category": 1,
@@ -2697,7 +2733,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 1868,
+            "start": 1797,
             "length": 14,
             "code": 7053,
             "category": 1,
@@ -2716,7 +2752,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 2107,
+            "start": 2027,
             "length": 25,
             "code": 7053,
             "category": 1,
@@ -2735,7 +2771,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 2334,
+            "start": 2246,
             "length": 13,
             "code": 2345,
             "category": 1,
@@ -2743,7 +2779,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 2397,
+            "start": 2307,
             "length": 7,
             "code": 2339,
             "category": 1,
@@ -2751,7 +2787,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 2603,
+            "start": 2503,
             "length": 8,
             "messageText": "Parameter 'message' implicitly has an 'any' type.",
             "category": 1,
@@ -2759,7 +2795,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 2800,
+            "start": 2692,
             "length": 13,
             "code": 2345,
             "category": 1,
@@ -2767,7 +2803,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 2842,
+            "start": 2733,
             "length": 13,
             "code": 2345,
             "category": 1,
@@ -2775,7 +2811,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 2890,
+            "start": 2777,
             "length": 4,
             "messageText": "Parameter 'name' implicitly has an 'any' type.",
             "category": 1,
@@ -2783,7 +2819,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 2896,
+            "start": 2783,
             "length": 8,
             "messageText": "Parameter 'packages' implicitly has an 'any' type.",
             "category": 1,
@@ -2791,7 +2827,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 2917,
+            "start": 2803,
             "length": 15,
             "code": 7053,
             "category": 1,
@@ -2799,7 +2835,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3021,
+            "start": 2904,
             "length": 15,
             "code": 7053,
             "category": 1,
@@ -2807,7 +2843,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3117,
+            "start": 2995,
             "length": 7,
             "messageText": "Parameter 'oldname' implicitly has an 'any' type.",
             "category": 1,
@@ -2815,7 +2851,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3126,
+            "start": 3004,
             "length": 4,
             "messageText": "Parameter 'name' implicitly has an 'any' type.",
             "category": 1,
@@ -2823,7 +2859,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3132,
+            "start": 3010,
             "length": 8,
             "messageText": "Parameter 'packages' implicitly has an 'any' type.",
             "category": 1,
@@ -2831,7 +2867,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3174,
+            "start": 3051,
             "length": 18,
             "code": 7053,
             "category": 1,
@@ -2839,7 +2875,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3206,
+            "start": 3083,
             "length": 18,
             "code": 7053,
             "category": 1,
@@ -2847,7 +2883,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3236,
+            "start": 3113,
             "length": 15,
             "code": 7053,
             "category": 1,
@@ -2855,7 +2891,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3278,
+            "start": 3154,
             "length": 18,
             "code": 7053,
             "category": 1,
@@ -2863,7 +2899,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3304,
+            "start": 3179,
             "length": 15,
             "code": 7053,
             "category": 1,
@@ -2871,7 +2907,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3395,
+            "start": 3267,
             "length": 18,
             "code": 7053,
             "category": 1,
@@ -2879,7 +2915,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3493,
+            "start": 3362,
             "length": 15,
             "code": 7053,
             "category": 1,
@@ -2887,7 +2923,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3617,
+            "start": 3480,
             "length": 6,
             "messageText": "Parameter 'bundle' implicitly has an 'any' type.",
             "category": 1,
@@ -2895,7 +2931,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3639,
+            "start": 3501,
             "length": 17,
             "code": 7053,
             "category": 1,
@@ -2903,7 +2939,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3697,
+            "start": 3555,
             "length": 6,
             "messageText": "Parameter 'bundle' implicitly has an 'any' type.",
             "category": 1,
@@ -2911,7 +2947,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3744,
+            "start": 3600,
             "length": 28,
             "code": 7053,
             "category": 1,
@@ -2919,7 +2955,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3823,
+            "start": 3677,
             "length": 17,
             "code": 7053,
             "category": 1,
@@ -2927,7 +2963,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3866,
+            "start": 3719,
             "length": 17,
             "code": 7053,
             "category": 1,
@@ -2935,7 +2971,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3912,
+            "start": 3763,
             "length": 27,
             "code": 7053,
             "category": 1,
@@ -2943,7 +2979,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3997,
+            "start": 3843,
             "length": 1,
             "messageText": "Variable 'p' implicitly has type 'any[]' in some locations where its type cannot be determined.",
             "category": 1,
@@ -2951,7 +2987,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 4144,
+            "start": 3985,
             "length": 14,
             "code": 7053,
             "category": 1,
@@ -2970,7 +3006,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 4222,
+            "start": 4059,
             "length": 1,
             "messageText": "Variable 'p' implicitly has an 'any[]' type.",
             "category": 1,
@@ -2978,7 +3014,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 4459,
+            "start": 4290,
             "length": 8,
             "code": 2339,
             "category": 1,
@@ -2986,7 +3022,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 4565,
+            "start": 4393,
             "length": 8,
             "code": 2339,
             "category": 1,
@@ -2994,7 +3030,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 4600,
+            "start": 4426,
             "length": 37,
             "code": 7053,
             "category": 1,
@@ -3013,7 +3049,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 4715,
+            "start": 4537,
             "length": 10,
             "messageText": "Not all code paths return a value.",
             "category": 1,
@@ -3021,7 +3057,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 4737,
+            "start": 4558,
             "length": 14,
             "code": 7053,
             "category": 1,
@@ -3040,7 +3076,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 4831,
+            "start": 4649,
             "length": 24,
             "code": 7053,
             "category": 1,
@@ -3064,7 +3100,7 @@
         [
           {
             "file": "../src/init-file-view.ts",
-            "start": 210,
+            "start": 205,
             "length": 22,
             "code": 7016,
             "category": 1,
@@ -3083,7 +3119,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 309,
+            "start": 300,
             "length": 3,
             "code": 2339,
             "category": 1,
@@ -3091,7 +3127,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 376,
+            "start": 366,
             "length": 3,
             "code": 2339,
             "category": 1,
@@ -3099,7 +3135,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 428,
+            "start": 417,
             "length": 3,
             "code": 2339,
             "category": 1,
@@ -3107,7 +3143,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 499,
+            "start": 487,
             "length": 4,
             "code": 2339,
             "category": 1,
@@ -3115,7 +3151,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 540,
+            "start": 527,
             "length": 4,
             "code": 2339,
             "category": 1,
@@ -3123,7 +3159,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 608,
+            "start": 594,
             "length": 6,
             "code": 2339,
             "category": 1,
@@ -3131,7 +3167,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 669,
+            "start": 654,
             "length": 6,
             "code": 2339,
             "category": 1,
@@ -3139,7 +3175,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 770,
+            "start": 752,
             "length": 3,
             "code": 2339,
             "category": 1,
@@ -3147,7 +3183,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 830,
+            "start": 811,
             "length": 3,
             "code": 2339,
             "category": 1,
@@ -3155,7 +3191,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 938,
+            "start": 913,
             "length": 3,
             "messageText": "Binding element 'uri' implicitly has an 'any' type.",
             "category": 1,
@@ -3163,7 +3199,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 943,
+            "start": 918,
             "length": 4,
             "messageText": "Binding element 'file' implicitly has an 'any' type.",
             "category": 1,
@@ -3171,7 +3207,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 963,
+            "start": 937,
             "length": 3,
             "code": 2339,
             "category": 1,
@@ -3179,7 +3215,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 983,
+            "start": 956,
             "length": 4,
             "code": 2339,
             "category": 1,
@@ -3187,7 +3223,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 1005,
+            "start": 977,
             "length": 4,
             "code": 2339,
             "category": 1,
@@ -3195,7 +3231,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 1033,
+            "start": 1005,
             "length": 13,
             "messageText": "Binding element 'currentTarget' implicitly has an 'any' type.",
             "category": 1,
@@ -3203,7 +3239,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 1086,
+            "start": 1056,
             "length": 4,
             "code": 2339,
             "category": 1,
@@ -3211,7 +3247,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 1256,
+            "start": 1216,
             "length": 3,
             "code": 2339,
             "category": 1,
@@ -3219,7 +3255,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 1416,
+            "start": 1363,
             "length": 4,
             "code": 2339,
             "category": 1,
@@ -3227,7 +3263,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 1431,
+            "start": 1378,
             "length": 4,
             "code": 2339,
             "category": 1,
@@ -3235,7 +3271,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 1482,
+            "start": 1427,
             "length": 4,
             "code": 2339,
             "category": 1,
@@ -3243,7 +3279,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 1506,
+            "start": 1450,
             "length": 11,
             "code": 7053,
             "category": 1,
@@ -3251,7 +3287,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 1608,
+            "start": 1548,
             "length": 6,
             "code": 7053,
             "category": 1,
@@ -3270,7 +3306,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 1660,
+            "start": 1597,
             "length": 6,
             "code": 7053,
             "category": 1,
@@ -3289,7 +3325,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 1784,
+            "start": 1716,
             "length": 6,
             "code": 7053,
             "category": 1,
@@ -3308,7 +3344,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 1813,
+            "start": 1742,
             "length": 12,
             "code": 2339,
             "category": 1,
@@ -3316,7 +3352,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 1898,
+            "start": 1823,
             "length": 4,
             "messageText": "Binding element 'name' implicitly has an 'any' type.",
             "category": 1,
@@ -3324,7 +3360,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 1904,
+            "start": 1829,
             "length": 6,
             "messageText": "Binding element 'action' implicitly has an 'any' type.",
             "category": 1,
@@ -3332,7 +3368,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 1958,
+            "start": 1881,
             "length": 4,
             "messageText": "'this' implicitly has type 'any' because it does not have a type annotation.",
             "category": 1,
@@ -3340,7 +3376,7 @@
             "relatedInformation": [
               {
                 "file": "../src/init-file-view.ts",
-                "start": 1937,
+                "start": 1861,
                 "length": 8,
                 "messageText": "An outer value of 'this' is shadowed by this container.",
                 "category": 3,
@@ -3350,7 +3386,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 2006,
+            "start": 1928,
             "length": 4,
             "messageText": "'this' implicitly has type 'any' because it does not have a type annotation.",
             "category": 1,
@@ -3358,7 +3394,7 @@
             "relatedInformation": [
               {
                 "file": "../src/init-file-view.ts",
-                "start": 1937,
+                "start": 1861,
                 "length": 8,
                 "messageText": "An outer value of 'this' is shadowed by this container.",
                 "category": 3,
@@ -3368,7 +3404,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 2119,
+            "start": 2037,
             "length": 13,
             "messageText": "Binding element 'currentTarget' implicitly has an 'any' type.",
             "category": 1,
@@ -3376,7 +3412,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 2624,
+            "start": 2528,
             "length": 12,
             "code": 2339,
             "category": 1,
@@ -3384,7 +3420,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 2679,
+            "start": 2579,
             "length": 4,
             "code": 2339,
             "category": 1,
@@ -3392,7 +3428,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 2749,
+            "start": 2648,
             "length": 12,
             "code": 2339,
             "category": 1,
@@ -3400,7 +3436,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 2835,
+            "start": 2732,
             "length": 5,
             "messageText": "Object is of type 'unknown'.",
             "category": 1,
@@ -3408,7 +3444,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 2908,
+            "start": 2804,
             "length": 4,
             "code": 2339,
             "category": 1,
@@ -3416,7 +3452,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 2935,
+            "start": 2831,
             "length": 5,
             "messageText": "Object is of type 'unknown'.",
             "category": 1,
@@ -3424,7 +3460,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 3003,
+            "start": 2897,
             "length": 5,
             "messageText": "Object is of type 'unknown'.",
             "category": 1,
@@ -3432,7 +3468,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 3078,
+            "start": 2971,
             "length": 4,
             "code": 2339,
             "category": 1,
@@ -3440,7 +3476,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 3105,
+            "start": 2998,
             "length": 5,
             "messageText": "Object is of type 'unknown'.",
             "category": 1,
@@ -3448,7 +3484,7 @@
           },
           {
             "file": "../src/init-file-view.ts",
-            "start": 3181,
+            "start": 3071,
             "length": 4,
             "code": 2339,
             "category": 1,
@@ -3461,7 +3497,7 @@
         [
           {
             "file": "../src/name-view.ts",
-            "start": 206,
+            "start": 201,
             "length": 11,
             "code": 7016,
             "category": 1,
@@ -3480,7 +3516,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 250,
+            "start": 244,
             "length": 22,
             "code": 7016,
             "category": 1,
@@ -3499,7 +3535,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 412,
+            "start": 399,
             "length": 3,
             "code": 2339,
             "category": 1,
@@ -3507,7 +3543,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 459,
+            "start": 445,
             "length": 3,
             "code": 2339,
             "category": 1,
@@ -3515,7 +3551,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 505,
+            "start": 490,
             "length": 5,
             "code": 2339,
             "category": 1,
@@ -3523,7 +3559,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 535,
+            "start": 519,
             "length": 3,
             "code": 2339,
             "category": 1,
@@ -3531,7 +3567,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 606,
+            "start": 588,
             "length": 7,
             "code": 2339,
             "category": 1,
@@ -3539,7 +3575,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 679,
+            "start": 660,
             "length": 3,
             "code": 2339,
             "category": 1,
@@ -3547,7 +3583,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 777,
+            "start": 757,
             "length": 3,
             "code": 2339,
             "category": 1,
@@ -3555,7 +3591,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 874,
+            "start": 852,
             "length": 3,
             "code": 2339,
             "category": 1,
@@ -3563,7 +3599,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 932,
+            "start": 909,
             "length": 3,
             "code": 2339,
             "category": 1,
@@ -3571,7 +3607,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 1015,
+            "start": 991,
             "length": 3,
             "code": 2339,
             "category": 1,
@@ -3579,7 +3615,15 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 1112,
+            "start": 1086,
+            "length": 3,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'div' does not exist on type 'typeof NameView'."
+          },
+          {
+            "file": "../src/name-view.ts",
+            "start": 1133,
             "length": 3,
             "code": 2339,
             "category": 1,
@@ -3595,7 +3639,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 1188,
+            "start": 1248,
             "length": 3,
             "code": 2339,
             "category": 1,
@@ -3603,7 +3647,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 1277,
+            "start": 1353,
             "length": 3,
             "code": 2339,
             "category": 1,
@@ -3611,15 +3655,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 1384,
-            "length": 3,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'div' does not exist on type 'typeof NameView'."
-          },
-          {
-            "file": "../src/name-view.ts",
-            "start": 1548,
+            "start": 1510,
             "length": 11,
             "code": 2339,
             "category": 1,
@@ -3627,7 +3663,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 1583,
+            "start": 1543,
             "length": 11,
             "code": 2339,
             "category": 1,
@@ -3635,7 +3671,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 1635,
+            "start": 1593,
             "length": 2,
             "code": 2339,
             "category": 1,
@@ -3643,7 +3679,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 1668,
+            "start": 1626,
             "length": 5,
             "messageText": "Parameter 'event' implicitly has an 'any' type.",
             "category": 1,
@@ -3651,7 +3687,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 1708,
+            "start": 1665,
             "length": 2,
             "code": 2339,
             "category": 1,
@@ -3659,7 +3695,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 1745,
+            "start": 1702,
             "length": 5,
             "messageText": "Parameter 'event' implicitly has an 'any' type.",
             "category": 1,
@@ -3667,7 +3703,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 1785,
+            "start": 1741,
             "length": 2,
             "code": 2339,
             "category": 1,
@@ -3675,23 +3711,23 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 1827,
+            "start": 1783,
             "length": 5,
             "messageText": "Parameter 'event' implicitly has an 'any' type.",
             "category": 1,
             "code": 7006
+          },
+          {
+            "file": "../src/name-view.ts",
+            "start": 1821,
+            "length": 11,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'disposables' does not exist on type 'NameView'."
           },
           {
             "file": "../src/name-view.ts",
             "start": 1867,
-            "length": 11,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'disposables' does not exist on type 'NameView'."
-          },
-          {
-            "file": "../src/name-view.ts",
-            "start": 1914,
             "length": 7,
             "code": 2339,
             "category": 1,
@@ -3699,7 +3735,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 2085,
+            "start": 2030,
             "length": 11,
             "code": 2339,
             "category": 1,
@@ -3707,7 +3743,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 2117,
+            "start": 2061,
             "length": 6,
             "code": 2339,
             "category": 1,
@@ -3715,7 +3751,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 2136,
+            "start": 2079,
             "length": 5,
             "code": 2339,
             "category": 1,
@@ -3723,7 +3759,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 2157,
+            "start": 2100,
             "length": 5,
             "code": 2339,
             "category": 1,
@@ -3731,7 +3767,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 2199,
+            "start": 2139,
             "length": 6,
             "messageText": "Parameter 'event' implicitly has an 'any' type.",
             "category": 1,
@@ -3739,7 +3775,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 2223,
+            "start": 2162,
             "length": 5,
             "code": 2339,
             "category": 1,
@@ -3747,7 +3783,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 2252,
+            "start": 2190,
             "length": 5,
             "code": 2339,
             "category": 1,
@@ -3755,7 +3791,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 2316,
+            "start": 2249,
             "length": 6,
             "messageText": "Parameter 'event' implicitly has an 'any' type.",
             "category": 1,
@@ -3763,7 +3799,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 2336,
+            "start": 2268,
             "length": 12,
             "code": 2339,
             "category": 1,
@@ -3771,7 +3807,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 2354,
+            "start": 2286,
             "length": 7,
             "code": 2339,
             "category": 1,
@@ -3779,7 +3815,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 2368,
+            "start": 2300,
             "length": 5,
             "code": 2339,
             "category": 1,
@@ -3787,7 +3823,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 2416,
+            "start": 2344,
             "length": 6,
             "messageText": "Parameter 'event' implicitly has an 'any' type.",
             "category": 1,
@@ -3795,11 +3831,19 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 2468,
+            "start": 2394,
             "length": 15,
             "messageText": "Object is possibly 'null'.",
             "category": 1,
             "code": 2531
+          },
+          {
+            "file": "../src/name-view.ts",
+            "start": 2443,
+            "length": 4,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'find' does not exist on type 'NameView'."
           },
           {
             "file": "../src/name-view.ts",
@@ -3811,15 +3855,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 2595,
-            "length": 4,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'find' does not exist on type 'NameView'."
-          },
-          {
-            "file": "../src/name-view.ts",
-            "start": 2703,
+            "start": 2622,
             "length": 15,
             "code": 2339,
             "category": 1,
@@ -3827,7 +3863,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 2724,
+            "start": 2643,
             "length": 7,
             "code": 2339,
             "category": 1,
@@ -3835,7 +3871,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 2733,
+            "start": 2652,
             "length": 15,
             "messageText": "Object is possibly 'null'.",
             "category": 1,
@@ -3843,7 +3879,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 2765,
+            "start": 2684,
             "length": 5,
             "code": 2339,
             "category": 1,
@@ -3851,7 +3887,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 2849,
+            "start": 2761,
             "length": 15,
             "messageText": "Object is possibly 'null'.",
             "category": 1,
@@ -3859,7 +3895,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 2898,
+            "start": 2809,
             "length": 7,
             "code": 2339,
             "category": 1,
@@ -3867,7 +3903,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 2922,
+            "start": 2833,
             "length": 7,
             "code": 2339,
             "category": 1,
@@ -3875,7 +3911,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 2940,
+            "start": 2851,
             "length": 15,
             "messageText": "Object is possibly 'null'.",
             "category": 1,
@@ -3883,7 +3919,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3019,
+            "start": 2925,
             "length": 4,
             "code": 2339,
             "category": 1,
@@ -3891,7 +3927,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3073,
+            "start": 2978,
             "length": 4,
             "code": 2339,
             "category": 1,
@@ -3899,7 +3935,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3155,
+            "start": 3056,
             "length": 5,
             "code": 2339,
             "category": 1,
@@ -3907,7 +3943,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3190,
+            "start": 3090,
             "length": 7,
             "code": 2339,
             "category": 1,
@@ -3915,7 +3951,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3240,
+            "start": 3137,
             "length": 3,
             "messageText": "Parameter 'div' implicitly has an 'any' type.",
             "category": 1,
@@ -3923,7 +3959,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3245,
+            "start": 3142,
             "length": 8,
             "messageText": "Parameter 'packages' implicitly has an 'any' type.",
             "category": 1,
@@ -3931,7 +3967,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3338,
+            "start": 3230,
             "length": 7,
             "messageText": "Parameter 'bundles' implicitly has an 'any' type.",
             "category": 1,
@@ -3939,7 +3975,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3347,
+            "start": 3239,
             "length": 7,
             "messageText": "Parameter 'oldname' implicitly has an 'any' type.",
             "category": 1,
@@ -3947,7 +3983,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3356,
+            "start": 3248,
             "length": 5,
             "messageText": "Parameter 'items' implicitly has an 'any' type.",
             "category": 1,
@@ -3955,7 +3991,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3365,
+            "start": 3257,
             "length": 15,
             "messageText": "Binding element 'confirmCallback' implicitly has an 'any' type.",
             "category": 1,
@@ -3963,7 +3999,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3382,
+            "start": 3274,
             "length": 12,
             "messageText": "Binding element 'backCallback' implicitly has an 'any' type.",
             "category": 1,
@@ -3971,7 +4007,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3410,
+            "start": 3301,
             "length": 7,
             "code": 2339,
             "category": 1,
@@ -3979,7 +4015,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3438,
+            "start": 3328,
             "length": 7,
             "code": 2339,
             "category": 1,
@@ -3987,7 +4023,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3466,
+            "start": 3355,
             "length": 5,
             "code": 2339,
             "category": 1,
@@ -3995,7 +4031,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3490,
+            "start": 3378,
             "length": 15,
             "code": 2339,
             "category": 1,
@@ -4003,7 +4039,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3534,
+            "start": 3421,
             "length": 12,
             "code": 2339,
             "category": 1,
@@ -4011,7 +4047,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3576,
+            "start": 3462,
             "length": 7,
             "code": 2339,
             "category": 1,
@@ -4019,7 +4055,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3602,
+            "start": 3487,
             "length": 15,
             "messageText": "Object is possibly 'null'.",
             "category": 1,
@@ -4027,7 +4063,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3631,
+            "start": 3516,
             "length": 7,
             "code": 2339,
             "category": 1,
@@ -4035,7 +4071,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3661,
+            "start": 3544,
             "length": 15,
             "messageText": "Object is possibly 'null'.",
             "category": 1,
@@ -4043,7 +4079,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3757,
+            "start": 3636,
             "length": 11,
             "messageText": "Variable 'items_added' implicitly has type 'any[]' in some locations where its type cannot be determined.",
             "category": 1,
@@ -4051,7 +4087,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3785,
+            "start": 3663,
             "length": 13,
             "messageText": "Variable 'items_removed' implicitly has type 'any[]' in some locations where its type cannot be determined.",
             "category": 1,
@@ -4059,7 +4095,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3814,
+            "start": 3691,
             "length": 5,
             "code": 2339,
             "category": 1,
@@ -4067,7 +4103,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 3838,
+            "start": 3715,
             "length": 4,
             "messageText": "Parameter 'item' implicitly has an 'any' type.",
             "category": 1,
@@ -4075,7 +4111,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 4060,
+            "start": 3929,
             "length": 5,
             "code": 2339,
             "category": 1,
@@ -4083,7 +4119,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 4067,
+            "start": 3936,
             "length": 11,
             "messageText": "Variable 'items_added' implicitly has an 'any[]' type.",
             "category": 1,
@@ -4091,7 +4127,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 4156,
+            "start": 4022,
             "length": 7,
             "code": 2339,
             "category": 1,
@@ -4099,7 +4135,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 4165,
+            "start": 4031,
             "length": 13,
             "messageText": "Variable 'items_removed' implicitly has an 'any[]' type.",
             "category": 1,
@@ -4107,7 +4143,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 4203,
+            "start": 4066,
             "length": 5,
             "code": 2339,
             "category": 1,
@@ -4115,7 +4151,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 4232,
+            "start": 4094,
             "length": 5,
             "code": 2339,
             "category": 1,
@@ -4123,7 +4159,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 4302,
+            "start": 4162,
             "length": 5,
             "code": 2339,
             "category": 1,
@@ -4131,7 +4167,7 @@
           },
           {
             "file": "../src/name-view.ts",
-            "start": 4325,
+            "start": 4184,
             "length": 11,
             "code": 2339,
             "category": 1,
@@ -4144,7 +4180,7 @@
         [
           {
             "file": "../src/main.ts",
-            "start": 1540,
+            "start": 1495,
             "length": 6,
             "messageText": "Object is possibly 'null'.",
             "category": 1,
@@ -4152,7 +4188,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 1547,
+            "start": 1502,
             "length": 7,
             "code": 2339,
             "category": 1,
@@ -4160,7 +4196,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 1563,
+            "start": 1518,
             "length": 14,
             "code": 2769,
             "category": 1,
@@ -4213,7 +4249,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 1761,
+            "start": 1709,
             "length": 8,
             "code": 2345,
             "category": 1,
@@ -4232,7 +4268,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 1784,
+            "start": 1732,
             "length": 8,
             "messageText": "Property 'noopener' does not exist on type 'WorkspaceOpenOptions | undefined'.",
             "category": 1,
@@ -4240,15 +4276,15 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 1916,
-            "length": 106,
+            "start": 1862,
+            "length": 103,
             "messageText": "Expected 0 arguments, but got 1.",
             "category": 1,
             "code": 2554
           },
           {
             "file": "../src/main.ts",
-            "start": 2901,
+            "start": 2816,
             "length": 4,
             "code": 2339,
             "category": 1,
@@ -4256,7 +4292,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 4195,
+            "start": 4062,
             "length": 5,
             "messageText": "Parameter 'value' implicitly has an 'any' type.",
             "category": 1,
@@ -4264,7 +4300,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 4202,
+            "start": 4069,
             "length": 9,
             "messageText": "Parameter 'transform' implicitly has an 'any' type.",
             "category": 1,
@@ -4272,7 +4308,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 4728,
+            "start": 4570,
             "length": 1,
             "messageText": "Variable 'p' implicitly has type 'any' in some locations where its type cannot be determined.",
             "category": 1,
@@ -4280,7 +4316,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 4792,
+            "start": 4632,
             "length": 1,
             "messageText": "Variable 'f' implicitly has type 'any' in some locations where its type cannot be determined.",
             "category": 1,
@@ -4288,7 +4324,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 5201,
+            "start": 5032,
             "length": 1,
             "messageText": "Variable 'p' implicitly has an 'any' type.",
             "category": 1,
@@ -4296,7 +4332,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 5208,
+            "start": 5039,
             "length": 1,
             "messageText": "Variable 'f' implicitly has an 'any' type.",
             "category": 1,
@@ -4304,7 +4340,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 5551,
+            "start": 5370,
             "length": 8,
             "messageText": "Parameter 'opposite' implicitly has an 'any' type.",
             "category": 1,
@@ -4312,7 +4348,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 5561,
+            "start": 5380,
             "length": 6,
             "messageText": "Parameter 'bundle' implicitly has an 'any' type.",
             "category": 1,
@@ -4320,7 +4356,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 5617,
+            "start": 5435,
             "length": 1,
             "messageText": "Parameter 'x' implicitly has an 'any' type.",
             "category": 1,
@@ -4328,7 +4364,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 5674,
+            "start": 5489,
             "length": 6,
             "messageText": "Parameter 'bundle' implicitly has an 'any' type.",
             "category": 1,
@@ -4336,7 +4372,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6062,
+            "start": 5861,
             "length": 6,
             "messageText": "Parameter 'bundle' implicitly has an 'any' type.",
             "category": 1,
@@ -4344,7 +4380,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6266,
+            "start": 6055,
             "length": 6,
             "messageText": "Parameter 'bundle' implicitly has an 'any' type.",
             "category": 1,
@@ -4352,7 +4388,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6331,
+            "start": 6117,
             "length": 7,
             "messageText": "Parameter 'oldname' implicitly has an 'any' type.",
             "category": 1,
@@ -4360,7 +4396,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6340,
+            "start": 6126,
             "length": 5,
             "messageText": "Parameter 'items' implicitly has an 'any' type.",
             "category": 1,
@@ -4368,7 +4404,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6436,
+            "start": 6219,
             "length": 7,
             "messageText": "Parameter 'oldname' implicitly has an 'any' type.",
             "category": 1,
@@ -4376,7 +4412,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6445,
+            "start": 6228,
             "length": 4,
             "messageText": "Parameter 'name' implicitly has an 'any' type.",
             "category": 1,
@@ -4384,7 +4420,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6451,
+            "start": 6234,
             "length": 8,
             "messageText": "Parameter 'packages' implicitly has an 'any' type.",
             "category": 1,
@@ -4392,7 +4428,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6539,
+            "start": 6319,
             "length": 7,
             "messageText": "Parameter 'oldname' implicitly has an 'any' type.",
             "category": 1,
@@ -4400,7 +4436,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6548,
+            "start": 6328,
             "length": 6,
             "messageText": "Parameter '_items' implicitly has an 'any' type.",
             "category": 1,
@@ -4408,8 +4444,8 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6573,
-            "length": 61,
+            "start": 6352,
+            "length": 58,
             "code": 2345,
             "category": 1,
             "messageText": {
@@ -4427,7 +4463,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6671,
+            "start": 6443,
             "length": 7,
             "messageText": "Parameter 'oldname' implicitly has an 'any' type.",
             "category": 1,
@@ -4435,7 +4471,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6680,
+            "start": 6452,
             "length": 4,
             "messageText": "Parameter 'name' implicitly has an 'any' type.",
             "category": 1,
@@ -4443,7 +4479,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6686,
+            "start": 6458,
             "length": 8,
             "messageText": "Parameter 'packages' implicitly has an 'any' type.",
             "category": 1,
@@ -4451,7 +4487,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6948,
+            "start": 6709,
             "length": 7,
             "messageText": "Parameter 'oldname' implicitly has an 'any' type.",
             "category": 1,
@@ -4459,7 +4495,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6957,
+            "start": 6718,
             "length": 5,
             "messageText": "Parameter 'items' implicitly has an 'any' type.",
             "category": 1,
@@ -4467,50 +4503,14 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 7121,
+            "start": 6876,
             "length": 6,
             "messageText": "Parameter 'bundle' implicitly has an 'any' type.",
             "category": 1,
             "code": 7006
           }
         ]
-      ],
-      "../node_modules/@types/color-name/index.d.ts",
-      "../node_modules/@types/eslint-visitor-keys/index.d.ts",
-      "../node_modules/@types/json-schema/index.d.ts",
-      "../../../../node_modules/@types/benchmark/index.d.ts",
-      "../../../../node_modules/@types/detect-indent/index.d.ts",
-      "../../../../node_modules/@types/minimatch/index.d.ts",
-      "../../../../node_modules/@types/glob/index.d.ts",
-      "../../../../node_modules/@types/mkdirp/index.d.ts",
-      "../node_modules/typescript/lib/lib.es2015.d.ts",
-      "../node_modules/typescript/lib/lib.es2016.d.ts",
-      "../node_modules/typescript/lib/lib.es2017.d.ts",
-      "../node_modules/typescript/lib/lib.es2018.d.ts",
-      "../node_modules/typescript/lib/lib.esnext.intl.d.ts",
-      "../node_modules/typescript/lib/lib.es2020.bigint.d.ts",
-      "../node_modules/typescript/lib/lib.es2018.regexp.d.ts",
-      "../node_modules/typescript/lib/lib.es2018.promise.d.ts",
-      "../node_modules/typescript/lib/lib.es2018.intl.d.ts",
-      "../node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
-      "../node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts",
-      "../node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
-      "../node_modules/typescript/lib/lib.es2017.intl.d.ts",
-      "../node_modules/typescript/lib/lib.es2017.string.d.ts",
-      "../node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
-      "../node_modules/typescript/lib/lib.es2017.object.d.ts",
-      "../node_modules/typescript/lib/lib.es2016.array.include.d.ts",
-      "../node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
-      "../node_modules/typescript/lib/lib.es2015.symbol.d.ts",
-      "../node_modules/typescript/lib/lib.es2015.reflect.d.ts",
-      "../node_modules/typescript/lib/lib.es2015.proxy.d.ts",
-      "../node_modules/typescript/lib/lib.es2015.promise.d.ts",
-      "../node_modules/typescript/lib/lib.es2015.iterable.d.ts",
-      "../node_modules/typescript/lib/lib.es2015.generator.d.ts",
-      "../node_modules/typescript/lib/lib.es2015.collection.d.ts",
-      "../node_modules/typescript/lib/lib.es2015.core.d.ts",
-      "../node_modules/typescript/lib/lib.dom.d.ts",
-      "../node_modules/typescript/lib/lib.es5.d.ts"
+      ]
     ]
   },
   "version": "3.8.3"
