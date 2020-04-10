@@ -14,11 +14,11 @@ import { BundlesView } from "./bundles-view"
 import { NameView } from "./name-view"
 import { Bundles } from "./bundles"
 
-let bundles: Bundles | null
-let bundleview: BundleView | null
-let bundlesview: BundlesView | null
-let nameview: NameView | null
-let initfileview: InitFileView | null
+let bundles: Bundles
+let bundleview: BundleView
+let bundlesview: BundlesView
+let nameview: NameView
+let initfileview: InitFileView
 
 let subscriptions: CompositeDisposable
 
@@ -84,20 +84,15 @@ export function deactivate() {
     atom.config.save()
   }
   subscriptions.dispose()
-  if (bundles != null) {
+  if (bundles) {
     bundles.destroy()
   }
-  if (nameview != null) {
+  if (nameview) {
     nameview.destroy()
   }
-  bundles = null
-  nameview = null
-  bundlesview = null
-  bundleview = null
-  if (initfileview != null) {
+  if (initfileview) {
     initfileview.destroy()
   }
-  initfileview = null
 }
 
 export const config = {
