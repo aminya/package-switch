@@ -183,8 +183,8 @@ function loadProjectConfigs() {
   let p
   if ((p = atom.project.getPaths()).length === 1) {
     let f
-    fs.exists((f = path.join(p[0], ".package-switch.cson")), function (exists) {
-      if (!exists) {
+    fs.stat((f = path.join(p[0], ".package-switch.cson")), function (fileError, stats) {
+      if (fileError && !stats) {
         atom.packages.activatePackage("tree-view")
         atom.packages.activatePackage("tabs")
         atom.packages.activatePackage("settings-view")
