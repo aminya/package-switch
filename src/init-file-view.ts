@@ -99,7 +99,8 @@ export class InitFileView extends View {
 
   save() {
     this.file.packages = []
-    for (let child of this.package_list.children()) {
+    let package_list_children = Array.from(this.package_list.children())
+    for (let child of package_list_children) {
       if (child.children[0].classList.contains("icon-diff-added")) {
         this.file.packages.push({ name: child.children[0].innerText, action: "added" })
       }
