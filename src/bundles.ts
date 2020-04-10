@@ -1,7 +1,5 @@
 /*
  * decaffeinate suggestions:
- * DS102: Remove unnecessary code created because of implicit returns
- * DS206: Consider reworking classes to avoid initClass
  * DS207: Consider shorter variations of null checks
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
@@ -47,7 +45,7 @@ export class Bundles {
     this.emitter.dispose()
     this.data = {}
     this.single_bundles = {}
-    return (this.project_bundles = {})
+    this.project_bundles = {}
   }
 
   reload(event?, filename?) {
@@ -55,9 +53,9 @@ export class Bundles {
       if (this.filename != null) {
         this.getData()
       }
-      return this.emitter.emit("file-change")
+      this.emitter.emit("file-change")
     } else {
-      return (this.writing = false)
+      this.writing = false
     }
   }
 
@@ -70,23 +68,23 @@ export class Bundles {
   }
 
   onFileChange(callback) {
-    return this.emitter.on("file-change", callback)
+    this.emitter.on("file-change", callback)
   }
 
   getData() {
     try {
       const data = CSON.readFileSync(this.filename)
-      return Object.keys(data).forEach((key) => {
-        return (this.data[key] = new Bundle(data[key]))
+      Object.keys(data).forEach((key) => {
+        this.data[key] = new Bundle(data[key])
       })
     } catch (error) {
-      return this.notify("Error while reading settings from file")
+      this.notify("Error while reading settings from file")
     }
   }
 
   getPackages() {
-    return atom.packages.getAvailablePackageNames().forEach((name) => {
-      return (this.single_bundles[name] = new Bundle({ packages: [{ name, action: "added" }] }))
+    atom.packages.getAvailablePackageNames().forEach((name) => {
+      this.single_bundles[name] = new Bundle({ packages: [{ name, action: "added" }] })
     })
   }
 
@@ -96,13 +94,13 @@ export class Bundles {
         this.writing = true
         CSON.writeFileSync(this.filename, this.data)
         if (emit) {
-          return this.emitter.emit("file-change")
+          this.emitter.emit("file-change")
         }
       } catch (error) {
-        return this.notify(`Settings could not be written to ${this.filename}`)
+        this.notify(`Settings could not be written to ${this.filename}`)
       }
     } else {
-      return this.reload()
+      this.reload()
     }
   }
 
@@ -110,21 +108,21 @@ export class Bundles {
     if (atom.notifications != null) {
       atom.notifications.addError(message)
     }
-    return console.log("package-switch: " + message)
+    console.log("package-switch: " + message)
   }
 
   touchFile() {
     if (!fs.existsSync(this.filename)) {
-      return fs.writeFileSync(this.filename, "{}")
+      fs.writeFileSync(this.filename, "{}")
     }
   }
 
   addBundle(name, packages) {
     if (this.data[name] != null) {
-      return this.notify(`Bundle \"${name}\" already exists`)
+      this.notify(`Bundle \"${name}\" already exists`)
     } else {
       this.data[name] = new Bundle({ packages })
-      return this.setData()
+      this.setData()
     }
   }
 
@@ -132,20 +130,20 @@ export class Bundles {
     if ((oldname === name && this.data[oldname] != null) || (this.data[oldname] != null && this.data[name] == null)) {
       delete this.data[oldname]
       this.data[name] = new Bundle({ packages })
-      return this.setData()
+      this.setData()
     } else {
       if (!this.data[oldname]) {
         this.notify(`Bundle \"${oldname}\" not found`)
       }
       if (this.data[name] != null) {
-        return this.notify(`Bundle \"${name}\" already exists`)
+        this.notify(`Bundle \"${name}\" already exists`)
       }
     }
   }
 
   removeBundle(bundle) {
     delete this.data[bundle]
-    return this.setData()
+    this.setData()
   }
 
   getBundle(bundle) {
