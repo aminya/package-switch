@@ -1,6 +1,10 @@
 package-switch
 ==============
-[![Build Status](https://travis-ci.org/deprint/package-switch.svg)](https://travis-ci.org/deprint/package-switch) [![Dependency Status](https://david-dm.org/deprint/package-switch.svg)](https://david-dm.org/deprint/package-switch) [![apm](https://img.shields.io/apm/dm/package-switch.svg)](https://github.com/deprint/package-switch) [![apm](https://img.shields.io/apm/v/package-switch.svg)](https://github.com/deprint/package-switch)
+
+![Build Status (Github Actions)](https://github.com/aminya/AcuteML.jl/workflows/CI/badge.svg)
+[![Dependency Status](https://david-dm.org/aminya/package-switch.svg)](https://david-dm.org/aminya/package-switch)
+[![apm](https://img.shields.io/apm/dm/package-switch.svg)](https://github.com/aminya/package-switch)
+[![apm](https://img.shields.io/apm/v/package-switch.svg)](https://github.com/aminya/package-switch)
 
 ## Easy package activation/deactivation
 ![package-switch-2](https://cloud.githubusercontent.com/assets/7817714/8269467/947642ce-17a9-11e5-8602-3a1de749edd1.png)
@@ -50,7 +54,8 @@ Include this file in bug reports if you think the bug is in this file.
 Local configuration files can be opened as a text editor by right-clicking the file in tree-view and clicking on `Open as Text`.
 
 ## Roadmap
-* Bug fixes, etc.
+* Replacing atom-space-pen-views with atom-select-list and other new packages
+* Typing for variables
 
 ## Contributing
 * Let me know if you encounter any bugs.
