@@ -1,3 +1,6 @@
+## 0.6.0 - Codebase is rewritten in TypeScript
+
+
 ## 0.5.0 - Edit config files manually
 * `package-switch:open-global` opens the global config file
 * Added context menu command for config files in tree-view to open them as text editors
