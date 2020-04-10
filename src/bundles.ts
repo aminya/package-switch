@@ -20,10 +20,10 @@ export class Bundles {
   project_bundles = {}
   writing = false
 
-  constructor(arg) {
+  constructor(arg?) {
     this.reload = this.reload.bind(this)
     this.setData = this.setData.bind(this)
-    if (arg != null) {
+    if (arg) {
       this.filename = arg === "" ? null : arg
     } else {
       this.getFileName()
