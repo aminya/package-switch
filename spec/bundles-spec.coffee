@@ -1,4 +1,4 @@
-Bundles = require '../lib/bundles.coffee'
+Bundles = require '../lib/bundles'
 
 describe 'Bundles', ->
   [bundles, bundle] = []
