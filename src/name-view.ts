@@ -43,14 +43,14 @@ export class NameView extends View {
 
     this.disposables = new CompositeDisposable()
 
-    this.on("click", ".buttons .icon-x", this.cancel)
-    this.on("click", ".buttons .icon-check", this.accept)
-    this.on("click", ".buttons .icon-arrow-left", this.back)
+    this.on("click", ".buttons .icon-x", (event) => this.cancel(event))
+    this.on("click", ".buttons .icon-check", (event) => this.accept(event))
+    this.on("click", ".buttons .icon-arrow-left", (event) => this.back(event))
 
     return this.disposables.add(
       atom.commands.add(this.element, {
-        "core:confirm": this.accept,
-        "core:cancel": this.cancel,
+        "core:confirm": (event) => this.accept(event),
+        "core:cancel": (event) => this.cancel(event),
       })
     )
   }
