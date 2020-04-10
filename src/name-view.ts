@@ -1,38 +1,35 @@
 /*
  * decaffeinate suggestions:
- * DS001: Remove Babel/TypeScript constructor workaround
- * DS102: Remove unnecessary code created because of implicit returns
- * DS206: Consider reworking classes to avoid initClass
  * DS207: Consider shorter variations of null checks
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
 import { View } from "space-pen"
-import { $, $$, TextEditorView } from "atom-space-pen-views"
+import { TextEditorView } from "atom-space-pen-views"
 import { CompositeDisposable } from "atom"
 
 export class NameView extends View {
   nameEditor = null
 
   static content() {
-    return this.div({ class: "nameview" }, () => {
+    this.div({ class: "nameview" }, () => {
       this.div({ class: "block" }, () => {
         this.label(() => {
-          return this.div({ class: "bundle-name" }, "Bundle Name")
+          this.div({ class: "bundle-name" }, "Bundle Name")
         })
         this.subview("bundle_name", new TextEditorView({ mini: true }))
         this.div({ id: "name-error-none", class: "error hidden" }, "This field cannot be empty")
-        return this.div({ id: "name-error-used", class: "error hidden" }, "Name already used")
+        this.div({ id: "name-error-used", class: "error hidden" }, "Name already used")
       })
       this.div({ class: "block text-subtle" }, () => {
         this.div({ class: "added icon icon-diff-added hidden", outlet: "added" })
-        return this.div({ class: "removed icon icon-diff-removed hidden", outlet: "removed" })
+        this.div({ class: "removed icon icon-diff-removed hidden", outlet: "removed" })
       })
-      return this.div({ class: "buttons" }, () => {
+      this.div({ class: "buttons" }, () => {
         this.div(() => {
           this.div({ class: "btn btn-error icon icon-x inline-block-tight" }, "Cancel")
-          return this.div({ class: " btn btn-error icon icon-arrow-left inline-block-tight" }, "Back")
+          this.div({ class: " btn btn-error icon icon-arrow-left inline-block-tight" }, "Back")
         })
-        return this.div({ class: "btn btn-primary icon icon-check inline-block-tight" }, "Accept")
+        this.div({ class: "btn btn-primary icon icon-check inline-block-tight" }, "Accept")
       })
     })
   }
@@ -47,7 +44,7 @@ export class NameView extends View {
     this.on("click", ".buttons .icon-check", (event) => this.accept(event))
     this.on("click", ".buttons .icon-arrow-left", (event) => this.back(event))
 
-    return this.disposables.add(
+    this.disposables.add(
       atom.commands.add(this.element, {
         "core:confirm": (event) => this.accept(event),
         "core:cancel": (event) => this.cancel(event),
@@ -58,31 +55,31 @@ export class NameView extends View {
   destroy() {
     this.disposables.dispose()
     this.detach()
-    return this.panel != null ? this.panel.hide() : undefined
+    this.panel != null ? this.panel.hide() : undefined
   }
 
   cancel(event?) {
     if (this.panel != null) {
       this.panel.hide()
     }
-    return event.stopPropagation()
+    event.stopPropagation()
   }
 
   back(event?) {
     this.backCallback(this.oldname, this.items)
-    return this.cancel(event)
+    this.cancel(event)
   }
 
   accept(event?) {
     if (!this.validInput()) {
       if (this.nameEditor.getText() === "") {
-        return this.find("#name-error-none").removeClass("hidden")
+        this.find("#name-error-none").removeClass("hidden")
       } else {
-        return this.find("#name-error-used").removeClass("hidden")
+        this.find("#name-error-used").removeClass("hidden")
       }
     } else {
       this.cancel(event)
-      return this.confirmCallback(this.oldname, this.nameEditor.getText(), this.items)
+      this.confirmCallback(this.oldname, this.nameEditor.getText(), this.items)
     }
   }
 
@@ -96,17 +93,17 @@ export class NameView extends View {
 
   clearErrors() {
     this.find("#name-error-none").addClass("hidden")
-    return this.find("#name-error-used").addClass("hidden")
+    this.find("#name-error-used").addClass("hidden")
   }
 
   clearPackages() {
     this.added.addClass("hidden")
-    return this.removed.addClass("hidden")
+    this.removed.addClass("hidden")
   }
 
   showPackages(div, packages) {
     div.removeClass("hidden")
-    return div.html(packages.toString())
+    div.html(packages.toString())
   }
 
   show(bundles, oldname, items, { confirmCallback, backCallback }) {
@@ -126,9 +123,9 @@ export class NameView extends View {
     const items_removed = []
     this.items.forEach(function (item) {
       if (item.action === "added") {
-        return items_added.push(item.name)
+        items_added.push(item.name)
       } else {
-        return items_removed.push(item.name)
+        items_removed.push(item.name)
       }
     })
     if (items_added.length !== 0) {
@@ -142,6 +139,6 @@ export class NameView extends View {
       this.panel = atom.workspace.addModalPanel({ item: this })
     }
     this.panel.show()
-    return this.bundle_name.focus()
+    this.bundle_name.focus()
   }
 }
