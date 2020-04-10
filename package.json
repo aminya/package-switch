@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "atom-space-pen-views": "^2.2.0",
+    "space-pen": "^5.1.2",
     "season": "^6.0.2"
   },
   "devDependencies": {

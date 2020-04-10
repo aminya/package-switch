@@ -6,7 +6,8 @@
  * DS207: Consider shorter variations of null checks
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
-import { $, $$, View, TextEditorView } from "atom-space-pen-views"
+import { View } from "space-pen"
+import { $, $$, TextEditorView } from "atom-space-pen-views"
 import { CompositeDisposable } from "atom"
 
 export class NameView extends View {
