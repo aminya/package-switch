@@ -27,16 +27,17 @@ export function activate() {
   subscriptions = new CompositeDisposable()
 
   subscriptions.add(
-    atom.commands.add("atom-workspace", { "package-switch:start-packages": () => toggle() }),
-    atom.commands.add("atom-workspace", { "package-switch:stop-packages": () => toggle(true) }),
-    atom.commands.add("atom-workspace", { "package-switch:create": () => create() }),
-    atom.commands.add("atom-workspace", { "package-switch:edit": () => edit() }),
-    atom.commands.add("atom-workspace", { "package-switch:remove": () => remove() }),
     atom.commands.add("atom-workspace", {
-      "package-switch:open-global"() {
+      "package-switch:start-packages": () => toggle(),
+       "package-switch:stop-packages": () => toggle(true),
+      "package-switch:create": () => create() ,
+      "package-switch:edit": () => edit() ,
+      "package-switch:remove": () => remove(),
+      "package-switch:open-global": () => {
         atom.workspace.open(path.join(path.dirname(atom.config.getUserConfigPath()), "package-switch.bundles"))
-      },
+      }
     }),
+
     atom.commands.add(
       '.tree-view .file .name[data-name$="\\.package-switch\\.cson"]',
       "package-switch:open-local",
