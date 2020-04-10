@@ -6,29 +6,10 @@
  * DS207: Consider shorter variations of null checks
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
-let NameView
 import { $, $$, View, TextEditorView } from "atom-space-pen-views"
 import { CompositeDisposable } from "atom"
 
 export class NameView extends View {
-  constructor(...args) {
-    {
-      // Hack: trick Babel/TypeScript into allowing this before super.
-      if (false) {
-        super()
-      }
-      let thisFn = (() => {
-        return this
-      }).toString()
-      let thisName = thisFn.match(/return (?:_assertThisInitialized\()*(\w+)\)*;/)[1]
-      eval(`${thisName} = this;`)
-    }
-    this.cancel = this.cancel.bind(this)
-    this.back = this.back.bind(this)
-    this.accept = this.accept.bind(this)
-    super(...args)
-  }
-
   nameEditor = null
 
   static content() {
@@ -55,7 +36,8 @@ export class NameView extends View {
     })
   }
 
-  initialize() {
+  constructor() {
+    super()
     this.nameEditor = this.bundle_name.getModel()
 
     this.disposables = new CompositeDisposable()
