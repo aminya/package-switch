@@ -2,19 +2,46 @@
   "name": "package-switch",
   "main": "lib/main",
   "version": "0.5.0",
+  "author": "Amin Yahyaabadi, Fabian Stiewitz",
   "description": "Easy package activation/deactivation",
-  "keywords": [
-    "package",
-    "bundle"
-  ],
-  "repository": "https://github.com/deprint/package-switch",
+  "keywords": ["package", "activate", "deactivate", "activation","disable", "enable", "load", "bundle", "switch", "shutdown"],
+  "repository": "https://github.com/aminya/package-switch",
   "license": "MIT",
+  "scripts": {
+    "typescript": "tsc -p ./src/tsconfig.json || echo done",
+    "prettier_src": "prettier --write ./src/**/*.ts",
+    "prettier_out": "prettier --write ./lib/**/*.js",
+    "build": "npm run typescript -s",
+    "lint": "eslint . --ext js,ts,coffee,json",
+    "test": "npm run build && atom --test spec"
+  },
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
   },
   "dependencies": {
-    "atom-space-pen-views": "^2.0.0",
-    "fs-plus": "^2.0.4",
-    "season": "^5.2.0"
+    "atom-space-pen-views": "^2.2.0",
+    "space-pen": "^5.1.2",
+    "season": "^6.0.2"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.3",
+    "coffeescript": "^2.5.1",
+    "@types/atom": "^1.40.1",
+    "@types/season": "^6.0.0",
+    "eslint": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "babel-eslint": "latest",
+    "eslint-plugin-coffee": "latest",
+    "eslint-plugin-json": "latest",
+    "eslint-plugin-only-warn": "latest",
+    "tslint": "latest",
+    "tslint-config-prettier": "latest",
+    "prettier": "latest"
+  },
+  "prettier": {
+    "semi": false,
+    "tabWidth": 2,
+    "printWidth": 120
   }
 }

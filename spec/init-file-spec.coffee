@@ -1,5 +1,5 @@
-InitFile = require '../lib/init-file'
-InitFileView = require '../lib/init-file-view'
+{ InitFile }  = require '../lib/init-file'
+{ InitFileView } = require '../lib/init-file-view'
 path = require 'path'
 
 describe 'Init File', ->
