@@ -48,7 +48,7 @@ export class BundlesView extends SelectListView {
     this.panel.show()
 
     bundles.forEach(function (bundle, index) {
-      bundle["actions"] = {
+      bundle.actions = {
         added: [],
         removed: [],
       }
