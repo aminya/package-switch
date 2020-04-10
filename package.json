@@ -1,6 +1,6 @@
 {
   "name": "package-switch",
-  "main": "lib/main",
+  "main": "lib/package-switch",
   "version": "0.7.1",
   "author": "Amin Yahyaabadi, Fabian Stiewitz",
   "description": "Easy package activation/deactivation",
@@ -20,9 +20,13 @@
   "license": "MIT",
   "scripts": {
     "typescript": "tsc -p ./src/tsconfig.json || echo done",
+    "buildlocal": "npm run typescript -s",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode none --watch",
+    "prepare": "npm run build",
+    "ppublish": "bash ./ppublish.sh",
     "prettier_src": "prettier --write ./src/**/*.ts",
     "prettier_out": "prettier --write ./lib/**/*.js",
-    "build": "npm run typescript -s",
     "lint": "eslint . --ext js,ts,coffee,json",
     "test": "npm run build && atom --test spec",
     "prepare": "npm run build",
