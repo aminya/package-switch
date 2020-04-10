@@ -5,8 +5,8 @@
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
 import { CompositeDisposable } from "atom"
-let fs = null
-let path = null
+import fs from "fs"
+import path from "path"
 
 let Bundles: null
 let bundles: null
@@ -37,9 +37,6 @@ export function activate() {
     atom.commands.add("atom-workspace", { "package-switch:remove": () => remove() }),
     atom.commands.add("atom-workspace", {
       "package-switch:open-global"() {
-        if (path == null) {
-          path = require("path")
-        }
         atom.workspace.open(path.join(path.dirname(atom.config.getUserConfigPath()), "package-switch.bundles"))
       },
     }),
@@ -55,12 +52,6 @@ export function activate() {
     }),
     atom.workspace.addOpener(function (uritoopen, { noopener }) {
       if (uritoopen.endsWith(".package-switch.cson") && noopener == null) {
-        if (fs == null) {
-          fs = require("fs")
-        }
-        if (path == null) {
-          path = require("path")
-        }
         if (InitFile == null) {
           InitFile = require("./init-file")
         }
@@ -192,12 +183,6 @@ function loadProjectConfigs() {
   let p
   if ((p = atom.project.getPaths()).length === 1) {
     let f
-    if (fs == null) {
-      fs = require("fs")
-    }
-    if (path == null) {
-      path = require("path")
-    }
     fs.exists((f = path.join(p[0], ".package-switch.cson")), function (exists) {
       if (!exists) {
         atom.packages.activatePackage("tree-view")
