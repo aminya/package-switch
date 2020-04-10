@@ -5,7 +5,7 @@
  * DS207: Consider shorter variations of null checks
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
-import Bundle from "./bundle"
+import { Bundle } from "./bundle"
 import path from "path"
 import fs from "fs"
 import { Emitter } from "atom"
