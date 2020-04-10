@@ -1,6 +1,5 @@
 /*
  * decaffeinate suggestions:
- * DS102: Remove unnecessary code created because of implicit returns
  * DS103: Rewrite code to no longer use __guard__
  * DS207: Consider shorter variations of null checks
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
@@ -41,7 +40,7 @@ export function activate() {
         if (path == null) {
           path = require("path")
         }
-        return atom.workspace.open(path.join(path.dirname(atom.config.getUserConfigPath()), "package-switch.bundles"))
+        atom.workspace.open(path.join(path.dirname(atom.config.getUserConfigPath()), "package-switch.bundles"))
       },
     }),
     atom.commands.add(
@@ -51,7 +50,7 @@ export function activate() {
     ),
     atom.config.onDidChange("package-switch.SaveRestore", ({ newValue }) => {
       if (newValue) {
-        return saveStates()
+        saveStates()
       }
     }),
     atom.workspace.addOpener(function (uritoopen, { noopener }) {
@@ -68,7 +67,7 @@ export function activate() {
         if (InitFileView == null) {
           InitFileView = require("./init-file-view")
         }
-        return (initfileview = new InitFileView({
+        (initfileview = new InitFileView({
           uri: uritoopen,
           file: new InitFile(path.dirname(uritoopen), uritoopen),
         }))
@@ -166,28 +165,28 @@ function createBundleView() {
   if (BundleView == null) {
     BundleView = require("./bundle-view")
   }
-  return bundleview != null ? bundleview : (bundleview = new BundleView())
+  bundleview != null ? bundleview : (bundleview = new BundleView())
 }
 
 function createBundlesView() {
   if (BundlesView == null) {
     BundlesView = require("./bundles-view")
   }
-  return bundlesview != null ? bundlesview : (bundlesview = new BundlesView())
+  bundlesview != null ? bundlesview : (bundlesview = new BundlesView())
 }
 
 function createNameView() {
   if (NameView == null) {
     NameView = require("./name-view")
   }
-  return nameview != null ? nameview : (nameview = new NameView())
+  nameview != null ? nameview : (nameview = new NameView())
 }
 
 function createBundlesInstance() {
   if (Bundles == null) {
     Bundles = require("./bundles")
   }
-  return bundles != null ? bundles : (bundles = new Bundles())
+  bundles != null ? bundles : (bundles = new Bundles())
 }
 function loadProjectConfigs() {
   let p
@@ -199,17 +198,17 @@ function loadProjectConfigs() {
     if (path == null) {
       path = require("path")
     }
-    return fs.exists((f = path.join(p[0], ".package-switch.cson")), function (exists) {
+    fs.exists((f = path.join(p[0], ".package-switch.cson")), function (exists) {
       if (!exists) {
         atom.packages.activatePackage("tree-view")
         atom.packages.activatePackage("tabs")
         atom.packages.activatePackage("settings-view")
-        return atom.packages.activatePackage("command-palette")
+        atom.packages.activatePackage("command-palette")
       }
       if (InitFile == null) {
         InitFile = require("./init-file")
       }
-      return setTimeout(
+      setTimeout(
         () => new InitFile(path.basename(p[0]), f).execute(false),
         atom.config.get("package-switch.DeferInitialization")
       )
@@ -218,20 +217,20 @@ function loadProjectConfigs() {
     atom.packages.activatePackage("tree-view")
     atom.packages.activatePackage("tabs")
     atom.packages.activatePackage("settings-view")
-    return atom.packages.activatePackage("command-palette")
+    atom.packages.activatePackage("command-palette")
   }
 }
 
 function toggleCallback(opposite, bundle) {
-  return __guard__(bundles.getBundle(bundle.name), (x) => x.execute(opposite))
+  __guard__(bundles.getBundle(bundle.name), (x) => x.execute(opposite))
 }
 
 function removeCallback(bundle) {
-  return bundles.removeBundle(bundle.name)
+  bundles.removeBundle(bundle.name)
 }
 
 function saveStates() {
-  return atom.config.set(
+  atom.config.set(
     "package-switch.SaveData",
     atom.config.get("core.disabledPackages").filter((item, index, array) => array.indexOf(item) === index)
   )
@@ -240,10 +239,10 @@ function saveStates() {
 function toggle(opposite = false) {
   createBundlesInstance()
   createBundlesView()
-  return bundlesview.show(
+  bundlesview.show(
     bundles.getBundles(),
     (bundle) => {
-      return toggleCallback(opposite, bundle)
+      toggleCallback(opposite, bundle)
     },
     opposite
   )
@@ -252,14 +251,14 @@ function toggle(opposite = false) {
 function remove() {
   createBundlesInstance()
   createBundlesView()
-  return bundlesview.show(bundles.getBundles(false), (bundle) => removeCallback(bundle))
+  bundlesview.show(bundles.getBundles(false), (bundle) => removeCallback(bundle))
 }
 
 function createCallback(oldname, items) {
   createNameView()
-  return nameview.show(bundles, oldname, items, {
+  nameview.show(bundles, oldname, items, {
     confirmCallback: (oldname, name, packages) => {
-      return nameCallback(oldname, name, packages)
+      nameCallback(oldname, name, packages)
     },
     backCallback: (oldname, _items) =>
       create({
@@ -271,20 +270,20 @@ function createCallback(oldname, items) {
 
 function nameCallback(oldname, name, packages) {
   if (oldname != null) {
-    return bundles.replaceBundle(oldname, name, packages)
+    bundles.replaceBundle(oldname, name, packages)
   } else {
-    return bundles.addBundle(name, packages)
+    bundles.addBundle(name, packages)
   }
 }
 
 function create(bundle = null) {
   createBundlesInstance()
   createBundleView()
-  return bundleview.show(bundle, (oldname, items) => createCallback(oldname, items))
+  bundleview.show(bundle, (oldname, items) => createCallback(oldname, items))
 }
 
 function edit() {
   createBundlesInstance()
   createBundlesView()
-  return bundlesview.show(bundles.getBundles(false), (bundle) => create(bundle))
+  bundlesview.show(bundles.getBundles(false), (bundle) => create(bundle))
 }
