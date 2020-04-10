@@ -6,12 +6,12 @@
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
 import { Bundle } from "./bundle"
+import { InitFile } from "./init-file"
+
 import path from "path"
 import fs from "fs"
 import { Emitter } from "atom"
 import CSON from "season"
-
-let InitFile = null
 
 export class Bundles {
   filename = null
@@ -171,9 +171,6 @@ export class Bundles {
       var f
       if (fs.existsSync((f = path.join(project, ".package-switch.cson")))) {
         var d, i
-        if (InitFile == null) {
-          InitFile = require("./init-file")
-        }
         if ((i = new InitFile((d = path.basename(project)), f)).packages.length !== 0) {
           p.push({
             name: `Project: ${d}`,
