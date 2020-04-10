@@ -12,7 +12,8 @@
     "prettier_src": "prettier --write ./src/**/*.ts",
     "prettier_out": "prettier --write ./lib/**/*.js",
     "build": "npm run typescript -s",
-    "lint": "eslint . --ext js,ts,coffee,json"
+    "lint": "eslint . --ext js,ts,coffee,json",
+    "test": "npm run build && atom --test spec"
   },
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
