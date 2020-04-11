@@ -5,9 +5,43 @@
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
 import CSON from "season"
+import fs from "fs"
 
 export class InitFile {
   constructor(name, filepath) {
+    this.name = name
+    this.filepath = filepath
+    try {
+      this.packages = JSON.parse(fs.readFileSync(this.filepath))
+      if (this.packages == null) {
+        this.packages = []
+      }
+    } catch (error) {
+      this.packages = []
+    }
+  }
+
+  execute(opposite) {
+    return this.packages.map((p) =>
+      opposite
+        ? p.action === "removed"
+          ? atom.packages.enablePackage(p.name)
+          : atom.packages.disablePackage(p.name)
+        : p.action === "added"
+        ? atom.packages.enablePackage(p.name)
+        : atom.packages.disablePackage(p.name)
+    )
+  }
+
+  save() {
+    try {
+      fs.writeFileSync(this.filepath, JSON.stringify(this.packages))
+    } catch (error) {
+      console.error(error)
+    }
+  }
+}
+
     this.name = name
     this.filepath = filepath
     try {
