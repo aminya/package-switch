@@ -3,7 +3,7 @@
  * DS207: Consider shorter variations of null checks
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
-import { View } from "space-pen"
+const { View } = require("space-pen")
 import { TextEditorView } from "atom-space-pen-views"
 import { CompositeDisposable } from "atom"
 
