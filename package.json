@@ -1,6 +1,6 @@
 {
   "name": "package-switch",
-  "main": "lib/main",
+  "main": "lib/main.js",
   "version": "0.7.1",
   "author": "Amin Yahyaabadi, Fabian Stiewitz",
   "description": "Easy package activation/deactivation",
@@ -22,11 +22,13 @@
     "typescript": "tsc -p ./src/tsconfig.json || echo done",
     "prettier_src": "prettier --write ./src/**/*.ts",
     "prettier_out": "prettier --write ./lib/**/*.js",
-    "build": "npm run typescript -s",
+    "buildlocal": "npm run typescript -s",
     "lint": "eslint . --ext js,ts,coffee,json",
     "test": "npm run build && atom --test spec",
     "prepare": "npm run build",
-    "ppublish": "bash ./ppublish.sh"
+    "ppublish": "bash ./ppublish.sh",
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
   },
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
@@ -34,6 +36,7 @@
   "dependencies": {
     "atom-space-pen-views": "^2.2.0",
     "space-pen": "^5.1.2",
+    "jquery": "2.1.4",
     "season": "^6.0.2"
   },
   "devDependencies": {
@@ -50,7 +53,15 @@
     "eslint-plugin-only-warn": "latest",
     "tslint": "latest",
     "tslint-config-prettier": "latest",
-    "prettier": "latest"
+    "prettier": "latest",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@rollup/plugin-typescript": "^4.0.0",
+    "rollup-plugin-coffee-script": "^2.0.0",
+    "@rollup/plugin-json": "^4.0.2",
+    "rollup-plugin-terser": "^5.3.0",
+    "tslib": "^1.11.1",
+    "rollup": "^2.6.0"
   },
   "prettier": {
     "semi": false,
