@@ -39,7 +39,7 @@ export function activate() {
     }),
 
     atom.commands.add(
-      '.tree-view .file .name[data-name$="\\.package-switch\\.cson"]',
+      '.tree-view .file .name[data-name$="\\.package-switch\\.json"]',
       "package-switch:open-local",
       ({ target }) => atom.workspace.open(target.dataset.path, { noopener: true })
     ),
