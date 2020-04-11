@@ -186,8 +186,6 @@ export class Bundles {
         // deprecated
         const fcson = path.join(project, ".package-switch.json")
         if (fs.existsSync(fcson)) {
-          atom.notifications.addWarning(`Using CSON config for package-switch is deprecated. 
-           Convert ${fcson} to JSON at https://decaffeinate-project.org/repl/`)
           let d, i
           if ((i = new InitFileCSON((d = path.basename(project)), f)).packages.length !== 0) {
             p.push({
