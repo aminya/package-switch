@@ -79,7 +79,6 @@ export class Bundles {
       })
     } catch (error) {
       this.notify("Error while reading settings from file")
-      atom.notifications.addError(error)
     }
   }
 
