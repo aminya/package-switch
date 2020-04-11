@@ -24,7 +24,7 @@
     "prettier_out": "prettier --write ./lib/**/*.js",
     "buildlocal": "npm run typescript -s",
     "lint": "eslint . --ext js,ts,coffee,json",
-    "test": "npm run build && atom --test spec",
+    "test": "npm run buildlocal && atom --test spec",
     "prepare": "npm run build",
     "ppublish": "bash ./ppublish.sh",
     "build": "rollup -c",
