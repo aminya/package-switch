@@ -1,7 +1,7 @@
 {
   "name": "package-switch",
   "main": "lib/main",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "author": "Amin Yahyaabadi, Fabian Stiewitz",
   "description": "Easy package activation/deactivation",
   "keywords": [
