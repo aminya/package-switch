@@ -7,11 +7,11 @@ describe 'Init File', ->
 
   beforeEach ->
     fixturesPath = atom.project.getPaths()[0]
-    initFile = new InitFile(path.basename(fixturesPath), path.join(fixturesPath, '.package-switch.cson'))
+    initFile = new InitFile(path.basename(fixturesPath), path.join(fixturesPath, '.package-switch.json'))
     spy = spyOn(initFile, 'save')
 
   it 'has a valid filepath field', ->
-    expect(initFile.filepath).toBe path.join(fixturesPath, '.package-switch.cson')
+    expect(initFile.filepath).toBe path.join(fixturesPath, '.package-switch.json')
 
   it 'has loaded the package settings', ->
     expect(initFile.packages.length).toBe 2
@@ -20,7 +20,7 @@ describe 'Init File', ->
     initFileView = null
 
     beforeEach ->
-      initFileView = new InitFileView(uri: path.join(fixturesPath, '.package-switch.cson'), file: initFile)
+      initFileView = new InitFileView(uri: path.join(fixturesPath, '.package-switch.json'), file: initFile)
 
     afterEach ->
       initFileView?.destroy()

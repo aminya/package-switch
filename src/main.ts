@@ -8,7 +8,7 @@ import { CompositeDisposable } from "atom"
 import fs from "fs"
 import path from "path"
 import { InitFileView } from "./init-file-view"
-import { InitFile } from "./init-file"
+import { InitFile, InitFileCSON } from "./init-file"
 import { BundleView } from "./bundle-view"
 import { BundlesView } from "./bundles-view"
 import { NameView } from "./name-view"
@@ -39,7 +39,7 @@ export function activate() {
     }),
 
     atom.commands.add(
-      '.tree-view .file .name[data-name$="\\.package-switch\\.cson"]',
+      '.tree-view .file .name[data-name$="\\.package-switch\\.json"]',
       "package-switch:open-local",
       ({ target }) => atom.workspace.open(target.dataset.path, { noopener: true })
     ),
@@ -49,11 +49,21 @@ export function activate() {
       }
     }),
     atom.workspace.addOpener(function (uritoopen, { noopener }) {
-      if (uritoopen.endsWith(".package-switch.cson") && noopener == null) {
-        initfileview = new InitFileView({
-          uri: uritoopen,
-          file: new InitFile(path.dirname(uritoopen), uritoopen),
-        })
+      if (noopener == null) {
+        if (uritoopen.endsWith(".package-switch.json")) {
+          initfileview = new InitFileView({
+            uri: uritoopen,
+            file: new InitFile(path.dirname(uritoopen), uritoopen),
+          })
+        }
+        // deprecated
+        else if (uritoopen.endsWith(".package-switch.cson")) {
+          console.error("here")
+          initfileview = new InitFileView({
+            uri: uritoopen,
+            file: new InitFileCSON(path.dirname(uritoopen), uritoopen),
+          })
+        }
       }
     })
   )
@@ -158,10 +168,10 @@ function createBundlesInstance() {
 }
 
 function loadProjectConfigs() {
-  let p
-  if ((p = atom.project.getPaths()).length === 1) {
-    let f
-    fs.stat((f = path.join(p[0], ".package-switch.cson")), function (fileError, stats) {
+  const p = atom.project.getPaths()
+  if (p.length === 1) {
+    const f = path.join(p[0], ".package-switch.json")
+    fs.stat(f, function (fileError, stats) {
       if (fileError && !stats) {
         atom.packages.activatePackage("tree-view")
         atom.packages.activatePackage("tabs")
@@ -173,6 +183,23 @@ function loadProjectConfigs() {
         atom.config.get("package-switch.DeferInitialization")
       )
     })
+
+    // deprecated
+    const fcson = path.join(p[0], ".package-switch.cson")
+    if (fs.existsSync(fcson)) {
+      fs.stat(fcson, function (fileError, stats) {
+        if (fileError && !stats) {
+          atom.packages.activatePackage("tree-view")
+          atom.packages.activatePackage("tabs")
+          atom.packages.activatePackage("settings-view")
+          atom.packages.activatePackage("command-palette")
+        }
+        setTimeout(
+          () => new InitFileCSON(path.basename(p[0]), fcson).execute(false),
+          atom.config.get("package-switch.DeferInitialization")
+        )
+      })
+    }
   } else {
     atom.packages.activatePackage("tree-view")
     atom.packages.activatePackage("tabs")

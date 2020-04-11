@@ -12,7 +12,7 @@ package-switch
 ## Features
 * Enable/disable packages without having to navigate settings-view
 * Put multiple packages into `Bundles` to enable/disable them all at once
-* Store local bundles in `.package-switch.cson` files
+* Store local bundles in `.package-switch.json` files
 * Auto-execute local bundle if only one project is active
 * Save and restore package states to save start-up time
 
@@ -37,7 +37,7 @@ package-switch
   * `package-switch:stop-packages` does the opposite of `package-switch:start-packages`
 
 ### "Auto-enable" packages
-To auto-enable packages you have to create a local configuration file called `.package-switch.cson` in your project's root folder.
+To auto-enable packages you have to create a local configuration file called `.package-switch.json` in your project's root folder.
 This config file can store one bundle that will be executed when Atom starts in the project folder.
 
 ### "Auto-disable" packages
