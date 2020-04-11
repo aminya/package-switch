@@ -1,7 +1,7 @@
 {
   "name": "package-switch",
   "main": "lib/main.js",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "author": "Amin Yahyaabadi, Fabian Stiewitz",
   "description": "Easy package activation/deactivation",
   "keywords": [
