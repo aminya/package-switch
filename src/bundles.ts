@@ -79,6 +79,7 @@ export class Bundles {
       })
     } catch (error) {
       this.notify("Error while reading settings from file")
+      atom.notifications.addError(error)
     }
   }
 
@@ -98,6 +99,7 @@ export class Bundles {
         }
       } catch (error) {
         this.notify(`Settings could not be written to ${this.filename}`)
+        atom.notifications.addError(error)
       }
     } else {
       this.reload()
@@ -182,7 +184,7 @@ export class Bundles {
         }
       } else {
         // deprecated
-        const fcson = path.join(project, ".package-switch.cson")
+        const fcson = path.join(project, ".package-switch.json")
         if (fs.existsSync(fcson)) {
           atom.notifications.addWarning(`Using CSON config for package-switch is deprecated. 
            Convert ${fcson} to JSON at https://decaffeinate-project.org/repl/`)

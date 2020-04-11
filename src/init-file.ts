@@ -16,12 +16,13 @@ export class InitFile {
         this.packages = []
       }
     } catch (error) {
+      atom.notifications.addError(error)
       this.packages = []
     }
   }
 
   execute(opposite) {
-    return this.packages.map((p) =>
+    this.packages.map((p) =>
       opposite
         ? p.action === "removed"
           ? atom.packages.enablePackage(p.name)
@@ -36,7 +37,7 @@ export class InitFile {
     try {
       fs.writeFileSync(this.filepath, JSON.stringify(this.packages, null, '\t'))
     } catch (error) {
-      console.error(error)
+      atom.notifications.addError(error)
     }
   }
 }
@@ -66,7 +67,7 @@ export class InitFileCSON {
   }
 
   execute(opposite) {
-    return this.packages.map((p) =>
+    this.packages.map((p) =>
       opposite
         ? p.action === "removed"
           ? atom.packages.enablePackage(p.name)
@@ -79,7 +80,7 @@ export class InitFileCSON {
 
   save() {
     try {
-      return CSON.writeFileSync(this.filepath, this.packages)
+      CSON.writeFileSync(this.filepath, this.packages)
     } catch (error) {}
   }
 }
