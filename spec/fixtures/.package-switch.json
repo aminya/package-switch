@@ -1,0 +1,10 @@
+[
+  {
+    "name": "status-bar",
+    "action": "added"
+  },
+  {
+    "name": "tree-view",
+    "action": "removed"
+  }
+]
