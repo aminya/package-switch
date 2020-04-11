@@ -130,7 +130,7 @@
         "signature": "bc7f44fdf2c20e0c540c5e986135c31421724d5922638c67257a4bf52a7984b7"
       },
       "../src/init-file.ts": {
-        "version": "1b0a6d470b93652a60c36e0486d955dcb0ed21cfed2b02cac8ad94f4f6e0cee5",
+        "version": "53234b97030f4c2a517a18c845b4993770d4b3db11868f8fb4e6cd27362d1759",
         "signature": "4d9d32809add106ac35c82c23eb5e52f2517229e0a2f546e868859e5edc46050"
       },
       "../node_modules/@types/node/globals.d.ts": {
@@ -318,7 +318,7 @@
         "signature": "1c0edbd8cd877d3fd9faa7ad81d39f83ac1d5d6a2d1826eef1097d20ab4140d7"
       },
       "../src/bundles.ts": {
-        "version": "f40e3aa4262e2c3e39a55fd510433991ab2a363834eb6ea34d200563b7a254da",
+        "version": "67ccfb6dd7e8b029966233aed0f373bbd7e61ebb0f6ed8f07863a800194a3a62",
         "signature": "197b478056c3ac1b36cffee4432361863158cac12c8f69c01d7999ca68ed4dce"
       },
       "../src/init-file-view.ts": {
@@ -3524,275 +3524,6 @@
           }
         ]
       ],
-      "../node_modules/@types/color-name/index.d.ts",
-      "../node_modules/@types/eslint-visitor-keys/index.d.ts",
-      "../node_modules/@types/json-schema/index.d.ts",
-      "../../../../node_modules/@types/benchmark/index.d.ts",
-      "../../../../node_modules/@types/detect-indent/index.d.ts",
-      "../../../../node_modules/@types/minimatch/index.d.ts",
-      "../../../../node_modules/@types/glob/index.d.ts",
-      "../../../../node_modules/@types/mkdirp/index.d.ts",
-      [
-        "../src/init-file.ts",
-        [
-          {
-            "file": "../src/init-file.ts",
-            "start": 318,
-            "length": 4,
-            "messageText": "Parameter 'name' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 324,
-            "length": 8,
-            "messageText": "Parameter 'filepath' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 346,
-            "length": 4,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'name' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 368,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'filepath' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 411,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 433,
-            "length": 30,
-            "code": 2345,
-            "category": 1,
-            "messageText": "Argument of type 'Buffer' is not assignable to parameter of type 'string'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 454,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'filepath' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 481,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 515,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 615,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 654,
-            "length": 8,
-            "messageText": "Parameter 'opposite' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 676,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 690,
-            "length": 1,
-            "messageText": "Parameter 'p' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 1038,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'filepath' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 1068,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 1193,
-            "length": 4,
-            "messageText": "Variable 'CSON' implicitly has type 'any' in some locations where its type cannot be determined.",
-            "category": 1,
-            "code": 7034
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 1242,
-            "length": 4,
-            "messageText": "Parameter 'name' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 1248,
-            "length": 8,
-            "messageText": "Parameter 'filepath' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 1612,
-            "length": 4,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'name' does not exist on type 'InitFileCSON'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 1634,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'filepath' does not exist on type 'InitFileCSON'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 1677,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFileCSON'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 1688,
-            "length": 4,
-            "messageText": "Variable 'CSON' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7005
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 1711,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'filepath' does not exist on type 'InitFileCSON'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 1737,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFileCSON'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 1771,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFileCSON'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 1829,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFileCSON'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 1868,
-            "length": 8,
-            "messageText": "Parameter 'opposite' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 1890,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFileCSON'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 1904,
-            "length": 1,
-            "messageText": "Parameter 'p' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 2230,
-            "length": 4,
-            "messageText": "Variable 'CSON' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7005
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 2254,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'filepath' does not exist on type 'InitFileCSON'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 2269,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFileCSON'."
-          }
-        ]
-      ],
       [
         "../src/main.ts",
         [
@@ -4105,6 +3836,283 @@
           }
         ]
       ],
+      "../node_modules/@types/color-name/index.d.ts",
+      "../node_modules/@types/eslint-visitor-keys/index.d.ts",
+      "../node_modules/@types/json-schema/index.d.ts",
+      "../../../../node_modules/@types/benchmark/index.d.ts",
+      "../../../../node_modules/@types/detect-indent/index.d.ts",
+      "../../../../node_modules/@types/minimatch/index.d.ts",
+      "../../../../node_modules/@types/glob/index.d.ts",
+      "../../../../node_modules/@types/mkdirp/index.d.ts",
+      [
+        "../src/init-file.ts",
+        [
+          {
+            "file": "../src/init-file.ts",
+            "start": 318,
+            "length": 4,
+            "messageText": "Parameter 'name' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 324,
+            "length": 8,
+            "messageText": "Parameter 'filepath' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 346,
+            "length": 4,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'name' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 368,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'filepath' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 416,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'filepath' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 456,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 478,
+            "length": 30,
+            "code": 2345,
+            "category": 1,
+            "messageText": "Argument of type 'Buffer' is not assignable to parameter of type 'string'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 499,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'filepath' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 528,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 564,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 693,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 732,
+            "length": 8,
+            "messageText": "Parameter 'opposite' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 754,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 768,
+            "length": 1,
+            "messageText": "Parameter 'p' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1116,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'filepath' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1146,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1271,
+            "length": 4,
+            "messageText": "Variable 'CSON' implicitly has type 'any' in some locations where its type cannot be determined.",
+            "category": 1,
+            "code": 7034
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1320,
+            "length": 4,
+            "messageText": "Parameter 'name' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1326,
+            "length": 8,
+            "messageText": "Parameter 'filepath' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1690,
+            "length": 4,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'name' does not exist on type 'InitFileCSON'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1712,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'filepath' does not exist on type 'InitFileCSON'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1755,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFileCSON'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1766,
+            "length": 4,
+            "messageText": "Variable 'CSON' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7005
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1789,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'filepath' does not exist on type 'InitFileCSON'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1815,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFileCSON'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1849,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFileCSON'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1907,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFileCSON'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1946,
+            "length": 8,
+            "messageText": "Parameter 'opposite' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1968,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFileCSON'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1982,
+            "length": 1,
+            "messageText": "Parameter 'p' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 2308,
+            "length": 4,
+            "messageText": "Variable 'CSON' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7005
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 2332,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'filepath' does not exist on type 'InitFileCSON'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 2347,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFileCSON'."
+          }
+        ]
+      ],
       [
         "../src/bundles.ts",
         [
@@ -4318,7 +4326,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 2153,
+            "start": 2111,
             "length": 25,
             "code": 7053,
             "category": 1,
@@ -4337,7 +4345,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 2378,
+            "start": 2336,
             "length": 13,
             "code": 2345,
             "category": 1,
@@ -4345,7 +4353,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 2469,
+            "start": 2427,
             "length": 7,
             "code": 2339,
             "category": 1,
@@ -4353,7 +4361,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 2719,
+            "start": 2677,
             "length": 8,
             "messageText": "Parameter 'message' implicitly has an 'any' type.",
             "category": 1,
@@ -4361,7 +4369,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 2916,
+            "start": 2874,
             "length": 13,
             "code": 2345,
             "category": 1,
@@ -4369,7 +4377,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 2958,
+            "start": 2916,
             "length": 13,
             "code": 2345,
             "category": 1,
@@ -4377,7 +4385,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3006,
+            "start": 2964,
             "length": 4,
             "messageText": "Parameter 'name' implicitly has an 'any' type.",
             "category": 1,
@@ -4385,7 +4393,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3012,
+            "start": 2970,
             "length": 8,
             "messageText": "Parameter 'packages' implicitly has an 'any' type.",
             "category": 1,
@@ -4393,7 +4401,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3033,
+            "start": 2991,
             "length": 15,
             "code": 7053,
             "category": 1,
@@ -4401,7 +4409,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3137,
+            "start": 3095,
             "length": 15,
             "code": 7053,
             "category": 1,
@@ -4409,7 +4417,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3233,
+            "start": 3191,
             "length": 7,
             "messageText": "Parameter 'oldname' implicitly has an 'any' type.",
             "category": 1,
@@ -4417,7 +4425,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3242,
+            "start": 3200,
             "length": 4,
             "messageText": "Parameter 'name' implicitly has an 'any' type.",
             "category": 1,
@@ -4425,7 +4433,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3248,
+            "start": 3206,
             "length": 8,
             "messageText": "Parameter 'packages' implicitly has an 'any' type.",
             "category": 1,
@@ -4433,7 +4441,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3290,
+            "start": 3248,
             "length": 18,
             "code": 7053,
             "category": 1,
@@ -4441,8 +4449,16 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3322,
+            "start": 3280,
             "length": 18,
+            "code": 7053,
+            "category": 1,
+            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 3310,
+            "length": 15,
             "code": 7053,
             "category": 1,
             "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
@@ -4450,14 +4466,6 @@
           {
             "file": "../src/bundles.ts",
             "start": 3352,
-            "length": 15,
-            "code": 7053,
-            "category": 1,
-            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 3394,
             "length": 18,
             "code": 7053,
             "category": 1,
@@ -4465,7 +4473,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3420,
+            "start": 3378,
             "length": 15,
             "code": 7053,
             "category": 1,
@@ -4473,7 +4481,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3511,
+            "start": 3469,
             "length": 18,
             "code": 7053,
             "category": 1,
@@ -4481,7 +4489,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3609,
+            "start": 3567,
             "length": 15,
             "code": 7053,
             "category": 1,
@@ -4489,7 +4497,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3733,
+            "start": 3691,
             "length": 6,
             "messageText": "Parameter 'bundle' implicitly has an 'any' type.",
             "category": 1,
@@ -4497,7 +4505,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3755,
+            "start": 3713,
             "length": 17,
             "code": 7053,
             "category": 1,
@@ -4505,7 +4513,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3813,
+            "start": 3771,
             "length": 6,
             "messageText": "Parameter 'bundle' implicitly has an 'any' type.",
             "category": 1,
@@ -4513,7 +4521,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3860,
+            "start": 3818,
             "length": 28,
             "code": 7053,
             "category": 1,
@@ -4521,7 +4529,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3939,
+            "start": 3897,
             "length": 17,
             "code": 7053,
             "category": 1,
@@ -4529,7 +4537,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 3982,
+            "start": 3940,
             "length": 17,
             "code": 7053,
             "category": 1,
@@ -4537,7 +4545,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 4028,
+            "start": 3986,
             "length": 27,
             "code": 7053,
             "category": 1,
@@ -4545,7 +4553,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 4113,
+            "start": 4071,
             "length": 1,
             "messageText": "Variable 'p' implicitly has type 'any[]' in some locations where its type cannot be determined.",
             "category": 1,
@@ -4553,7 +4561,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 4260,
+            "start": 4218,
             "length": 14,
             "code": 7053,
             "category": 1,
@@ -4572,7 +4580,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 4338,
+            "start": 4296,
             "length": 1,
             "messageText": "Variable 'p' implicitly has an 'any[]' type.",
             "category": 1,
@@ -4580,7 +4588,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 4575,
+            "start": 4533,
             "length": 8,
             "code": 2339,
             "category": 1,
@@ -4588,7 +4596,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 4681,
+            "start": 4639,
             "length": 8,
             "code": 2339,
             "category": 1,
@@ -4596,7 +4604,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 4716,
+            "start": 4674,
             "length": 37,
             "code": 7053,
             "category": 1,
@@ -4615,7 +4623,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 5178,
+            "start": 4960,
             "length": 8,
             "code": 2339,
             "category": 1,
@@ -4623,7 +4631,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 5290,
+            "start": 5072,
             "length": 8,
             "code": 2339,
             "category": 1,
@@ -4631,7 +4639,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 5329,
+            "start": 5111,
             "length": 37,
             "code": 7053,
             "category": 1,
@@ -4650,7 +4658,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 5457,
+            "start": 5239,
             "length": 10,
             "messageText": "Not all code paths return a value.",
             "category": 1,
@@ -4658,7 +4666,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 5479,
+            "start": 5261,
             "length": 14,
             "code": 7053,
             "category": 1,
@@ -4677,7 +4685,7 @@
           },
           {
             "file": "../src/bundles.ts",
-            "start": 5573,
+            "start": 5355,
             "length": 24,
             "code": 7053,
             "category": 1,
