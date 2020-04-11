@@ -34,7 +34,7 @@ export class InitFile {
 
   save() {
     try {
-      fs.writeFileSync(this.filepath, JSON.stringify(this.packages))
+      fs.writeFileSync(this.filepath, JSON.stringify(this.packages, null, '\t'))
     } catch (error) {
       console.error(error)
     }
