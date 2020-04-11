@@ -21,6 +21,8 @@ if test -f '.gitignore'; then
 	git add -- ./lib
 	git commit -m 'Add built files' -- ./lib
 	git mv .gitignore.back .gitignore
+	cd ./lib
+	git ls-files -z | xargs -0 git update-index --assume-unchanged
 else
 	error_exit '.gitignore does not exist!'
 fi
