@@ -4,12 +4,11 @@
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
 import { Bundle } from "./bundle"
-import { InitFile } from "./init-file"
+import { InitFile, InitFileCSON } from "./init-file"
 
 import path from "path"
 import fs from "fs"
 import { Emitter } from "atom"
-import CSON from "season"
 
 export class Bundles {
   filename = null
@@ -74,7 +73,7 @@ export class Bundles {
 
   getData() {
     try {
-      const data = CSON.readFileSync(this.filename)
+      const data = JSON.parse(fs.readFileSync(this.filename))
       Object.keys(data).forEach((key) => {
         this.data[key] = new Bundle(data[key])
       })
@@ -93,7 +92,7 @@ export class Bundles {
     if (this.filename != null) {
       try {
         this.writing = true
-        CSON.writeFileSync(this.filename, this.data)
+        fs.writeFileSync(this.filename, JSON.stringify(this.data))
         if (emit) {
           this.emitter.emit("file-change")
         }
@@ -171,8 +170,8 @@ export class Bundles {
       return p
     }
     for (const project of atom.project.getPaths()) {
-      let f
-      if (fs.existsSync((f = path.join(project, ".package-switch.cson")))) {
+      const f = path.join(project, ".package-switch.json")
+      if (fs.existsSync(f)) {
         let d, i
         if ((i = new InitFile((d = path.basename(project)), f)).packages.length !== 0) {
           p.push({
@@ -180,6 +179,21 @@ export class Bundles {
             packages: i.packages,
           })
           this.project_bundles[`Project: ${d}`] = i
+        }
+      } else {
+        // deprecated
+        const fcson = path.join(project, ".package-switch.cson")
+        if (fs.existsSync(fcson)) {
+          atom.notifications.addWarning(`Using CSON config for package-switch is deprecated. 
+           Convert ${fcson} to JSON at https://decaffeinate-project.org/repl/`)
+          let d, i
+          if ((i = new InitFileCSON((d = path.basename(project)), f)).packages.length !== 0) {
+            p.push({
+              name: `Project: ${d}`,
+              packages: i.packages,
+            })
+            this.project_bundles[`Project: ${d}`] = i
+          }
         }
       }
     }
