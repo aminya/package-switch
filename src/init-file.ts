@@ -10,13 +10,16 @@ export class InitFile {
   constructor(name, filepath) {
     this.name = name
     this.filepath = filepath
-    try {
-      this.packages = JSON.parse(fs.readFileSync(this.filepath))
-      if (this.packages == null) {
-        this.packages = []
+    if (fs.existsSync(this.filepath)) {
+      try {
+        this.packages = JSON.parse(fs.readFileSync(this.filepath))
+        if (this.packages == null) {
+          this.packages = []
+        }
+      } catch (error) {
+        atom.notifications.addError(error)
       }
-    } catch (error) {
-      atom.notifications.addError(error)
+    } else {
       this.packages = []
     }
   }
