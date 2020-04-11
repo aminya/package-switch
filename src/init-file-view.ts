@@ -3,7 +3,8 @@
  * DS207: Consider shorter variations of null checks
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
-import { $$, View } from "atom-space-pen-views"
+import { View } from "space-pen"
+const $$ = (fn) => View.render.call(View, fn)
 
 export class InitFileView extends View {
   static content() {
