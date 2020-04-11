@@ -130,8 +130,8 @@
         "signature": "bc7f44fdf2c20e0c540c5e986135c31421724d5922638c67257a4bf52a7984b7"
       },
       "../src/init-file.ts": {
-        "version": "7d32b60f575387db4c86b29bb7a6229060706af50ae9701876ee700e0fa9a6b6",
-        "signature": "ecfb3feabdcec04aac4c817f97a9018cbc0d86915b8749d52c06b25c3a58559f"
+        "version": "1b0a6d470b93652a60c36e0486d955dcb0ed21cfed2b02cac8ad94f4f6e0cee5",
+        "signature": "4d9d32809add106ac35c82c23eb5e52f2517229e0a2f546e868859e5edc46050"
       },
       "../node_modules/@types/node/globals.d.ts": {
         "version": "1236b98326630298e0b9cd30ccecd77560ac925140b753f1b1a0ffc6e7b51ad4",
@@ -318,7 +318,7 @@
         "signature": "1c0edbd8cd877d3fd9faa7ad81d39f83ac1d5d6a2d1826eef1097d20ab4140d7"
       },
       "../src/bundles.ts": {
-        "version": "ce9ecf2b1ed18a838444f7598576a7292ebe72ff0a78e6441e90eed133e47b9d",
+        "version": "f40e3aa4262e2c3e39a55fd510433991ab2a363834eb6ea34d200563b7a254da",
         "signature": "197b478056c3ac1b36cffee4432361863158cac12c8f69c01d7999ca68ed4dce"
       },
       "../src/init-file-view.ts": {
@@ -330,7 +330,7 @@
         "signature": "4c8269d771cdbe8a993355bba8a9786b096ebe56313596f48607816af4d65727"
       },
       "../src/main.ts": {
-        "version": "1b74f5e67485e236dfbccd232bfa80a9bc9a2047b5df3eaba5645eb33008973d",
+        "version": "45e20a5e74ba00ae07a7589eec1cf218e99be1644b2a10d32bb5b5d88aa1257c",
         "signature": "2ee17d4a4b8f67ff5877d96459ae2a861286408d0c89d9c2f9d9a1245ba1b505"
       },
       "../node_modules/@types/color-name/index.d.ts": {
@@ -590,8 +590,8 @@
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../src/init-file.ts": [
-        "../node_modules/@types/season/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/season/index.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
@@ -970,7 +970,6 @@
         "../node_modules/@types/node/path.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/atom/index.d.ts",
-        "../node_modules/@types/season/index.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
@@ -1678,61 +1677,6 @@
       "../node_modules/typescript/lib/lib.es2018.regexp.d.ts",
       "../node_modules/typescript/lib/lib.es2020.bigint.d.ts",
       "../node_modules/typescript/lib/lib.esnext.intl.d.ts",
-      "../node_modules/@types/season/index.d.ts",
-      "../node_modules/@types/node/globals.d.ts",
-      "../node_modules/@types/node/assert.d.ts",
-      "../node_modules/@types/node/async_hooks.d.ts",
-      "../node_modules/@types/node/buffer.d.ts",
-      "../node_modules/@types/node/child_process.d.ts",
-      "../node_modules/@types/node/cluster.d.ts",
-      "../node_modules/@types/node/console.d.ts",
-      "../node_modules/@types/node/constants.d.ts",
-      "../node_modules/@types/node/crypto.d.ts",
-      "../node_modules/@types/node/dgram.d.ts",
-      "../node_modules/@types/node/dns.d.ts",
-      "../node_modules/@types/node/domain.d.ts",
-      "../node_modules/@types/node/events.d.ts",
-      "../node_modules/@types/node/fs.d.ts",
-      "../node_modules/@types/node/http.d.ts",
-      "../node_modules/@types/node/http2.d.ts",
-      "../node_modules/@types/node/https.d.ts",
-      "../node_modules/@types/node/inspector.d.ts",
-      "../node_modules/@types/node/module.d.ts",
-      "../node_modules/@types/node/net.d.ts",
-      "../node_modules/@types/node/os.d.ts",
-      "../node_modules/@types/node/path.d.ts",
-      "../node_modules/@types/node/perf_hooks.d.ts",
-      "../node_modules/@types/node/process.d.ts",
-      "../node_modules/@types/node/punycode.d.ts",
-      "../node_modules/@types/node/querystring.d.ts",
-      "../node_modules/@types/node/readline.d.ts",
-      "../node_modules/@types/node/repl.d.ts",
-      "../node_modules/@types/node/stream.d.ts",
-      "../node_modules/@types/node/string_decoder.d.ts",
-      "../node_modules/@types/node/timers.d.ts",
-      "../node_modules/@types/node/tls.d.ts",
-      "../node_modules/@types/node/trace_events.d.ts",
-      "../node_modules/@types/node/tty.d.ts",
-      "../node_modules/@types/node/url.d.ts",
-      "../node_modules/@types/node/util.d.ts",
-      "../node_modules/@types/node/v8.d.ts",
-      "../node_modules/@types/node/vm.d.ts",
-      "../node_modules/@types/node/worker_threads.d.ts",
-      "../node_modules/@types/node/zlib.d.ts",
-      "../node_modules/@types/node/base.d.ts",
-      "../node_modules/@types/node/ts3.2/fs.d.ts",
-      "../node_modules/@types/node/ts3.2/util.d.ts",
-      "../node_modules/@types/node/ts3.2/globals.d.ts",
-      "../node_modules/@types/node/ts3.2/index.d.ts",
-      "../node_modules/@types/atom/index.d.ts",
-      "../node_modules/@types/color-name/index.d.ts",
-      "../node_modules/@types/eslint-visitor-keys/index.d.ts",
-      "../node_modules/@types/json-schema/index.d.ts",
-      "../../../../node_modules/@types/benchmark/index.d.ts",
-      "../../../../node_modules/@types/detect-indent/index.d.ts",
-      "../../../../node_modules/@types/minimatch/index.d.ts",
-      "../../../../node_modules/@types/glob/index.d.ts",
-      "../../../../node_modules/@types/mkdirp/index.d.ts",
       [
         "../src/bundle-view.ts",
         [
@@ -2453,648 +2397,53 @@
           }
         ]
       ],
-      [
-        "../src/init-file.ts",
-        [
-          {
-            "file": "../src/init-file.ts",
-            "start": 315,
-            "length": 4,
-            "messageText": "Parameter 'name' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 321,
-            "length": 8,
-            "messageText": "Parameter 'filepath' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 342,
-            "length": 4,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'name' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 363,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'filepath' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 404,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 438,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'filepath' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 463,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 496,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 551,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 586,
-            "length": 8,
-            "messageText": "Parameter 'opposite' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 614,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 628,
-            "length": 1,
-            "messageText": "Parameter 'p' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 972,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'filepath' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/init-file.ts",
-            "start": 987,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFile'."
-          }
-        ]
-      ],
-      [
-        "../src/bundles.ts",
-        [
-          {
-            "file": "../src/bundles.ts",
-            "start": 487,
-            "length": 4,
-            "messageText": "Parameter 'arg' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 772,
-            "length": 7,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'watcher' does not exist on type 'Bundles'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 791,
-            "length": 13,
-            "code": 2769,
-            "category": 1,
-            "messageText": {
-              "messageText": "No overload matches this call.",
-              "category": 1,
-              "code": 2769,
-              "next": [
-                {
-                  "messageText": "The last overload gave the following error.",
-                  "category": 1,
-                  "code": 2770,
-                  "next": [
-                    {
-                      "messageText": "Argument of type 'null' is not assignable to parameter of type 'PathLike'.",
-                      "category": 1,
-                      "code": 2345
-                    }
-                  ]
-                }
-              ]
-            },
-            "relatedInformation": [
-              {
-                "file": "../node_modules/@types/node/fs.d.ts",
-                "start": 92496,
-                "length": 5,
-                "messageText": "The last overload is declared here.",
-                "category": 1,
-                "code": 2771
-              }
-            ]
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 921,
-            "length": 7,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'emitter' does not exist on type 'Bundles'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 977,
-            "length": 7,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'watcher' does not exist on type 'Bundles'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 1007,
-            "length": 7,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'watcher' does not exist on type 'Bundles'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 1038,
-            "length": 7,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'emitter' does not exist on type 'Bundles'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 1148,
-            "length": 5,
-            "messageText": "'event' is declared but its value is never read.",
-            "category": 1,
-            "code": 6133,
-            "reportsUnnecessary": true
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 1148,
-            "length": 6,
-            "messageText": "Parameter 'event' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 1156,
-            "length": 8,
-            "messageText": "'filename' is declared but its value is never read.",
-            "category": 1,
-            "code": 6133,
-            "reportsUnnecessary": true
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 1156,
-            "length": 9,
-            "messageText": "Parameter 'filename' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 1271,
-            "length": 7,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'emitter' does not exist on type 'Bundles'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 1511,
-            "length": 13,
-            "code": 2322,
-            "category": 1,
-            "messageText": "Type 'string' is not assignable to type 'null'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 1608,
-            "length": 8,
-            "messageText": "Parameter 'callback' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 1629,
-            "length": 7,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'emitter' does not exist on type 'Bundles'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 1731,
-            "length": 13,
-            "code": 2345,
-            "category": 1,
-            "messageText": "Argument of type 'null' is not assignable to parameter of type 'string'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 1797,
-            "length": 14,
-            "code": 7053,
-            "category": 1,
-            "messageText": {
-              "messageText": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.",
-              "category": 1,
-              "code": 7053,
-              "next": [
-                {
-                  "messageText": "No index signature with a parameter of type 'string' was found on type '{}'.",
-                  "category": 1,
-                  "code": 7054
-                }
-              ]
-            }
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 2027,
-            "length": 25,
-            "code": 7053,
-            "category": 1,
-            "messageText": {
-              "messageText": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.",
-              "category": 1,
-              "code": 7053,
-              "next": [
-                {
-                  "messageText": "No index signature with a parameter of type 'string' was found on type '{}'.",
-                  "category": 1,
-                  "code": 7054
-                }
-              ]
-            }
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 2246,
-            "length": 13,
-            "code": 2345,
-            "category": 1,
-            "messageText": "Argument of type 'null' is not assignable to parameter of type 'string'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 2307,
-            "length": 7,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'emitter' does not exist on type 'Bundles'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 2503,
-            "length": 8,
-            "messageText": "Parameter 'message' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 2692,
-            "length": 13,
-            "code": 2345,
-            "category": 1,
-            "messageText": "Argument of type 'null' is not assignable to parameter of type 'PathLike'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 2733,
-            "length": 13,
-            "code": 2345,
-            "category": 1,
-            "messageText": "Argument of type 'null' is not assignable to parameter of type 'string | number | Buffer | URL'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 2777,
-            "length": 4,
-            "messageText": "Parameter 'name' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 2783,
-            "length": 8,
-            "messageText": "Parameter 'packages' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 2803,
-            "length": 15,
-            "code": 7053,
-            "category": 1,
-            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 2904,
-            "length": 15,
-            "code": 7053,
-            "category": 1,
-            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 2995,
-            "length": 7,
-            "messageText": "Parameter 'oldname' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 3004,
-            "length": 4,
-            "messageText": "Parameter 'name' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 3010,
-            "length": 8,
-            "messageText": "Parameter 'packages' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 3051,
-            "length": 18,
-            "code": 7053,
-            "category": 1,
-            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 3083,
-            "length": 18,
-            "code": 7053,
-            "category": 1,
-            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 3113,
-            "length": 15,
-            "code": 7053,
-            "category": 1,
-            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 3154,
-            "length": 18,
-            "code": 7053,
-            "category": 1,
-            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 3179,
-            "length": 15,
-            "code": 7053,
-            "category": 1,
-            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 3267,
-            "length": 18,
-            "code": 7053,
-            "category": 1,
-            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 3362,
-            "length": 15,
-            "code": 7053,
-            "category": 1,
-            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 3480,
-            "length": 6,
-            "messageText": "Parameter 'bundle' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 3501,
-            "length": 17,
-            "code": 7053,
-            "category": 1,
-            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 3555,
-            "length": 6,
-            "messageText": "Parameter 'bundle' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 3600,
-            "length": 28,
-            "code": 7053,
-            "category": 1,
-            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 3677,
-            "length": 17,
-            "code": 7053,
-            "category": 1,
-            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 3719,
-            "length": 17,
-            "code": 7053,
-            "category": 1,
-            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 3763,
-            "length": 27,
-            "code": 7053,
-            "category": 1,
-            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 3843,
-            "length": 1,
-            "messageText": "Variable 'p' implicitly has type 'any[]' in some locations where its type cannot be determined.",
-            "category": 1,
-            "code": 7034
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 3985,
-            "length": 14,
-            "code": 7053,
-            "category": 1,
-            "messageText": {
-              "messageText": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.",
-              "category": 1,
-              "code": 7053,
-              "next": [
-                {
-                  "messageText": "No index signature with a parameter of type 'string' was found on type '{}'.",
-                  "category": 1,
-                  "code": 7054
-                }
-              ]
-            }
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 4059,
-            "length": 1,
-            "messageText": "Variable 'p' implicitly has an 'any[]' type.",
-            "category": 1,
-            "code": 7005
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 4290,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 4393,
-            "length": 8,
-            "code": 2339,
-            "category": 1,
-            "messageText": "Property 'packages' does not exist on type 'InitFile'."
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 4426,
-            "length": 37,
-            "code": 7053,
-            "category": 1,
-            "messageText": {
-              "messageText": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.",
-              "category": 1,
-              "code": 7053,
-              "next": [
-                {
-                  "messageText": "No index signature with a parameter of type 'string' was found on type '{}'.",
-                  "category": 1,
-                  "code": 7054
-                }
-              ]
-            }
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 4537,
-            "length": 10,
-            "messageText": "Not all code paths return a value.",
-            "category": 1,
-            "code": 7030
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 4558,
-            "length": 14,
-            "code": 7053,
-            "category": 1,
-            "messageText": {
-              "messageText": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.",
-              "category": 1,
-              "code": 7053,
-              "next": [
-                {
-                  "messageText": "No index signature with a parameter of type 'string' was found on type '{}'.",
-                  "category": 1,
-                  "code": 7054
-                }
-              ]
-            }
-          },
-          {
-            "file": "../src/bundles.ts",
-            "start": 4649,
-            "length": 24,
-            "code": 7053,
-            "category": 1,
-            "messageText": {
-              "messageText": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.",
-              "category": 1,
-              "code": 7053,
-              "next": [
-                {
-                  "messageText": "No index signature with a parameter of type 'string' was found on type '{}'.",
-                  "category": 1,
-                  "code": 7054
-                }
-              ]
-            }
-          }
-        ]
-      ],
+      "../node_modules/@types/season/index.d.ts",
+      "../node_modules/@types/node/globals.d.ts",
+      "../node_modules/@types/node/assert.d.ts",
+      "../node_modules/@types/node/async_hooks.d.ts",
+      "../node_modules/@types/node/buffer.d.ts",
+      "../node_modules/@types/node/child_process.d.ts",
+      "../node_modules/@types/node/cluster.d.ts",
+      "../node_modules/@types/node/console.d.ts",
+      "../node_modules/@types/node/constants.d.ts",
+      "../node_modules/@types/node/crypto.d.ts",
+      "../node_modules/@types/node/dgram.d.ts",
+      "../node_modules/@types/node/dns.d.ts",
+      "../node_modules/@types/node/domain.d.ts",
+      "../node_modules/@types/node/events.d.ts",
+      "../node_modules/@types/node/fs.d.ts",
+      "../node_modules/@types/node/http.d.ts",
+      "../node_modules/@types/node/http2.d.ts",
+      "../node_modules/@types/node/https.d.ts",
+      "../node_modules/@types/node/inspector.d.ts",
+      "../node_modules/@types/node/module.d.ts",
+      "../node_modules/@types/node/net.d.ts",
+      "../node_modules/@types/node/os.d.ts",
+      "../node_modules/@types/node/path.d.ts",
+      "../node_modules/@types/node/perf_hooks.d.ts",
+      "../node_modules/@types/node/process.d.ts",
+      "../node_modules/@types/node/punycode.d.ts",
+      "../node_modules/@types/node/querystring.d.ts",
+      "../node_modules/@types/node/readline.d.ts",
+      "../node_modules/@types/node/repl.d.ts",
+      "../node_modules/@types/node/stream.d.ts",
+      "../node_modules/@types/node/string_decoder.d.ts",
+      "../node_modules/@types/node/timers.d.ts",
+      "../node_modules/@types/node/tls.d.ts",
+      "../node_modules/@types/node/trace_events.d.ts",
+      "../node_modules/@types/node/tty.d.ts",
+      "../node_modules/@types/node/url.d.ts",
+      "../node_modules/@types/node/util.d.ts",
+      "../node_modules/@types/node/v8.d.ts",
+      "../node_modules/@types/node/vm.d.ts",
+      "../node_modules/@types/node/worker_threads.d.ts",
+      "../node_modules/@types/node/zlib.d.ts",
+      "../node_modules/@types/node/base.d.ts",
+      "../node_modules/@types/node/ts3.2/fs.d.ts",
+      "../node_modules/@types/node/ts3.2/util.d.ts",
+      "../node_modules/@types/node/ts3.2/globals.d.ts",
+      "../node_modules/@types/node/ts3.2/index.d.ts",
+      "../node_modules/@types/atom/index.d.ts",
       [
         "../src/init-file-view.ts",
         [
@@ -4175,12 +3524,281 @@
           }
         ]
       ],
+      "../node_modules/@types/color-name/index.d.ts",
+      "../node_modules/@types/eslint-visitor-keys/index.d.ts",
+      "../node_modules/@types/json-schema/index.d.ts",
+      "../../../../node_modules/@types/benchmark/index.d.ts",
+      "../../../../node_modules/@types/detect-indent/index.d.ts",
+      "../../../../node_modules/@types/minimatch/index.d.ts",
+      "../../../../node_modules/@types/glob/index.d.ts",
+      "../../../../node_modules/@types/mkdirp/index.d.ts",
+      [
+        "../src/init-file.ts",
+        [
+          {
+            "file": "../src/init-file.ts",
+            "start": 318,
+            "length": 4,
+            "messageText": "Parameter 'name' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 324,
+            "length": 8,
+            "messageText": "Parameter 'filepath' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 346,
+            "length": 4,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'name' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 368,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'filepath' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 411,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 433,
+            "length": 30,
+            "code": 2345,
+            "category": 1,
+            "messageText": "Argument of type 'Buffer' is not assignable to parameter of type 'string'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 454,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'filepath' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 481,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 515,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 615,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 654,
+            "length": 8,
+            "messageText": "Parameter 'opposite' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 676,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 690,
+            "length": 1,
+            "messageText": "Parameter 'p' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1038,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'filepath' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1068,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1193,
+            "length": 4,
+            "messageText": "Variable 'CSON' implicitly has type 'any' in some locations where its type cannot be determined.",
+            "category": 1,
+            "code": 7034
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1242,
+            "length": 4,
+            "messageText": "Parameter 'name' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1248,
+            "length": 8,
+            "messageText": "Parameter 'filepath' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1612,
+            "length": 4,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'name' does not exist on type 'InitFileCSON'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1634,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'filepath' does not exist on type 'InitFileCSON'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1677,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFileCSON'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1688,
+            "length": 4,
+            "messageText": "Variable 'CSON' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7005
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1711,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'filepath' does not exist on type 'InitFileCSON'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1737,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFileCSON'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1771,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFileCSON'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1829,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFileCSON'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1868,
+            "length": 8,
+            "messageText": "Parameter 'opposite' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1890,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFileCSON'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 1904,
+            "length": 1,
+            "messageText": "Parameter 'p' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 2230,
+            "length": 4,
+            "messageText": "Variable 'CSON' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7005
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 2254,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'filepath' does not exist on type 'InitFileCSON'."
+          },
+          {
+            "file": "../src/init-file.ts",
+            "start": 2269,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFileCSON'."
+          }
+        ]
+      ],
       [
         "../src/main.ts",
         [
           {
             "file": "../src/main.ts",
-            "start": 1495,
+            "start": 1552,
             "length": 6,
             "messageText": "Object is possibly 'null'.",
             "category": 1,
@@ -4188,7 +3806,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 1502,
+            "start": 1559,
             "length": 7,
             "code": 2339,
             "category": 1,
@@ -4196,7 +3814,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 1518,
+            "start": 1575,
             "length": 14,
             "code": 2769,
             "category": 1,
@@ -4249,7 +3867,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 1709,
+            "start": 1773,
             "length": 8,
             "code": 2345,
             "category": 1,
@@ -4268,7 +3886,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 1732,
+            "start": 1796,
             "length": 8,
             "messageText": "Property 'noopener' does not exist on type 'WorkspaceOpenOptions | undefined'.",
             "category": 1,
@@ -4276,15 +3894,23 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 1862,
-            "length": 103,
+            "start": 1943,
+            "length": 112,
             "messageText": "Expected 0 arguments, but got 1.",
             "category": 1,
             "code": 2554
           },
           {
             "file": "../src/main.ts",
-            "start": 2816,
+            "start": 2231,
+            "length": 116,
+            "messageText": "Expected 0 arguments, but got 1.",
+            "category": 1,
+            "code": 2554
+          },
+          {
+            "file": "../src/main.ts",
+            "start": 3237,
             "length": 4,
             "code": 2339,
             "category": 1,
@@ -4292,7 +3918,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 4062,
+            "start": 4531,
             "length": 5,
             "messageText": "Parameter 'value' implicitly has an 'any' type.",
             "category": 1,
@@ -4300,7 +3926,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 4069,
+            "start": 4538,
             "length": 9,
             "messageText": "Parameter 'transform' implicitly has an 'any' type.",
             "category": 1,
@@ -4308,39 +3934,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 4570,
-            "length": 1,
-            "messageText": "Variable 'p' implicitly has type 'any' in some locations where its type cannot be determined.",
-            "category": 1,
-            "code": 7034
-          },
-          {
-            "file": "../src/main.ts",
-            "start": 4632,
-            "length": 1,
-            "messageText": "Variable 'f' implicitly has type 'any' in some locations where its type cannot be determined.",
-            "category": 1,
-            "code": 7034
-          },
-          {
-            "file": "../src/main.ts",
-            "start": 5032,
-            "length": 1,
-            "messageText": "Variable 'p' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7005
-          },
-          {
-            "file": "../src/main.ts",
-            "start": 5039,
-            "length": 1,
-            "messageText": "Variable 'f' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7005
-          },
-          {
-            "file": "../src/main.ts",
-            "start": 5370,
+            "start": 6516,
             "length": 8,
             "messageText": "Parameter 'opposite' implicitly has an 'any' type.",
             "category": 1,
@@ -4348,7 +3942,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 5380,
+            "start": 6526,
             "length": 6,
             "messageText": "Parameter 'bundle' implicitly has an 'any' type.",
             "category": 1,
@@ -4356,7 +3950,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 5435,
+            "start": 6582,
             "length": 1,
             "messageText": "Parameter 'x' implicitly has an 'any' type.",
             "category": 1,
@@ -4364,7 +3958,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 5489,
+            "start": 6639,
             "length": 6,
             "messageText": "Parameter 'bundle' implicitly has an 'any' type.",
             "category": 1,
@@ -4372,7 +3966,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 5861,
+            "start": 7027,
             "length": 6,
             "messageText": "Parameter 'bundle' implicitly has an 'any' type.",
             "category": 1,
@@ -4380,7 +3974,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6055,
+            "start": 7231,
             "length": 6,
             "messageText": "Parameter 'bundle' implicitly has an 'any' type.",
             "category": 1,
@@ -4388,7 +3982,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6117,
+            "start": 7296,
             "length": 7,
             "messageText": "Parameter 'oldname' implicitly has an 'any' type.",
             "category": 1,
@@ -4396,7 +3990,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6126,
+            "start": 7305,
             "length": 5,
             "messageText": "Parameter 'items' implicitly has an 'any' type.",
             "category": 1,
@@ -4404,7 +3998,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6219,
+            "start": 7401,
             "length": 7,
             "messageText": "Parameter 'oldname' implicitly has an 'any' type.",
             "category": 1,
@@ -4412,7 +4006,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6228,
+            "start": 7410,
             "length": 4,
             "messageText": "Parameter 'name' implicitly has an 'any' type.",
             "category": 1,
@@ -4420,7 +4014,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6234,
+            "start": 7416,
             "length": 8,
             "messageText": "Parameter 'packages' implicitly has an 'any' type.",
             "category": 1,
@@ -4428,7 +4022,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6319,
+            "start": 7504,
             "length": 7,
             "messageText": "Parameter 'oldname' implicitly has an 'any' type.",
             "category": 1,
@@ -4436,7 +4030,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6328,
+            "start": 7513,
             "length": 6,
             "messageText": "Parameter '_items' implicitly has an 'any' type.",
             "category": 1,
@@ -4444,8 +4038,8 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6352,
-            "length": 58,
+            "start": 7538,
+            "length": 61,
             "code": 2345,
             "category": 1,
             "messageText": {
@@ -4463,7 +4057,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6443,
+            "start": 7636,
             "length": 7,
             "messageText": "Parameter 'oldname' implicitly has an 'any' type.",
             "category": 1,
@@ -4471,7 +4065,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6452,
+            "start": 7645,
             "length": 4,
             "messageText": "Parameter 'name' implicitly has an 'any' type.",
             "category": 1,
@@ -4479,7 +4073,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6458,
+            "start": 7651,
             "length": 8,
             "messageText": "Parameter 'packages' implicitly has an 'any' type.",
             "category": 1,
@@ -4487,7 +4081,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6709,
+            "start": 7913,
             "length": 7,
             "messageText": "Parameter 'oldname' implicitly has an 'any' type.",
             "category": 1,
@@ -4495,7 +4089,7 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6718,
+            "start": 7922,
             "length": 5,
             "messageText": "Parameter 'items' implicitly has an 'any' type.",
             "category": 1,
@@ -4503,11 +4097,602 @@
           },
           {
             "file": "../src/main.ts",
-            "start": 6876,
+            "start": 8086,
             "length": 6,
             "messageText": "Parameter 'bundle' implicitly has an 'any' type.",
             "category": 1,
             "code": 7006
+          }
+        ]
+      ],
+      [
+        "../src/bundles.ts",
+        [
+          {
+            "file": "../src/bundles.ts",
+            "start": 494,
+            "length": 4,
+            "messageText": "Parameter 'arg' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 790,
+            "length": 7,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'watcher' does not exist on type 'Bundles'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 809,
+            "length": 13,
+            "code": 2769,
+            "category": 1,
+            "messageText": {
+              "messageText": "No overload matches this call.",
+              "category": 1,
+              "code": 2769,
+              "next": [
+                {
+                  "messageText": "The last overload gave the following error.",
+                  "category": 1,
+                  "code": 2770,
+                  "next": [
+                    {
+                      "messageText": "Argument of type 'null' is not assignable to parameter of type 'PathLike'.",
+                      "category": 1,
+                      "code": 2345
+                    }
+                  ]
+                }
+              ]
+            },
+            "relatedInformation": [
+              {
+                "file": "../node_modules/@types/node/fs.d.ts",
+                "start": 92496,
+                "length": 5,
+                "messageText": "The last overload is declared here.",
+                "category": 1,
+                "code": 2771
+              }
+            ]
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 945,
+            "length": 7,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'emitter' does not exist on type 'Bundles'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 1005,
+            "length": 7,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'watcher' does not exist on type 'Bundles'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 1036,
+            "length": 7,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'watcher' does not exist on type 'Bundles'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 1069,
+            "length": 7,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'emitter' does not exist on type 'Bundles'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 1185,
+            "length": 5,
+            "messageText": "'event' is declared but its value is never read.",
+            "category": 1,
+            "code": 6133,
+            "reportsUnnecessary": true
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 1185,
+            "length": 6,
+            "messageText": "Parameter 'event' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 1193,
+            "length": 8,
+            "messageText": "'filename' is declared but its value is never read.",
+            "category": 1,
+            "code": 6133,
+            "reportsUnnecessary": true
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 1193,
+            "length": 9,
+            "messageText": "Parameter 'filename' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 1313,
+            "length": 7,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'emitter' does not exist on type 'Bundles'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 1565,
+            "length": 13,
+            "code": 2322,
+            "category": 1,
+            "messageText": "Type 'string' is not assignable to type 'null'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 1665,
+            "length": 8,
+            "messageText": "Parameter 'callback' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 1687,
+            "length": 7,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'emitter' does not exist on type 'Bundles'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 1803,
+            "length": 13,
+            "code": 2769,
+            "category": 1,
+            "messageText": {
+              "messageText": "No overload matches this call.",
+              "category": 1,
+              "code": 2769,
+              "next": [
+                {
+                  "messageText": "Overload 1 of 3, '(path: string | number | Buffer | URL, options?: { encoding?: null | undefined; flag?: string | undefined; } | null | undefined): Buffer', gave the following error.",
+                  "category": 1,
+                  "code": 2772,
+                  "next": [
+                    {
+                      "messageText": "Argument of type 'null' is not assignable to parameter of type 'string | number | Buffer | URL'.",
+                      "category": 1,
+                      "code": 2345
+                    }
+                  ]
+                },
+                {
+                  "messageText": "Overload 2 of 3, '(path: string | number | Buffer | URL, options?: string | { encoding?: string | null | undefined; flag?: string | undefined; } | null | undefined): string | Buffer', gave the following error.",
+                  "category": 1,
+                  "code": 2772,
+                  "next": [
+                    {
+                      "messageText": "Argument of type 'null' is not assignable to parameter of type 'string | number | Buffer | URL'.",
+                      "category": 1,
+                      "code": 2345
+                    }
+                  ]
+                }
+              ]
+            },
+            "relatedInformation": []
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 1872,
+            "length": 14,
+            "code": 7053,
+            "category": 1,
+            "messageText": {
+              "messageText": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.",
+              "category": 1,
+              "code": 7053,
+              "next": [
+                {
+                  "messageText": "No index signature with a parameter of type 'string' was found on type '{}'.",
+                  "category": 1,
+                  "code": 7054
+                }
+              ]
+            }
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 2153,
+            "length": 25,
+            "code": 7053,
+            "category": 1,
+            "messageText": {
+              "messageText": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.",
+              "category": 1,
+              "code": 7053,
+              "next": [
+                {
+                  "messageText": "No index signature with a parameter of type 'string' was found on type '{}'.",
+                  "category": 1,
+                  "code": 7054
+                }
+              ]
+            }
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 2378,
+            "length": 13,
+            "code": 2345,
+            "category": 1,
+            "messageText": "Argument of type 'null' is not assignable to parameter of type 'string | number | Buffer | URL'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 2469,
+            "length": 7,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'emitter' does not exist on type 'Bundles'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 2719,
+            "length": 8,
+            "messageText": "Parameter 'message' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 2916,
+            "length": 13,
+            "code": 2345,
+            "category": 1,
+            "messageText": "Argument of type 'null' is not assignable to parameter of type 'PathLike'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 2958,
+            "length": 13,
+            "code": 2345,
+            "category": 1,
+            "messageText": "Argument of type 'null' is not assignable to parameter of type 'string | number | Buffer | URL'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 3006,
+            "length": 4,
+            "messageText": "Parameter 'name' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 3012,
+            "length": 8,
+            "messageText": "Parameter 'packages' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 3033,
+            "length": 15,
+            "code": 7053,
+            "category": 1,
+            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 3137,
+            "length": 15,
+            "code": 7053,
+            "category": 1,
+            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 3233,
+            "length": 7,
+            "messageText": "Parameter 'oldname' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 3242,
+            "length": 4,
+            "messageText": "Parameter 'name' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 3248,
+            "length": 8,
+            "messageText": "Parameter 'packages' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 3290,
+            "length": 18,
+            "code": 7053,
+            "category": 1,
+            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 3322,
+            "length": 18,
+            "code": 7053,
+            "category": 1,
+            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 3352,
+            "length": 15,
+            "code": 7053,
+            "category": 1,
+            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 3394,
+            "length": 18,
+            "code": 7053,
+            "category": 1,
+            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 3420,
+            "length": 15,
+            "code": 7053,
+            "category": 1,
+            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 3511,
+            "length": 18,
+            "code": 7053,
+            "category": 1,
+            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 3609,
+            "length": 15,
+            "code": 7053,
+            "category": 1,
+            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 3733,
+            "length": 6,
+            "messageText": "Parameter 'bundle' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 3755,
+            "length": 17,
+            "code": 7053,
+            "category": 1,
+            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 3813,
+            "length": 6,
+            "messageText": "Parameter 'bundle' implicitly has an 'any' type.",
+            "category": 1,
+            "code": 7006
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 3860,
+            "length": 28,
+            "code": 7053,
+            "category": 1,
+            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 3939,
+            "length": 17,
+            "code": 7053,
+            "category": 1,
+            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 3982,
+            "length": 17,
+            "code": 7053,
+            "category": 1,
+            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 4028,
+            "length": 27,
+            "code": 7053,
+            "category": 1,
+            "messageText": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 4113,
+            "length": 1,
+            "messageText": "Variable 'p' implicitly has type 'any[]' in some locations where its type cannot be determined.",
+            "category": 1,
+            "code": 7034
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 4260,
+            "length": 14,
+            "code": 7053,
+            "category": 1,
+            "messageText": {
+              "messageText": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.",
+              "category": 1,
+              "code": 7053,
+              "next": [
+                {
+                  "messageText": "No index signature with a parameter of type 'string' was found on type '{}'.",
+                  "category": 1,
+                  "code": 7054
+                }
+              ]
+            }
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 4338,
+            "length": 1,
+            "messageText": "Variable 'p' implicitly has an 'any[]' type.",
+            "category": 1,
+            "code": 7005
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 4575,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 4681,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFile'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 4716,
+            "length": 37,
+            "code": 7053,
+            "category": 1,
+            "messageText": {
+              "messageText": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.",
+              "category": 1,
+              "code": 7053,
+              "next": [
+                {
+                  "messageText": "No index signature with a parameter of type 'string' was found on type '{}'.",
+                  "category": 1,
+                  "code": 7054
+                }
+              ]
+            }
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 5178,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFileCSON'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 5290,
+            "length": 8,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'packages' does not exist on type 'InitFileCSON'."
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 5329,
+            "length": 37,
+            "code": 7053,
+            "category": 1,
+            "messageText": {
+              "messageText": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.",
+              "category": 1,
+              "code": 7053,
+              "next": [
+                {
+                  "messageText": "No index signature with a parameter of type 'string' was found on type '{}'.",
+                  "category": 1,
+                  "code": 7054
+                }
+              ]
+            }
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 5457,
+            "length": 10,
+            "messageText": "Not all code paths return a value.",
+            "category": 1,
+            "code": 7030
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 5479,
+            "length": 14,
+            "code": 7053,
+            "category": 1,
+            "messageText": {
+              "messageText": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.",
+              "category": 1,
+              "code": 7053,
+              "next": [
+                {
+                  "messageText": "No index signature with a parameter of type 'string' was found on type '{}'.",
+                  "category": 1,
+                  "code": 7054
+                }
+              ]
+            }
+          },
+          {
+            "file": "../src/bundles.ts",
+            "start": 5573,
+            "length": 24,
+            "code": 7053,
+            "category": 1,
+            "messageText": {
+              "messageText": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.",
+              "category": 1,
+              "code": 7053,
+              "next": [
+                {
+                  "messageText": "No index signature with a parameter of type 'string' was found on type '{}'.",
+                  "category": 1,
+                  "code": 7054
+                }
+              ]
+            }
           }
         ]
       ]
