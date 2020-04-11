@@ -4,7 +4,6 @@
  * DS207: Consider shorter variations of null checks
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
-import CSON from "season"
 import fs from "fs"
 
 export class InitFile {
@@ -41,6 +40,18 @@ export class InitFile {
     }
   }
 }
+
+// deprecated
+let CSON
+export class InitFileCSON {
+  constructor(name, filepath) {
+    atom.notifications.addWarning(`Using CSON config for package-switch is deprecated. 
+    Convert ${filepath} to JSON at https://decaffeinate-project.org/repl/`)
+
+    // Dynamic import https://mariusschulz.com/blog/dynamic-import-expressions-in-typescript
+    import("season").then((csonloaded) => {
+      CSON = csonloaded
+    })
 
     this.name = name
     this.filepath = filepath
