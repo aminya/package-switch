@@ -1,3 +1,5 @@
+## 0.8.0 - Building with rollup to speedup loading
+
 ## 0.7.0 - CSON config files are deprecated in favor of JSON
 
 ## 0.6.0 - Codebase is rewritten in TypeScript
