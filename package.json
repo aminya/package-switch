@@ -40,7 +40,7 @@
     "season": "^6.0.2"
   },
   "devDependencies": {
-    "typescript": "^3.8.3",
+    "typescript": "^3.9.3",
     "coffeescript": "^2.5.1",
     "@types/atom": "^1.40.2",
     "@types/season": "^6.0.0",
