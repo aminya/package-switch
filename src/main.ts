@@ -1,6 +1,5 @@
 /*
  * decaffeinate suggestions:
- * DS103: Rewrite code to no longer use __guard__
  * DS207: Consider shorter variations of null checks
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
@@ -139,10 +138,6 @@ export const config = {
   },
 }
 
-function __guard__(value, transform) {
-  return typeof value !== "undefined" && value !== null ? transform(value) : undefined
-}
-
 function createBundleView() {
   if (!bundleview) {
     bundleview = new BundleView()
@@ -209,7 +204,7 @@ function loadProjectConfigs() {
 }
 
 function toggleCallback(opposite, bundle) {
-  __guard__(bundles.getBundle(bundle.name), (x) => x.execute(opposite))
+  bundles.getBundle(bundle.name)?.execute(opposite)
 }
 
 function removeCallback(bundle) {
