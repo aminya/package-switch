@@ -25,10 +25,11 @@
     "buildlocal": "npm run typescript -s",
     "lint": "eslint . --ext js,ts,coffee,json",
     "test": "npm run buildlocal && atom --test spec",
-    "prepare": "npm run build",
-    "ppublish": "bash ./ppublish.sh",
-    "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "clean": "shx rm -rf dist",
+    "dev": "npm run clean && env NODE_ENV=development env BABEL_ENV=production rollup -c -w",
+    "build": "npm run clean && env NODE_ENV=production env BABEL_ENV=production rollup -c",
+    "prepare": "npm run build && node ./node_modules/atom-space-pen-views-plus/scripts/postinstall.js",
+    "ppublish": "bash ./ppublish.sh"
   },
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
