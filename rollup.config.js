@@ -1,55 +1,63 @@
-import resolve from "@rollup/plugin-node-resolve"
-import commonjs from "@rollup/plugin-commonjs"
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import coffeescript from 'rollup-plugin-coffee-script';
 import typescript from "@rollup/plugin-typescript"
-import coffeescript from "rollup-plugin-coffee-script"
 import json from "@rollup/plugin-json"
-import { terser } from "rollup-plugin-terser"
-import pkg from "./package.json"
+import {terser} from 'rollup-plugin-terser';
+
+let plugins = [
+
+  // so Rollup can find externals
+  resolve({extensions: ['.js', '.coffee', 'ts'], preferBuiltins: true}),
+
+  // so Rollup can convert externals to an ES module
+  commonjs(),
+
+  // so Rollup can convert TypeScript to JavaScript
+  typescript(
+    { noEmitOnError: false }
+  ),
+
+  // if any (in deps as well): Convert CoffeeScript to JavaScript
+  coffeescript(),
+
+  // so Rollup can bundle JSON to JavaScript
+  json(
+    { compact: true }
+  ),
+];
+
+// minify only in production mode
+if (process.env.NODE_ENV === 'production') {
+  plugins.push(
+    // minify
+    terser({
+      ecma: 2018,
+      warnings: true,
+      compress: {
+        drop_console: false,
+      },
+    })
+  );
+}
 
 export default [
   {
-    input: "src/main.ts",
-    output: {
-      dir: "lib",
-      // file: pkg.main, // disabled due to dynamic import for season (set inlineDynamicImports: true) if wanted
-      format: "cjs",
-      sourcemap: true,
-    },
-
+    input: 'src/main.ts',
+    output: [
+      {
+        dir: "lib",
+        format: 'cjs',
+        sourcemap: true,
+      },
+    ],
     // loaded externally
     external: [
       "atom",
-      "fs",
+      // node stuff
       "path",
-      "atom-space-pen-views" // loaded because of errors
+      "fs"
     ],
-    plugins: [
-
-      // so Rollup can find externals
-      resolve(
-        { extensions: [".js", ".coffee"], preferBuiltins: true }
-        ),
-
-      // so Rollup can convert externals to an ES module
-      commonjs({
-        // namedExports: { "space-pen": ["View"] } // not working
-      }),
-
-      // so Rollup can convert CoffeeScript to JavaScript
-      coffeescript(),
-
-      // so Rollup can convert TypeScript to JavaScript
-      typescript(
-        { noEmitOnError: false }
-      ),
-
-      // so Rollup can bundle JSON to JavaScript
-      json(
-        { compact: true }
-      ),
-
-      // minify
-      terser(),
-    ]
-  }
-]
+    plugins: plugins,
+  },
+];
