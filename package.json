@@ -38,8 +38,8 @@
     "season": "^6.0.2"
   },
   "devDependencies": {
-    "typescript": "^3.9.3",
-    "coffeescript": "^2.5.1",
+    "typescript": "^3.9.5",
+    "coffeescript": "^1.12.7",
     "@types/atom": "^1.40.4",
     "@types/season": "^6.0.0",
     "eslint": "latest",
@@ -52,14 +52,15 @@
     "tslint": "latest",
     "tslint-config-prettier": "latest",
     "prettier": "latest",
-    "rollup": "^2.12.0",
-    "@rollup/plugin-commonjs": "^12.0.0",
-    "@rollup/plugin-node-resolve": "^8.0.0",
+    "rollup": "^2.13.1",
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.1",
     "@rollup/plugin-typescript": "^4.1.2",
     "rollup-plugin-coffee-script": "^2.0.0",
-    "@rollup/plugin-json": "^4.0.3",
+    "@rollup/plugin-json": "^4.1.0",
     "rollup-plugin-terser": "^6.1.0",
-    "tslib": "^2.0.0"
+    "tslib": "^2.0.0",
+    "shx": "^0.3.2"
   },
   "prettier": {
     "semi": false,
