@@ -20,10 +20,10 @@ fi
 if test -f '.gitignore'; then
   git mv .gitignore .gitignore.back
   npm run build
-  git add -- ./dist
-  git commit -m 'chore: add built files' -- ./dist
+  git add -- ./lib
+  git commit -m 'chore: add built files' -- ./lib
   git mv .gitignore.back .gitignore
-  cd ./dist
+  cd ./lib || exit
   git ls-files -z | xargs -0 git update-index --assume-unchanged
 else
   error_exit '.gitignore does not exist!'
