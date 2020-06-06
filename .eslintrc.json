@@ -8,7 +8,7 @@
     "browser": true,
     "jasmine": true
   },
-  "globals": { "atom": "writable" },
+  "globals": { "atom": "readonly"},
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": { "jsx": true },
@@ -17,17 +17,11 @@
   },
   "plugins": ["only-warn"],
   "extends": ["eslint:recommended"],
+  "ignorePatterns": ["lib/", "node_modules/"],
   "overrides": [
     { // Bundled node version with atom has an old ESLint
       // TypeScript files
       "files": ["**/*.ts", "**/*.tsx"],
-      "env": {
-        "atomtest": true,
-        "es6": true,
-        "node": true,
-        "browser": true
-      },
-      "globals": { "atom": "writable" },
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
         "ecmaFeatures": { "jsx": true },
@@ -50,14 +44,6 @@
     {
       // CoffeeScript files
       "files": ["**/*.coffee"],
-      "env": {
-        "atomtest": true,
-        "es6": true,
-        "node": true,
-        "browser": true
-      },
-      "globals": { "atom": "writable" },
-      // "parser": "eslint-plugin-coffee",
       "parser": "eslint-plugin-coffee",
       "parserOptions": {
         "ecmaFeatures": { "jsx": true },

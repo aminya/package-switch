@@ -23,7 +23,7 @@
     "prettier_src": "prettier --write ./src/**/*.ts",
     "prettier_out": "prettier --write ./lib/**/*.js",
     "buildlocal": "npm run typescript -s",
-    "lint": "eslint . --ext js,ts,coffee,json",
+    "lint": "eslint . --fix --ext js,ts,coffee,json",
     "test": "npm run buildlocal && atom --test spec",
     "clean": "shx rm -rf dist",
     "dev": "npm run clean && env NODE_ENV=development env BABEL_ENV=production rollup -c -w",
