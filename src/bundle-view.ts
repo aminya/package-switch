@@ -4,10 +4,7 @@
  * DS207: Consider shorter variations of null checks
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
-import { SelectListView } from "atom-space-pen-views"
-const { View } = require("space-pen")
-const $ = require('jquery')
-const $$ = (fn) => View.render.call(View, fn)
+import { SelectListView, $, $$ } from "atom-space-pen-views-plus"
 
 export class BundleView extends SelectListView {
   initialize() {

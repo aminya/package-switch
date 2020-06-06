@@ -1,5 +1,5 @@
 { BundlesView } = require '../lib/bundles-view'
-{$} = require 'atom-space-pen-views'
+{$} = require 'atom-space-pen-views-plus'
 
 describe 'Bundles View', ->
   view = null
