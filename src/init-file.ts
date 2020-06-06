@@ -38,7 +38,7 @@ export class InitFile {
 
   save() {
     try {
-      fs.writeFileSync(this.filepath, JSON.stringify(this.packages, null, '\t'))
+      fs.writeFileSync(this.filepath, JSON.stringify(this.packages, null, "\t"))
     } catch (error) {
       atom.notifications.addError(error)
     }

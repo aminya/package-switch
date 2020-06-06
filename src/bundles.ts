@@ -92,7 +92,7 @@ export class Bundles {
     if (this.filename != null) {
       try {
         this.writing = true
-        fs.writeFileSync(this.filename, JSON.stringify(this.data, null, '\t'))
+        fs.writeFileSync(this.filename, JSON.stringify(this.data, null, "\t"))
         if (emit) {
           this.emitter.emit("file-change")
         }
