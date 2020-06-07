@@ -25,7 +25,7 @@
     "buildlocal": "npm run typescript -s",
     "lint": "eslint . --fix --ext js,ts,coffee,json",
     "test": "npm run buildlocal && atom --test spec",
-    "clean": "shx rm -rf dist",
+    "clean": "shx rm -rf lib",
     "dev": "npm run clean && env NODE_ENV=development env BABEL_ENV=production rollup -c -w",
     "build": "npm run clean && env NODE_ENV=production env BABEL_ENV=production rollup -c",
     "prepare": "npm run build && node ./node_modules/atom-space-pen-views-plus/scripts/postinstall.js",
