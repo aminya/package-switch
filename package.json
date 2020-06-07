@@ -3,7 +3,7 @@
   "main": "lib/main.js",
   "version": "0.9.0",
   "author": "Amin Yahyaabadi, Fabian Stiewitz",
-  "description": "Easy package activation/deactivation",
+  "description": "Easy and Fast package activation/deactivation",
   "keywords": [
     "package",
     "activate",

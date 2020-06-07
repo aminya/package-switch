@@ -6,7 +6,7 @@ package-switch
 [![apm](https://img.shields.io/apm/dm/package-switch.svg)](https://github.com/aminya/package-switch)
 [![apm](https://img.shields.io/apm/v/package-switch.svg)](https://github.com/aminya/package-switch)
 
-## Easy package activation/deactivation
+## Easy and Fast package activation/deactivation
 ![package-switch-2](https://cloud.githubusercontent.com/assets/7817714/8269467/947642ce-17a9-11e5-8602-3a1de749edd1.png)
 
 ## Features
@@ -15,6 +15,7 @@ package-switch
 * Store local bundles in `.package-switch.json` files
 * Auto-execute local bundle if only one project is active
 * Save and restore package states to save start-up time
+* package-switch is very fast and loads in 10ms.
 
 ## Usage
 ### Create a Bundle
