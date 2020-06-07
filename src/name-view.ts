@@ -141,3 +141,5 @@ export class NameView extends View {
     this.bundle_name.focus()
   }
 }
+
+export const nameview = new NameView()

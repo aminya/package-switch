@@ -129,3 +129,5 @@ export class BundleView extends SelectListView {
     return this.populateList(view)
   }
 }
+
+export const bundleview = new BundleView()

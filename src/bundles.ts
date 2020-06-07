@@ -18,13 +18,12 @@ export class Bundles {
   writing = false
 
   constructor(arg?) {
-    this.reload = this.reload.bind(this)
-    this.setData = this.setData.bind(this)
     if (arg) {
       this.filename = arg === "" ? null : arg
     } else {
       this.getFileName()
     }
+
     if (this.filename != null) {
       this.touchFile()
       this.getData()
@@ -35,6 +34,7 @@ export class Bundles {
     this.getPackages()
     this.project_bundles = {}
     this.emitter = new Emitter()
+
   }
 
   destroy() {
@@ -64,6 +64,9 @@ export class Bundles {
       // TODO
       configdir = atom.project.getPaths()[0]
     }
+    if (!configdir) {
+      configdir = "./"
+    }
     this.filename = path.join(path.dirname(configdir), "package-switch.bundles")
   }
 
@@ -83,9 +86,14 @@ export class Bundles {
   }
 
   getPackages() {
-    atom.packages.getAvailablePackageNames().forEach((name) => {
+    // const package_names = atom.packages.getAvailablePackageNames()
+    const package_names = getAvailablePackageNames()
+
+    const package_names_len = package_names.length
+    for (let i = 0; i < package_names_len; i++) {
+      const name = package_names[i]
       this.single_bundles[name] = new Bundle({ packages: [{ name, action: "added" }] })
-    })
+    }
   }
 
   setData(emit = true) {
@@ -206,4 +214,60 @@ export class Bundles {
     })
     return p
   }
+}
+
+export const bundles = new Bundles()
+
+// original getting list of packages takes ~10ms.
+// https://github.com/atom/atom/blob/eb1ec862273c68ebcf281c8b21d60c8336f046a4/src/package-manager.js#L416
+// TODO make a PR
+function getAvailablePackages() {
+
+  // 0.58 ms vs 7.58ms!
+  const packages = [];
+  const packagesByName = new Set();
+
+  const packageDirPaths = atom.packages.packageDirPaths
+  for (let i1 = 0, len = packageDirPaths.length; i1 < len; ++i1) {
+    const packageDirPath = packageDirPaths[i1]
+
+    if (fs.existsSync(packageDirPath)) {
+      const packagePaths = fs.readdirSync(packageDirPath)
+      for (let i2 = 0, len2 = packagePaths.length; i2 < len2; ++i2) {
+        const packagePath = path.join(packageDirPath, packagePaths[i2]);
+        const packageName = path.basename(packagePath);
+        if (
+          !packageName.startsWith('.') &&
+          !packagesByName.has(packageName)
+        ) {
+          packages.push({
+            name: packageName,
+            path: packagePath,
+            isBundled: false
+          });
+          packagesByName.add(packageName);
+        }
+      }
+    }
+  }
+
+  // 0.56 vs 0.58 ms
+  const keys = Object.keys(atom.packages.packageDependencies)
+  for (let i = 0, len = keys.length; i < len; ++i) {
+    const packageName = keys[i]
+    if (!packagesByName.has(packageName)) {
+      packages.push({
+        name: packageName,
+        path: path.join(atom.packages.resourcePath, 'node_modules', packageName),
+        isBundled: true
+      });
+    }
+  }
+
+  return packages.sort((a, b) => a.name.localeCompare(b.name))
+}
+
+
+function getAvailablePackageNames() {
+  return getAvailablePackages().map(a => a.name)
 }

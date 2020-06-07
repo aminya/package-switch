@@ -1,27 +1,40 @@
-/*
- * decaffeinate suggestions:
- * DS103: Rewrite code to no longer use __guard__
- * DS207: Consider shorter variations of null checks
- * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
- */
 import { CompositeDisposable } from "atom"
 import fs from "fs"
 import path from "path"
-import { InitFileView } from "./init-file-view"
+
 import { InitFile, InitFileCSON } from "./init-file"
+
+// Type Import
 import { BundleView } from "./bundle-view"
 import { BundlesView } from "./bundles-view"
 import { NameView } from "./name-view"
+import { InitFileView } from "./init-file-view"
 import { Bundles } from "./bundles"
 
+// view class
+let InitFileView: typeof InitFileView
+
+// view instances
+let lazyloader
 let bundles: Bundles
 let bundleview: BundleView
 let bundlesview: BundlesView
 let nameview: NameView
-let initfileview: InitFileView
+let initfileview: InitFileView | null = null
+
+async function lazyload() {
+  if (!lazyloader) {
+    lazyloader = await import("./lazyloader")
+    bundlesview = lazyloader.bundlesview
+    bundleview = lazyloader.bundleview
+    nameview = lazyloader.nameview
+    InitFileView = lazyloader.InitFileView
+    bundles = lazyloader.bundles
+  }
+}
+
 
 let subscriptions: CompositeDisposable
-
 export function activate() {
   loadProjectConfigs()
   subscriptions = new CompositeDisposable()
@@ -50,20 +63,25 @@ export function activate() {
     }),
     atom.workspace.addOpener(function (uritoopen, { noopener }) {
       if (noopener == null) {
+        lazyload().then(() => {
+
+
         if (uritoopen.endsWith(".package-switch.json")) {
           initfileview = new InitFileView({
             uri: uritoopen,
             file: new InitFile(path.dirname(uritoopen), uritoopen),
           })
         }
+
         // deprecated
         else if (uritoopen.endsWith(".package-switch.cson")) {
-          console.error("here")
           initfileview = new InitFileView({
             uri: uritoopen,
             file: new InitFileCSON(path.dirname(uritoopen), uritoopen),
           })
         }
+
+        })
       }
     })
   )
@@ -94,6 +112,7 @@ export function deactivate() {
     atom.config.save()
   }
   subscriptions.dispose()
+
   if (bundles) {
     bundles.destroy()
   }
@@ -139,34 +158,6 @@ export const config = {
   },
 }
 
-function __guard__(value, transform) {
-  return typeof value !== "undefined" && value !== null ? transform(value) : undefined
-}
-
-function createBundleView() {
-  if (!bundleview) {
-    bundleview = new BundleView()
-  }
-}
-
-function createBundlesView() {
-  if (!bundlesview) {
-    bundlesview = new BundlesView()
-  }
-}
-
-function createNameView() {
-  if (!nameview) {
-    nameview = new NameView()
-  }
-}
-
-function createBundlesInstance() {
-  if (!bundles) {
-    bundles = new Bundles()
-  }
-}
-
 function loadProjectConfigs() {
   const p = atom.project.getPaths()
   if (p.length === 1) {
@@ -209,12 +200,16 @@ function loadProjectConfigs() {
 }
 
 function toggleCallback(opposite, bundle) {
-  __guard__(bundles.getBundle(bundle.name), (x) => x.execute(opposite))
-}
+  lazyload().then(() => {
+  bundles.getBundle(bundle.name)?.execute(opposite)
+})}
+
 
 function removeCallback(bundle) {
+  lazyload().then(() => {
   bundles.removeBundle(bundle.name)
-}
+})}
+
 
 function saveStates() {
   atom.config.set(
@@ -224,8 +219,7 @@ function saveStates() {
 }
 
 function toggle(opposite = false) {
-  createBundlesInstance()
-  createBundlesView()
+  lazyload().then(() => {
   bundlesview.show(
     bundles.getBundles(),
     (bundle) => {
@@ -233,16 +227,15 @@ function toggle(opposite = false) {
     },
     opposite
   )
-}
+})}
 
 function remove() {
-  createBundlesInstance()
-  createBundlesView()
+  lazyload().then(() => {
   bundlesview.show(bundles.getBundles(false), (bundle) => removeCallback(bundle))
-}
+})}
 
 function createCallback(oldname, items) {
-  createNameView()
+  lazyload().then(() => {
   nameview.show(bundles, oldname, items, {
     confirmCallback: (oldname, name, packages) => {
       nameCallback(oldname, name, packages)
@@ -253,24 +246,25 @@ function createCallback(oldname, items) {
         packages: _items,
       }),
   })
-}
+})}
 
 function nameCallback(oldname, name, packages) {
+  lazyload().then(() => {
   if (oldname != null) {
     bundles.replaceBundle(oldname, name, packages)
   } else {
     bundles.addBundle(name, packages)
   }
-}
+})}
 
 function create(bundle = null) {
-  createBundlesInstance()
-  createBundleView()
+  lazyload().then(() => {
   bundleview.show(bundle, (oldname, items) => createCallback(oldname, items))
-}
+})}
+
+
 
 function edit() {
-  createBundlesInstance()
-  createBundlesView()
+  lazyload().then(() => {
   bundlesview.show(bundles.getBundles(false), (bundle) => create(bundle))
-}
+})}
