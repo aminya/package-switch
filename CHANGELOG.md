@@ -1,3 +1,10 @@
+## 0.9.0 - Faster loading
+- using custom getAvilablePackages
+- lazy loading of the views and bundles
+
+## 0.8.0 - Faster loading
+- using atom-space-pen-views-plus
+
 ## 0.8.0 - Building with rollup to speedup loading
 
 ## 0.7.0 - CSON config files are deprecated in favor of JSON
