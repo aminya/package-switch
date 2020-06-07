@@ -33,5 +33,5 @@
     // "skipLibCheck": false,
     "outDir": "../lib"
   },
-  "compileOnSave": true
+  "compileOnSave": false
 }
