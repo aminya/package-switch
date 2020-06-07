@@ -3,31 +3,33 @@ import fs from "fs"
 import path from "path"
 
 import { InitFile, InitFileCSON } from "./init-file"
-import { bundles } from "./bundles"
 
 // Type Import
 import { BundleView } from "./bundle-view"
 import { BundlesView } from "./bundles-view"
 import { NameView } from "./name-view"
 import { InitFileView } from "./init-file-view"
+import { Bundles } from "./bundles"
 
 // view class
 let InitFileView: typeof InitFileView
 
 // view instances
-let views
+let lazyloader
+let bundles: Bundles
 let bundleview: BundleView
 let bundlesview: BundlesView
 let nameview: NameView
 let initfileview: InitFileView | null = null
 
-async function loadviews() {
-  if (!views) {
-    views = await import("./views")
-    bundlesview = views.bundlesview
-    bundleview = views.bundleview
-    nameview = views.nameview
-    InitFileView = views.InitFileView
+async function lazyload() {
+  if (!lazyloader) {
+    lazyloader = await import("./lazyloader")
+    bundlesview = lazyloader.bundlesview
+    bundleview = lazyloader.bundleview
+    nameview = lazyloader.nameview
+    InitFileView = lazyloader.InitFileView
+    bundles = lazyloader.bundles
   }
 }
 
@@ -61,7 +63,7 @@ export function activate() {
     }),
     atom.workspace.addOpener(function (uritoopen, { noopener }) {
       if (noopener == null) {
-        loadviews().then(() => {
+        lazyload().then(() => {
 
 
         if (uritoopen.endsWith(".package-switch.json")) {
@@ -198,12 +200,16 @@ function loadProjectConfigs() {
 }
 
 function toggleCallback(opposite, bundle) {
+  lazyload().then(() => {
   bundles.getBundle(bundle.name)?.execute(opposite)
-}
+})}
+
 
 function removeCallback(bundle) {
+  lazyload().then(() => {
   bundles.removeBundle(bundle.name)
-}
+})}
+
 
 function saveStates() {
   atom.config.set(
@@ -213,7 +219,7 @@ function saveStates() {
 }
 
 function toggle(opposite = false) {
-  loadviews().then(() => {
+  lazyload().then(() => {
   bundlesview.show(
     bundles.getBundles(),
     (bundle) => {
@@ -224,12 +230,12 @@ function toggle(opposite = false) {
 })}
 
 function remove() {
-  loadviews().then(() => {
+  lazyload().then(() => {
   bundlesview.show(bundles.getBundles(false), (bundle) => removeCallback(bundle))
 })}
 
 function createCallback(oldname, items) {
-  loadviews().then(() => {
+  lazyload().then(() => {
   nameview.show(bundles, oldname, items, {
     confirmCallback: (oldname, name, packages) => {
       nameCallback(oldname, name, packages)
@@ -243,21 +249,22 @@ function createCallback(oldname, items) {
 })}
 
 function nameCallback(oldname, name, packages) {
+  lazyload().then(() => {
   if (oldname != null) {
     bundles.replaceBundle(oldname, name, packages)
   } else {
     bundles.addBundle(name, packages)
   }
-}
+})}
 
 function create(bundle = null) {
-  loadviews().then(() => {
+  lazyload().then(() => {
   bundleview.show(bundle, (oldname, items) => createCallback(oldname, items))
 })}
 
 
 
 function edit() {
-  loadviews().then(() => {
+  lazyload().then(() => {
   bundlesview.show(bundles.getBundles(false), (bundle) => create(bundle))
 })}
