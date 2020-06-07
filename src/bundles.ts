@@ -207,3 +207,6 @@ export class Bundles {
     return p
   }
 }
+
+export const bundles = new Bundles()
+

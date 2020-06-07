@@ -77,3 +77,5 @@ export class BundlesView extends SelectListView {
     return "name"
   }
 }
+
+export const bundlesview = new BundlesView()
