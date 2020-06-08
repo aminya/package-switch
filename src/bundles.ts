@@ -232,10 +232,13 @@ function getAvailablePackages() {
     const packageDirPath = packageDirPaths[i1]
 
     if (fs.existsSync(packageDirPath)) {
-      const packagePaths = fs.readdirSync(packageDirPath)
+      const packagePaths = fs.readdirSync(packageDirPath, { withFileTypes: true })
+        .filter(dirent => dirent.isDirectory())
+        .map(dirent => dirent.name)
+
       for (let i2 = 0, len2 = packagePaths.length; i2 < len2; ++i2) {
-        const packagePath = path.join(packageDirPath, packagePaths[i2]);
-        const packageName = path.basename(packagePath);
+        const packageName = packagePaths[i2]
+        const packagePath = path.join(packageDirPath, packageName)
         if (
           !packageName.startsWith('.') &&
           !packagesByName.has(packageName)

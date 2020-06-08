@@ -15,7 +15,7 @@ package-switch
 * Store local bundles in `.package-switch.json` files
 * Auto-execute local bundle if only one project is active
 * Save and restore package states to save start-up time
-* package-switch is very fast and loads in 10ms.
+* package-switch is very fast and loads in 8ms.
 
 ## Usage
 ### Create a Bundle
