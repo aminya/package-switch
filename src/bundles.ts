@@ -238,11 +238,11 @@ function getAvailablePackages() {
 
       for (let i2 = 0, len2 = packagePaths.length; i2 < len2; ++i2) {
         const packageName = packagePaths[i2]
-        const packagePath = path.join(packageDirPath, packageName)
         if (
           !packageName.startsWith('.') &&
           !packagesByName.has(packageName)
         ) {
+          const packagePath = path.join(packageDirPath, packageName)
           packages.push({
             name: packageName,
             path: packagePath,
