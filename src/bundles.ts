@@ -7,7 +7,7 @@ import { Bundle } from "./bundle"
 import { InitFile, InitFileCSON } from "./init-file"
 
 import path from "path"
-import fs from "fs"
+import fs from "fs-plus"
 import { Emitter } from "atom"
 
 export class Bundles {
@@ -232,12 +232,14 @@ function getAvailablePackages() {
     const packageDirPath = packageDirPaths[i1]
 
     if (fs.existsSync(packageDirPath)) {
-      const packagePaths = fs.readdirSync(packageDirPath, { withFileTypes: true })
-        .filter(dirent => dirent.isDirectory())
+
+      const packageNames = fs
+        .readdirSync(packageDirPath, { withFileTypes: true })
+        .filter(dirent => (dirent.isDirectory() || (dirent.isSymbolicLink() && fs.isDirectorySync(path.join(packageDirPath, dirent.name)))))
         .map(dirent => dirent.name)
 
-      for (let i2 = 0, len2 = packagePaths.length; i2 < len2; ++i2) {
-        const packageName = packagePaths[i2]
+      for (let i2 = 0, len2 = packageNames.length; i2 < len2; ++i2) {
+        const packageName = packageNames[i2]
         if (
           !packageName.startsWith('.') &&
           !packagesByName.has(packageName)

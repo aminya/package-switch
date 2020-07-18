@@ -39,6 +39,7 @@
     "season": "^6.0.2"
   },
   "devDependencies": {
+    "fs-plus": "latest",
     "typescript": "^3.9.5",
     "coffeescript": "^1.12.7",
     "@types/atom": "^1.40.4",
