@@ -41,7 +41,7 @@
   "devDependencies": {
     "fs-plus": "latest",
     "typescript": "^3.9.7",
-    "coffeescript": "^1.12.7",
+    "coffeescript": "^2.5.1",
     "@types/atom": "^1.40.4",
     "@types/season": "^6.0.0",
     "eslint": "latest",
